@@ -47,18 +47,18 @@ else
 
 ```json
 {
-   "user_name":"Hitakashi",
+   "user_name":"test-account",
    "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
    "user_status":"1",
-   "user_logo":"\/static\/img\/channel\/Hitakashi_53f4e837eb388_large.png",
-   "user_logo_small":"\/static\/img\/channel\/Hitakashi_53f4e837eb388_small.png",
+   "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
+   "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
    "user_is_broadcaster":true,
    "followers":"7",
    "user_partner":null,
-   "user_id":"278723",
+   "user_id":"123",
    "is_live":"0",
    "live_since":"2014-12-14 05:18:54",
-   "twitter_account":"hitakashi",
+   "twitter_account":"test-account",
    "twitter_enabled":"1"
 }
 ```
