@@ -5,19 +5,21 @@ Returns information about the auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/login](/README.md#get-auth) | This API  |
+| [POST /auth/login](/README.md#get-auth) | API has two uses, get an auth token and verify an auth token.  |
 
-## `POST /auth`
+## `POST /auth/login`
 
 An example text about what the endpoint returns.
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users auth token | 
+| a | a | A |
+| login | yes | string | username |
 
 ### Example URL
 
-https://www.hitbox.tv/api/test
+https://www.hitbox.tv/api/auth/login
 
 ### Example Response 
 
