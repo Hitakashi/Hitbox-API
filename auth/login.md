@@ -5,7 +5,7 @@ Returns information about the auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/login](/auth/login.md#post-authlogin(verify)) | API has two uses, get an auth token and verify an auth token.  |
+| [POST /auth/login](/auth/login.md#post-authloginverify) | API has two uses, get an auth token and verify an auth token.  |
 
 ## `POST /auth/login (Verify)`
 
