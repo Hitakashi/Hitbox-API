@@ -7,7 +7,7 @@ If you want to contribute to the documentation use the example below and send a 
 
 Example API Documentation.
 
-# Chat Emotes
+# API
 ***
 
 What is the general description of what the endpoint does. You don't have to include parameters if the endpoint doesn't have them.
