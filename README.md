@@ -7,16 +7,16 @@ If you want to contribute to the documentation use the example below and send a 
 
 Example API Documentation.
 
-# API
+# Example API
 ***
 
 What is the general description of what the endpoint does. You don't have to include parameters if the endpoint doesn't have them.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /chat/icons/:user](/chat/icons/index.md#get-chaticonsuser) | Get channel emotes |
+| [GET /example/api/:user](/README.md#get-exampleapi) | Get channel emotes |
 
-## `GET /chat/icons/:user`
+## `GET /example/api/`
 
 An example text about what the endpoint returns.
 
