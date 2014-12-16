@@ -34,6 +34,8 @@ https://www.hitbox.tv/api/test
 
 ```json
 {
-   "test":"test"
+   "test":{
+      ":test:":"test"
+   }
 }
 ```
