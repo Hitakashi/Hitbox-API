@@ -5,12 +5,12 @@ Returns information about the auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/login](/auth/login.md#post-authlogin-auth) | Returns an auth token for the provided login. |
-| [POST /auth/login](/auth/login.md#post-authlogin-info) | Gets account information for the provided auth token. |
+| [POST /auth/login](/auth/login.md#post-authlogin-auth) | Returns account information for the provided login. |
+| [POST /auth/login](/auth/login.md#post-authlogin-info) | Returns account information for the provided auth token. |
 
 ## `POST /auth/login (Auth)`
 
-Sending a POST request with the below data returns an auth token if valid.
+Sending a POST request with the below data returns account information.
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
