@@ -14,7 +14,7 @@ An example text about what the endpoint returns.
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users auth token | 
-|  |  |  |
+| Second POST |  |  |
 | login | yes | string | username |
 
 ### Example URL
