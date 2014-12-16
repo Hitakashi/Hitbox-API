@@ -5,7 +5,7 @@ Returns information about the auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/login](/README.md#get-auth) | API has two uses, get an auth token and verify an auth token.  |
+| [POST /auth/login](/auth/login.md#get-authlogin) | API has two uses, get an auth token and verify an auth token.  |
 
 ## `POST /auth/login`
 
