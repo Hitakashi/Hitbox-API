@@ -5,16 +5,15 @@ Returns information about the auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/login](/auth/login.md#post-authlogin) | API has two uses, get an auth token and verify an auth token.  |
+| [POST /auth/login](/auth/login.md#post-authlogin(verify)) | API has two uses, get an auth token and verify an auth token.  |
 
-## `POST /auth/login`
+## `POST /auth/login (Verify)`
 
 An example text about what the endpoint returns.
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users auth token | 
-| Second POST |  |  |
 | login | yes | string | username |
 
 ### Example URL
