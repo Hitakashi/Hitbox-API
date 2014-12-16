@@ -5,15 +5,15 @@ This endpoint contains information about subscriber chat badges. if `badge_id` a
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /mediabadges](/mediabadges.md#get-mediabadges) | Returns subscriber chat badge. |
+| [GET /mediabadges/:channel](/mediabadges.md#get-mediabadgeschannel) | Returns subscriber chat badge. |
 
-## `GET /mediabadges`
+## `GET /mediabadges/:channel`
 
 Returns information about subscriber chat badges.
 
 ### Example URL
 
-https://www.hitbox.tv/api/mediabadges
+https://www.hitbox.tv/api/mediabadges/:channel
 
 ### Example Response 
 
