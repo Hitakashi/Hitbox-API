@@ -9,7 +9,7 @@ What is the general description of what the endpoint does. You don't have to inc
 
 ## `GET /teams (Search)`
 
-An example text about what the endpoint returns.
+Ability to search for teams by providing a search term. The Website Search feature uses this.
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
