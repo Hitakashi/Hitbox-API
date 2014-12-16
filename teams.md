@@ -5,7 +5,7 @@ What is the general description of what the endpoint does. You don't have to inc
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /teams](/teams.md#get-teamssearch) | Searches for teams. |
+| [GET /teams](/teams.md#get-teams-search) | Searches for teams. |
 
 ## `GET /teams (Search)`
 
