@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /streamstats/:user/:startTime/:endTime](/twitter.md#post-twitterpost) | Returns stream stats |
+| [GET /streamstats/:user/:startTime/:endTime](/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats |
 
-## `POST /streamstats/:user/:startTime/:endTime`
+## `GET /streamstats/:user/:startTime/:endTime`
 
 Returns stream stats between `:startTime` and `:endTime`  (These are Epoch time stamps)
 
