@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /streamoverallstats/:user/:startTime/:endTime](/twitter.md#post-twitterpost) | Returns overall stream stats |
+| [GET /streamoverallstats/:user/:startTime/:endTime](/steamoverallstats.md#get-streamoverallstatsuserstarttimeendtime) | Returns overall stream stats |
 
-## `POST /streamoverallstats/:user/:startTime/:endTime`
+## `GET /streamoverallstats/:user/:startTime/:endTime`
 
 Returns overall stream stats between `:startTime` and `:endTime` (These are Epoch time stamps)
 
