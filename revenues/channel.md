@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /revenues/channel/:user](/channel.md#get-revenueschanneluser) | Returns Revenues stats |
+| [GET /revenues/channel/:user](/revenues/channel.md#get-revenueschanneluser) | Returns Revenues stats |
 
 ## `GET /revenues/channel/:user`
 
