@@ -5,7 +5,7 @@ What is the general description of what the endpoint does. You don't have to inc
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/status/:channel](/README.md#get-mediastatuschannel) | Returns simple information about the stream. |
+| [GET /media/status/:channel](/media/status/index.md#get-mediastatuschannel) | Returns simple information about the stream. |
 
 ## `GET /media/status/:channel`
 
