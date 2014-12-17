@@ -20,7 +20,7 @@ Returns account information about the user.
 
 ### Example URL
 
-https://www.hitbox.tv/api/user/:user
+https://www.hitbox.tv/api/user/test-account
 
 ### Example Request
 
@@ -71,7 +71,7 @@ Returns access levels for the auth in the provided channel.
 
 ### Example URL
 
-https://www.hitbox.tv/api/access/test_channel/test_auth
+https://www.hitbox.tv/api/user/access/test_channel/test_auth
 
 ### Example Response 
 
@@ -111,35 +111,12 @@ Returns access levels for the auth in the provided channel.
 
 ### Example URL
 
-https://www.hitbox.tv/api/access/test_channel/test_auth
+https://www.hitbox.tv/api/user/subscription/test_channel/test_auth
 
 ### Example Response 
 
-`user_id` = User ID
-
-`access_user_id` = Channel User ID
-
 ```json
 {
-   "user_id":"123",
-   "access_user_id":"124",
-   "settings":"anon",
-   "account":"anon",
-   "livestreams":"anon",
-   "partner":"anon",
-   "broadcast":"anon",
-   "videos":"anon",
-   "recordings":"anon",
-   "statistics":"anon",
-   "inbox":"anon",
-   "revenues":"anon",
-   "chat":"anon",
-   "following":"anon",
-   "teams":"anon",
-   "subscriptions":"anon",
-   "admin":null,
-   "superadmin":null,
-   "isSubscriber":false,
-   "isFollower":false
+   "isSubscriber":false
 }
 ```
