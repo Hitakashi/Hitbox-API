@@ -7,7 +7,7 @@
 
 ## `POST /revenues/channel/:user`
 
-Returns stream stats between `:startTime` and `:endTime`
+Returns revenues for given channel between `startDate` and `endDate`
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
