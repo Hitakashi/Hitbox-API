@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /twitter/post](/twitter.md#get-twitterpost) | Sends a Tweet to a Users linked Twitter account. |
+| [POST /twitter/post](/twitter.md#post-twitterpost) | Sends a Tweet to a Users linked Twitter account. |
 
-## `GET /twitter/post`
+## `POST /twitter/post`
 
 Sending a POST request with the data below will send a tweet to twitter.
 
