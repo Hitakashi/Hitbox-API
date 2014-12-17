@@ -62,8 +62,6 @@ auth_failed
 
 ## `POST /auth/login (Info)`
 
-Sending a POST with the below data returns account information.
-
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | User's Auth Token |
