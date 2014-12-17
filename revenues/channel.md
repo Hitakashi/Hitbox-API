@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /revenues/channel/:user](/twitter.md#post-twitterpost) | Returns Revenues stats |
+| [GET /revenues/channel/:user](/channel.md#get-revenueschanneluser) | Returns Revenues stats |
 
-## `POST /revenues/channel/:user`
+## `GET /revenues/channel/:user`
 
 Returns revenues for given channel between `startDate` and `endDate`
 
