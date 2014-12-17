@@ -7,7 +7,7 @@
 
 ## `POST /streamoverallstats/:user/:startTime/:endTime`
 
-Returns overall stream stats between `:startTime` and `:endTime`
+Returns overall stream stats between `:startTime` and `:endTime` (These are Epoch time stamps)
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
