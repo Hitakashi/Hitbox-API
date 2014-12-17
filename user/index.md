@@ -7,7 +7,7 @@ This API contains endpoints that describes the provided auth token.
 | ---- | --------------- |
 | [GET /user/:user](/user/index.md#get-useruser) | Get user account information. |
 | [GET /user/access/:channel/:auth](/user/index.md#get-useraccesschannelauth) | Get access levels for the provided auth in the channel. |
-| [GET /user/subscription/:channel/:auth](/user/index.md#) | Check if the given `:auth` is a subscriber to `:channel`. |
+| [GET /user/subscription/:channel/:auth](/user/index.md#get-usersubscriptionchannelauth) | Check if the given `:auth` is a subscriber to `:channel`. |
 
 ## `GET /user/:user`
 
