@@ -6,6 +6,7 @@ This API contains endpoints that describes the provided auth token.
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /user/:user](/user/index.md#get-useruser) | Get user account information. |
+| [PUT /user/:user](/user/index.md#put-useruser) | Updates account information. |
 | [GET /user/access/:channel/:auth](/user/index.md#get-useraccesschannelauth) | Get access levels for the provided auth in the channel. |
 | [GET /user/subscription/:channel/:auth](/user/index.md#get-usersubscriptionchannelauth) | Check if the given `:auth` is a subscriber to `:channel`. |
 
@@ -62,6 +63,38 @@ else
    "twitter_account":"test-account",
    "twitter_enabled":"1"
 }
+```
+
+## `PUT /user/:user`
+
+Updates the current user.
+
+As a general guideline for below passwords in POST if it's password change or email
+
+| POST Data | Required? | Type | Description |
+| --- | --- | --- | --- |
+| user_name | Yes | string | Username |
+| user_email | Yes | string | Email |
+| user_password | No | string | Old Password |
+| user_password_new | No | string | New Password |
+| user_password2_new | No | string | Validate New Password |
+| user_display_name | Yes | string | Must match user_name except in cases. |
+| twitter_account | No | string | Twitter Account Handle |
+| twitter_enabled | No | boolean | Twitter Enabled on Profile |
+
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | Yes | string | Users Auth Token. | 
+
+### Example URL
+
+https://www.hitbox.tv/api/user/test-account
+
+### Example Response
+
+if authToken
+```json
+user_updated
 ```
 
 ## `GET /user/access/:channel/:auth`
