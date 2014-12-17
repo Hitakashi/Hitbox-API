@@ -16,9 +16,9 @@ What is the general description of what the endpoint does. You don't have to inc
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /example/api/:user](/README.md#get-exampleapi) | Get channel emotes |
+| [GET /example/api](/README.md#get-exampleapi) | Example Endpoint Description |
 
-## `GET /example/api/`
+## `GET /example/api`
 
 An example text about what the endpoint returns.
 
