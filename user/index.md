@@ -177,6 +177,7 @@ https://www.hitbox.tv/api/user/list
       "user_status":"1",
       "user_logo":"\/static\/img\/channel\/test-account_543fc6c30cbf5_large.jpg",
       "user_logo_small":"\/static\/img\/channel\/test-account_543fc6c30cbf5_small.jpg"
-   }
+   },
+   ...
 ]
 ```
