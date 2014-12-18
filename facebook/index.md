@@ -3,8 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /facebook/pages](/facebook/post.md#get-facebookpages) | Return facebook pages associated with the linked facebook account |
-| [POST /facebook/pages](/facebook/post.md#post-facebookpages) | Modify `selected` value on facebook pages |
+| [GET /facebook/pages](/facebook/index.md#get-facebookpages) | Return facebook pages associated with the linked facebook account |
+| [POST /facebook/pages](/facebook/index.md#post-facebookpages) | Modify `selected` value on facebook pages |
+| [POST /facebook/post](/facebook/index.md#post-facebookpost) | Send message to `selected` facebook pages |
 
 ## `GET /facebook/pages`
 
@@ -68,4 +69,27 @@ Modify which page(s) are used for posting to. Yes, You only need to post `id` an
       }
    ]
 }
+```
+
+### Example Response
+
+```json
+success
+```
+
+## `POST /facebook/post`
+
+Sends a message to the `selected` facebook pages from [/facebook/pages](/facebook/index.md#post-facebookpages)
+
+| POST Data | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+| user_name | Yes | string | User's username |
+| message | Yes | string | Messsage |
+
+### Example Response
+
+Even if it's successful
+```json
+post_failed
 ```
