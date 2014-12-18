@@ -4,7 +4,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /media/video/:user/list](/media/video.md#get-mediavideouserlist) | Return VOD data |
-| [GET /media/video/:media_id](/media/video.md#get-mediavideomediaid) | Return VOD data |
+| [GET /media/video/:media_id](/media/video.md#get-mediavideomedia_id) | Return VOD data |
 
 ## `GET /media/video/:user/list`
 
