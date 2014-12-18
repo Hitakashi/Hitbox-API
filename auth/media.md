@@ -1,4 +1,4 @@
-# Video Access API
+# Media Access API
 ***
 
 | Endpoint | Description |
