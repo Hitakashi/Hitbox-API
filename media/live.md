@@ -27,7 +27,7 @@ Returns stream information. You can only get this information if the user has se
 
 https://www.hitbox.tv/api/media/live/test-account
 
-### Example Request
+### Example Response
 
 If valid authToken is passed
 ```json
