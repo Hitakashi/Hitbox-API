@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /twitter/post](/twitter.md#post-twitterpost) | Sends a Tweet to a Users linked Twitter account. |
+| [POST /twitter/post](/twitter/post.md#post-twitterpost) | Sends a Tweet to a Users linked Twitter account. |
 
 ## `POST /twitter/post`
 
