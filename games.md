@@ -3,15 +3,16 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /games](/games.md#get-games) | Return search query for games|
+| [GET /games](/games.md#get-games) | Return games |
 
 ## `GET /games`
 
-Returns games that matches the query(`q`)
+Returns games. 
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
-| q | Yes | string | Query to search for. |
+| q | No | string | Query to search for. |
+| limit | No | int | Number of games to limit. Default 100 |
 
 ### Example URL
 
