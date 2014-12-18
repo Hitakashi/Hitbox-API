@@ -39,7 +39,7 @@ https://www.hitbox.tv/api/chat/blacklist/test-account?authToken=123
 
 ```json
 {
-	"blacklist":["screenshooter.eu"]
+	"blacklist":["example.com"]
 }
 ```
 
