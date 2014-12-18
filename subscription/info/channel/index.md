@@ -13,7 +13,7 @@ Returns subscription information for given channel.
 
 https://www.hitbox.tv/api/subscription/info/channel/test-account
 
-### Example Payload 
+### Example Response 
 
 ```json
 {
