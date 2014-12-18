@@ -23,7 +23,7 @@ Returns account information about the user.
 
 https://www.hitbox.tv/api/user/test-account
 
-### Example Request
+### Example Response
 
 if authToken
 ```json
