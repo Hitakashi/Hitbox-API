@@ -7,7 +7,7 @@
 
 ## `POST /auth/media/video/:media_file`
 
-Returns if you can access a certain video based on it's `media_file` from [/media/video endpoint](media/video.md#get-mediavideouserlist)
+Returns if you can access a certain video based on it's `media_file` from [/media/video endpoint](/media/video.md#get-mediavideouserlist)
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
