@@ -9,9 +9,9 @@ If you want to contribute to the documentation use the example below and send a 
 
 Example API Documentation.
 
-# Media Info API
+# ABC API
 ***
-*Partner Channels ONLY*
+
 
 | Endpoint | Description |
 | ---- | --------------- |
