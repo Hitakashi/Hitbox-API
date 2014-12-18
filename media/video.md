@@ -4,6 +4,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /media/video/:user/list](/media/video.md#get-mediavideouserlist) | Return VOD data |
+| [GET /media/video/:media_id](/media/video.md#get-mediavideomediaid) | Return VOD data |
 
 ## `GET /media/video/:user/list`
 
@@ -41,7 +42,7 @@ https://www.hitbox.tv/api/media/video/:user/list
          "media_type_id":"2",
          "media_user_id":"27873323",
          "media_category_id":"2433650",
-         "media_file":"f7fad5547948ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06",
+         "media_file":"f7fad5547948ec921167c0cdsde7edd88c5d9f-53f8dcd26bc06",
          "media_profiles":"[{\"url\":\"\\\/test-account\\\/f7fad55432432ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06\\\/test-account\\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
          "media_host":null,
          "media_rec_session":null,
@@ -79,8 +80,8 @@ https://www.hitbox.tv/api/media/video/:user/list
          "media_featured_countries":null,
          "media_name":"f7fad55479432432432432432111de7edd88c5d9f-53f8dcd26bc06",
          "media_display_name":"test-account",
-         "media_status":"Testing Microvolts (720p, 60FPS. 1700Bitrate) - Aug 23rd #6",
-         "media_title":"Testing Microvolts (720p, 60FPS. 1700Bitrate) - Aug 23rd #6",
+         "media_status":"Testing Microvolts - Aug 23rd #6",
+         "media_title":"Testing Microvolts - Aug 23rd #6",
          "media_tags":"",
          "media_duration":"295.0000",
          "media_bg_image":null,
@@ -107,6 +108,85 @@ https://www.hitbox.tv/api/media/video/:user/list
          "channel":{
             "followers":"7",
             "user_id":"21312",
+            "user_name":"test-account",
+            "user_status":"1",
+            "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
+            "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
+            "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+            "user_partner":null,
+            "media_is_live":"0",
+            "media_live_since":"2014-12-14 05:18:54",
+            "twitter_account":"test-account",
+            "twitter_enabled":"0",
+            "livestream_count":"1"
+         }
+      }
+   ]
+}
+```
+
+## `GET /media/video/:media_id`
+
+Return VOD data for the user. It's exactly the same as above except it returns a `media_description` value.
+
+## Example URL
+
+https://www.hitbox.tv/api/media/video/123
+
+## Example Response
+```json
+{
+   "request":{
+      "this":"\/media\/video\/123"
+   },
+   "media_type":"video",
+   "video":[
+      {
+         "media_user_name":"test-account",
+         "media_id":"123",
+         "media_file":"f7fad5547948ec921167dac748cde7edd88c5d9f-53f8dcd26bc06",
+         "media_user_id":"278723",
+         "media_profiles":"[{\"url\":\"\\\/test-account\\\/f7fad5547948ec921das167c0c748cde7edd88c5d9f-53f8dcd26bc06\\\/test-account\\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
+         "media_type_id":"2",
+         "media_is_live":"1",
+         "media_live_delay":"0",
+         "media_date_added":"2014-08-23 18:36:54",
+         "media_live_since":null,
+         "media_transcoding":null,
+         "media_chat_enabled":"1",
+         "media_countries":null,
+         "user_banned":null,
+         "media_name":"f7fad5547948ec921167c0c74das7edd88c5d9f-53f8dcd26bc06",
+         "media_display_name":"Hitakashi",
+         "media_status":"Testing Microvolts - Aug 23rd #6",
+         "media_title":"Testing Microvolts - Aug 23rd #6",
+         "media_description":"",
+         "media_description_md":null,
+         "media_tags":"",
+         "media_duration":"295.0000",
+         "media_bg_image":null,
+         "media_views":"8",
+         "media_views_daily":"0",
+         "media_views_weekly":"0",
+         "media_views_monthly":"1",
+         "category_id":"24650",
+         "category_name":"MicroVolts",
+         "category_name_short":null,
+         "category_seo_key":"microvolts",
+         "category_viewers":"2",
+         "category_media_count":"1",
+         "category_channels":null,
+         "category_logo_small":null,
+         "category_logo_large":"\/static\/img\/games\/2198350-microvolts_logo.jpg",
+         "category_updated":"2014-12-13 20:40:22",
+         "team_name":"SheepiesGaming",
+         "media_start_in_sec":"0",
+         "media_duration_format":"00:04:55",
+         "media_thumbnail":"\/static\/img\/media\/videos\/f7f\/f7fad5547948e543c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
+         "media_thumbnail_large":"\/static\/img\/media\/videos\/f7f\/f7fad5547948ec9543c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
+         "channel":{
+            "followers":"7",
+            "user_id":"123",
             "user_name":"test-account",
             "user_status":"1",
             "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
