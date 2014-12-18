@@ -12,7 +12,7 @@ Returns information about the auth token.
 
 Sending a POST request with the below data returns account information.
 
-| Parameter | Required? | Type | Description |
+| POST Data | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | login | Yes | string | Username |
 | pass | Yes | string | Users Password |
