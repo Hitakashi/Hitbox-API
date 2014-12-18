@@ -9,6 +9,7 @@ This API contains endpoints that describes the provided auth token.
 | [PUT /user/:user](/user/index.md#put-useruser) | Updates account information. |
 | [GET /user/access/:channel/:auth](/user/index.md#get-useraccesschannelauth) | Get access levels for the provided auth in the channel. |
 | [GET /user/subscription/:channel/:auth](/user/index.md#get-usersubscriptionchannelauth) | Check if the given `:auth` is a subscriber to `:channel`. |
+| [GET /user/list](/user/index.md#get-userlist) | Returns user list. |
 
 ## `GET /user/:user`
 
@@ -152,4 +153,30 @@ https://www.hitbox.tv/api/user/subscription/test_channel/test_auth
 {
    "isSubscriber":false
 }
+```
+
+## `GET /user/list`
+
+Returns the user list.
+
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| q | no | string | User to seach for. | 
+| limit | no | int | Doesn't seem to work. |
+
+### Example URL
+
+https://www.hitbox.tv/api/user/list
+
+### Example Response
+
+```json
+[
+   {
+      "user_name":"test-account",
+      "user_status":"1",
+      "user_logo":"\/static\/img\/channel\/test-account_543fc6c30cbf5_large.jpg",
+      "user_logo_small":"\/static\/img\/channel\/test-account_543fc6c30cbf5_small.jpg"
+   }
+]
 ```
