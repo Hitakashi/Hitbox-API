@@ -14,6 +14,7 @@ Returns games.
 | --- | --- | --- | --- |
 | q | No | string | Query to search for. |
 | limit | No | int | Number of games to limit. Default 100 |
+| liveonly | No | boolean | Only show games with live channels |
 
 ### Example URL
 
