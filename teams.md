@@ -94,7 +94,7 @@ https://www.hitbox.tv/api/teams
 ```
 ## `GET /teams/:user`
 
-Returns all the teams a user is a member of. Passing a valid authToken replaces the authToken user's blocks with a authenticated [GET /user/:user](index.md#get-useruser) block.
+Returns all the teams a user is a member of. Passing a valid authToken replaces the authToken user's blocks with a authenticated [/user/:user](index.md#get-useruser) block.
 
 For example there's a team with "test-account" and "test-account2" and you run /teams/test-account?authToken=test-account2authToken it will replace "test-account2" user blocks with an authenticated user information.
 
