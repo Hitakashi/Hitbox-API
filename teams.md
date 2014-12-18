@@ -92,7 +92,7 @@ https://www.hitbox.tv/api/teams
    ]
 }
 ```
-## `GET /teams (Search)`
+## `GET /teams/:user`
 
 Returns all the teams a user is a member of. Passing a valid authToken replaces the authToken user's blocks with a authenticated [GET /user/:user](index.md#get-useruser) block.
 
