@@ -1,6 +1,6 @@
 # Media Info API
 ***
-*Partner Channels ONLY*
+*Partner Channels Only*
 
 | Endpoint | Description |
 | ---- | --------------- |
