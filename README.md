@@ -9,33 +9,28 @@ If you want to contribute to the documentation use the example below and send a 
 
 Example API Documentation.
 
-# Example API
+# Media Info API
 ***
-
-What is the general description of what the endpoint does. You don't have to include parameters if the endpoint doesn't have them.
+*Partner Channels ONLY*
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /example/api](/README.md#get-exampleapi) | Example Endpoint Description |
+| [GET /](/.md#get-) | Returns stream stats |
 
-## `GET /example/api`
+## `GET /`
 
-An example text about what the endpoint returns.
+Returns
 
 | Parameter | Required? | Type | Description |
-| ---- | ----- | ---- | ----- |
-| test | No | boolean | Some example text. | 
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
 
 ### Example URL
 
-https://www.hitbox.tv/api/test
+https://www.hitbox.tv/api/
 
 ### Example Response 
 
 ```json
-{
-   "test":{
-      ":test:":"test"
-   }
-}
+
 ```
