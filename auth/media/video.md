@@ -3,11 +3,11 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/media/video/:media_file](/auth/media.md#post-) | Returns access for video. |
+| [POST /auth/media/video/:media_file](/auth/media.md#post-authmediavideomedia_file) | Returns access for video. |
 
 ## `POST /auth/media/video/:media_file`
 
-Returns if you can access a certain video based on it's `media_file` from [updatethis]
+Returns if you can access a certain video based on it's `media_file` from [/media/video endpoint](media/video.md#get-mediavideouserlist)
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
