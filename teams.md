@@ -6,6 +6,7 @@ What is the general description of what the endpoint does. You don't have to inc
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /teams](/teams.md#get-teams-search) | Searches for teams. |
+| [GET /teams/:user](/teams.md#get-teamsuser) | Returns teams for provided user. |
 
 ## `GET /teams (Search)`
 
@@ -84,6 +85,97 @@ https://www.hitbox.tv/api/teams
                "twitter_account":null,
                "twitter_enabled":null,
                "group_role":"admin",
+               "group_accepted":true
+            }
+         ]
+      }
+   ]
+}
+```
+## `GET /teams (Search)`
+
+Returns all the teams a user is a member of. Passing a valid authToken replaces the authToken user's blocks with a authenticated [GET /user/:user](index.md#get-useruser) block.
+
+For example there's a team with "test-account" and "test-account2" and you run /teams/test-account?authToken=test-account2authToken it will replace "test-account2" user blocks with an authenticated user information.
+
+Passing a valid authToken removes the `user_is_broadcaster` token. It also changes `is_live` to `media_is_live`, `live_since` to `media_live_since` and adds `livestream_count`
+
+| Parameter | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | No | string | Users Auth Token. | 
+
+### Example URL
+
+https://www.hitbox.tv/api/teams/test-account
+
+### Example Response 
+
+This example is not using an authToken.
+```json
+{
+   "teams":[
+      {
+         "info":{
+            "group_id":"22222",
+            "founder_name":"test-admin",
+            "group_name":"TheBestTeam",
+            "group_display_name":"The_Best_Team",
+            "group_text":"Test Team for working with the Hitbox API.",
+            "group_logo_small":null,
+            "group_logo_large":null,
+            "group_cover":null,
+            "group_role":"member",
+            "group_accepted":true,
+            "group_default":0
+         },
+         "founder":{
+            "user_name":"Hitakashi",
+            "user_cover":"\/static\/img\/channel\/cover_53fbf0653372c78.png",
+            "user_status":"1",
+            "user_logo":"\/static\/img\/channel\/test-admin_53f4e837eb388_large.png",
+            "user_logo_small":"\/static\/img\/channel\/test-admin_53f4e837eb388_small.png",
+            "user_is_broadcaster":true,
+            "followers":"7",
+            "user_partner":null,
+            "user_id":"342",
+            "is_live":"0",
+            "live_since":"2014-12-14 05:18:54",
+            "twitter_account":"test-admin",
+            "twitter_enabled":"0"
+         },
+         "members":[
+            {
+               "user_name":"Hitakashi",
+               "user_cover":"\/static\/img\/channel\/cover_53fbf0653372c78.png",
+               "user_status":"1",
+               "user_logo":"\/static\/img\/channel\/test-admin_53f4e837eb388_large.png",
+               "user_logo_small":"\/static\/img\/channel\/test-admin_53f4e837eb388_small.png",
+               "user_is_broadcaster":true,
+               "followers":"7",
+               "user_partner":null,
+               "user_id":"342",
+               "is_live":"0",
+               "live_since":"2014-12-14 05:18:54",
+               "twitter_account":"test-admin",
+               "twitter_enabled":"0",
+               "group_role":"admin",
+               "group_accepted":true
+            },
+            {
+               "user_name":"test-member",
+               "user_cover":"\/static\/img\/channel\/cover_53aa863200ade74.png",
+               "user_status":"1",
+               "user_logo":"\/static\/img\/channel\/test-member_549125715fb44_large.png",
+               "user_logo_small":"\/static\/img\/channel\/test-member_549125715fb44_small.png",
+               "user_is_broadcaster":true,
+               "followers":"0",
+               "user_partner":null,
+               "user_id":"232",
+               "is_live":"0",
+               "live_since":null,
+               "twitter_account":"test-twitter2",
+               "twitter_enabled":"0",
+               "group_role":"member",
                "group_accepted":true
             }
          ]
