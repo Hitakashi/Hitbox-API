@@ -26,7 +26,7 @@ https://www.hitbox.tv/api/auth/media/live/test-account?authToken=123
 
 ### Example Response 
 
-This doesn't seem fully implemented, They are probably going to add subscriber only VODs or Streams.
+This doesn't seem fully implemented, They are probably going to add subscriber only VODs or Streams. Could also be used for password protected streams.
 
 ```json
 access_granted
