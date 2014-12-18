@@ -15,6 +15,13 @@ Returns stream information. You can only get this information if the user has se
 | ---- | ----- | ---- | ----- |
 | authToken | No | string | Users Auth Token. Used if wanting private user information. | 
 | nocache | No | boolean | No clue. Server side switch probably. |
+| filter | No | string | ? |
+| hiddenOnly | No | string | ? |
+| limit | No | int | ? |
+| liveonly | No | boolean | ? |
+| publicOnly | No | boolean | ? |
+| showHidden | Sorta | boolean | This will return channel information even if the stream is offline. I would always set to true |
+| yt | No | boolean | ? |
 
 ### Example URL
 
@@ -198,4 +205,10 @@ else
       }
    ]
 }
+```
+
+If showHidden=false and stream is offline 
+
+```json
+no_media_found
 ```
