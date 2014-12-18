@@ -60,3 +60,8 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
    }
 }
 ```
+
+If not in partnership with subscription 
+```json
+subscription_not_found
+```
