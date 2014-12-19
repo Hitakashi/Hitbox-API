@@ -6,6 +6,7 @@ What is the general description of what the endpoint does. You don't have to inc
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /team/:teamname](/team.md#get-teamteamname) | Get information about teams. |
+| [POST /team](team.md#post-team) | Creates a team |
 
 ## `GET /team/:teamname`
 
