@@ -111,7 +111,7 @@ https://www.hitbox.tv/api/team
 
 ### Example Response
 
-This API actually returns error information!
+This API actually returns information!
 
 If group is successfully created
 ```json
