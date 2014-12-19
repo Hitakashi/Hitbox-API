@@ -86,3 +86,54 @@ https://www.hitbox.tv/api/team/:teamname
    ]
 }
 ```
+
+## `POST /team`
+
+Create a team.
+
+## Example URL
+
+https://www.hitbox.tv/api/team
+
+### Example POST Payload
+
+`group_display_name` must match `group_name` except in casing.
+
+```json
+{
+   "authToken":"1233123123123123",
+   "group_user_name":"test-account",
+   "group_name":"TestTeam",
+   "group_text":"This is a test team.",
+   "group_display_name":"TesTeAm"
+}
+```
+
+### Example Response
+
+This API actually returns error information!
+
+If group is successfully created
+```json
+team_created
+```
+
+If group name is taken
+```json
+group_taken
+```
+
+If `group_display_name` is different than `group_name`
+```json
+invalid_display_name
+```
+
+If `group_text` is too short or invalid
+```json
+text_required
+```
+
+If `authToken` is invalid
+```json
+permission_denied
+```
