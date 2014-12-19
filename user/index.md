@@ -10,6 +10,7 @@ This API contains endpoints that describes the provided auth token.
 | [GET /user/access/:channel/:auth](/user/index.md#get-useraccesschannelauth) | Get access levels for the provided auth in the channel. |
 | [GET /user/subscription/:channel/:auth](/user/index.md#get-usersubscriptionchannelauth) | Check if the given `:auth` is a subscriber to `:channel`. |
 | [GET /user/list](/user/index.md#get-userlist) | Returns user list. |
+| [POST /user/:user/team/default](/user/index.md#post-useruserteamdefault) | Changes default team. |
 
 ## `GET /user/:user`
 
@@ -180,4 +181,31 @@ https://www.hitbox.tv/api/user/list
    },
    ...
 ]
+```
+
+## `POST /user/:user/team/default`
+
+Changes default team that shows on your channel.
+
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | Yes | string | User's Auth Token | 
+
+## Example URL
+
+https://www.hitbox.tv/api/user/test-account/team/default
+
+### Example POST Payload
+
+```json
+{
+   "group_id":"123"
+}
+```
+
+### Example Response
+
+Again, Even if it fails to change the default group (Ex: Not even in the group):
+```json
+success
 ```
