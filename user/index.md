@@ -67,6 +67,26 @@ else
 }
 ```
 
+Channel without stream setup
+
+```json
+{
+   "user_name":"Test-Account",
+   "user_cover":null,
+   "user_status":"1",
+   "user_logo":"\/static\/img\/channel\/masta_52274f9e8159b_large.jpg",
+   "user_logo_small":"\/static\/img\/channel\/masta_52274f9e8159b_small.jpg",
+   "user_is_broadcaster":false,
+   "followers":"0",
+   "user_partner":null,
+   "user_id":"1111111",
+   "is_live":null,
+   "live_since":null,
+   "twitter_account":null,
+   "twitter_enabled":null
+}
+```
+
 ## `PUT /user/:user`
 
 Updates the current user.
