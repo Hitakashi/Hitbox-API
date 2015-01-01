@@ -4,6 +4,7 @@ Hitbox-API
 This is an unofficial documentation of hitbox.tv API. 
 
 Chat Documentation: http://hitakashi.github.io/Hitbox-Chat-Methods/
+
 Chat Documentation Repo: https://github.com/Hitakashi/Hitbox-Chat-Methods
 
 
