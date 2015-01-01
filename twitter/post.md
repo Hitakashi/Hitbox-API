@@ -9,10 +9,6 @@
 
 Sending a POST request with the data below will send a tweet to twitter.
 
-| POST Data | Required? | Type | Description |
-| ---- | ----- | ---- | ----- |
-| message | Yes | string | Tweet Text |
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
@@ -21,6 +17,14 @@ Sending a POST request with the data below will send a tweet to twitter.
 ### Example URL
 
 https://www.hitbox.tv/api/twitter/post?authToken=123&user_name=test-account
+
+### Example POST Payload
+
+```json
+{
+  "message":"Hello Twitter!"
+}
+```
 
 ### Example Response 
 
