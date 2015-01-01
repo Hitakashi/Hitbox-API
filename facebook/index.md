@@ -50,6 +50,10 @@ Modify which page(s) are used for posting to. Yes, You only need to post `id` an
 | authToken | Yes | string | User's Auth Token |
 | user_name | Yes | string | User's username |
 
+### Example URL
+
+https://www.hitbox.tv/api/facebook/pages
+
 ### Example POST Payload
 
 ```json
@@ -81,11 +85,19 @@ success
 
 Sends a message to the `selected` facebook pages from [/facebook/pages](/facebook/index.md#post-facebookpages)
 
-| POST Data | Required? | Type | Description |
-| --- | --- | --- | --- |
-| authToken | Yes | string | User's Auth Token |
-| user_name | Yes | string | User's username |
-| message | Yes | string | Messsage |
+### Example URL
+
+https://www.hitbox.tv/api/facebook/post
+
+### Example POST Payload
+
+```json
+{
+   "authToken":"12312312312312",
+   "user_name":"test-account",
+   "message":"Hello Facebook!"
+}
+```
 
 ### Example Response
 
