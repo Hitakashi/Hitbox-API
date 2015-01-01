@@ -147,6 +147,21 @@ As a general guideline for below passwords in POST if it's password change or em
 
 https://www.hitbox.tv/api/user/test-account
 
+### Example POST Payload
+
+```json
+{
+   "user_name":"test-account",
+   "user_email":"test@example.com",
+   "user_password":"myoldpassword",
+   "user_password_new":"changingmypassword",
+   "user_password2_new":"changingmypassword",
+   "user_display_name":"test-Account",
+   "twitter_account":"@test_account",
+   "twitter_enabled":true-
+}
+```
+
 ### Example Response
 
 if authToken
