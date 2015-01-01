@@ -7,17 +7,19 @@
 
 ## `POST /combreak/:channel/:count`
 
-This API totally ignores `channel` and `count` POST data and instead uses the data from the URL for `channel` and `count`
-
-| POST Data | Required? | Type | Description |
-| --- | --- | --- | --- |
-| authToken | Yes | string | User's Auth Token |
-| channel | No | string | Channel Name |
-| count | No | string | Number of ads |
+Runs a commercial on the specified `:channel` with the amount of ads as `:count`
 
 ### Example URL
 
 https://www.hitbox.tv/api/ws/combreak/test-account/1
+
+### Example POST Data
+
+```json
+{
+   "authToken":"12312321312312"
+}
+```
 
 ### Example Response 
 
