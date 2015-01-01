@@ -128,17 +128,6 @@ Updates the current user.
 
 As a general guideline for below passwords in POST if it's password change or email
 
-| POST Data | Required? | Type | Description |
-| --- | --- | --- | --- |
-| user_name | Yes | string | Username |
-| user_email | Yes | string | Email |
-| user_password | No | string | Old Password |
-| user_password_new | No | string | New Password |
-| user_password2_new | No | string | Validate New Password |
-| user_display_name | Yes | string | Must match user_name except in cases. |
-| twitter_account | No | string | Twitter Account Handle |
-| twitter_enabled | No | boolean | Twitter Enabled on Profile |
-
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users Auth Token. | 
@@ -158,7 +147,7 @@ https://www.hitbox.tv/api/user/test-account
    "user_password2_new":"changingmypassword",
    "user_display_name":"test-Account",
    "twitter_account":"@test_account",
-   "twitter_enabled":true-
+   "twitter_enabled":true
 }
 ```
 
