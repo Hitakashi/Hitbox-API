@@ -6,7 +6,7 @@ This API contains endpoints that describes the provided auth token.
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Get user account information. |
-| [POST /media/live/:channel](/media/live.md#post-medialivechannel | Create stream on new account |
+| [POST /media/live/:channel](/media/live.md#post-medialivechannel) | Create stream on new account |
 
 ## `GET /media/live/:channel`
 
