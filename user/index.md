@@ -5,12 +5,47 @@ This API contains endpoints that describes the provided auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
+| [POST /user](/user/index.md#post-user) | Creates user account |
 | [GET /user/:user](/user/index.md#get-useruser) | Get user account information. |
 | [PUT /user/:user](/user/index.md#put-useruser) | Updates account information. |
 | [GET /user/access/:channel/:auth](/user/index.md#get-useraccesschannelauth) | Get access levels for the provided auth in the channel. |
 | [GET /user/subscription/:channel/:auth](/user/index.md#get-usersubscriptionchannelauth) | Check if the given `:auth` is a subscriber to `:channel`. |
 | [GET /user/list](/user/index.md#get-userlist) | Returns user list. |
 | [POST /user/:user/team/default](/user/index.md#post-useruserteamdefault) | Changes default team. |
+
+## `POST /user`
+
+This API does require a challenge and captcha from reCaptcha, So it might be impossible to externally create accounts.
+
+| Paramater | Required? | Type | Description |
+| --- | --- | --- | --- |
+| user_name | Yes | string | User name to register |
+
+
+### Example URL
+
+https://www.hitbox.tv/api/user?user_name=test-account
+
+### Example Post Payload
+
+```json
+{
+   "user_email":"user@example.com",
+   "user_password":"password",
+   "user_password2":"password",
+   "user_name":"test-account",
+   "captcha":{
+      "response":"",
+      "challenge":""
+   }
+}
+```
+
+### Example Response
+
+```json
+user_created
+```
 
 ## `GET /user/:user`
 
