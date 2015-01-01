@@ -12,15 +12,19 @@ Returns information about the auth token.
 
 Sending a POST request with the below data returns account information.
 
-| POST Data | Required? | Type | Description |
-| ---- | ----- | ---- | ----- |
-| login | Yes | string | Username |
-| pass | Yes | string | Users Password |
-| rememberme | no | unknown | Unknown |
-
 ### Example URL
 
 https://www.hitbox.tv/api/auth/login
+
+### Example POST Payload
+
+```json
+{
+   "login":"test-account",
+   "pass":"thisismypassword".
+   "rememberme":""
+}
+```
 
 ### Example Response 
 
