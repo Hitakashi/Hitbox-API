@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/auth/login
 ```json
 {
    "login":"test-account",
-   "pass":"thisismypassword".
+   "pass":"thisismypassword",
    "rememberme":""
 }
 ```
