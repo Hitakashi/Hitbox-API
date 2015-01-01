@@ -30,6 +30,7 @@ https://www.hitbox.tv/api/auth/media/live/test-account?authToken=123
 ```json
 {
   "authToken":"13231323142412321",
+  "mediaPassword":"123",
   "media_name":"test-account",
   "media_type":"live"
 }
