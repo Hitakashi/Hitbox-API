@@ -12,7 +12,9 @@ Chat Documentation Repo: https://github.com/Hitakashi/Hitbox-Chat-Methods
 
 I have created two accounts on hitbox called `hitakashi-stream-int` and `hitakashi-test-unint` that are setup with a stream and without a stream respectively to test unauthenticated API endpoints on.
 
+Please [b]always[/b] use HTTPS on the API, or at the very least any API requiring auth tokens.
 
+Do not post user passwords through your server. Instead POST it inside the browser via javascript. I recommend saving the auth token inside a cookie or local storage, but it [looks like](https://www.reddit.com/r/hitbox/comments/2flgvy/tnotifier_beta_has_begun/ckai8z6) you can pass the token to your server.
 
 ## Contribute
 
