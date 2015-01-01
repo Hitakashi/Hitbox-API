@@ -5,7 +5,8 @@ This API contains endpoints that describes the provided auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/live/:channel](/media/live.md#get-useruser) | Get user account information. |
+| [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Get user account information. |
+| [POST /media/live/:channel](/media/live.md#post-medialivechannel | Create stream on new account |
 
 ## `GET /media/live/:channel`
 
@@ -211,4 +212,33 @@ If showHidden=false and stream is offline
 
 ```json
 no_media_found
+```
+
+## `POST /media/live/:channel`
+
+| Paramater | Required? | Type | Description |
+| authToken | Yes | string | User's auth token |
+
+### Example URL
+
+https://www.hitbox.tv/media/live/test-account?authToken=123
+
+### Example POST Payload
+
+```json
+{
+   "user_name":"test-account",
+   "authToken":"132123",
+   "media_type":"live",
+   "media_description":"",
+   "media_status":"My first hitbox Livestream",
+   "media_name":"Hitakashi-Stream-Int",
+   "media_category_id":""
+}
+```
+
+### Example Response
+
+```json
+media_created
 ```
