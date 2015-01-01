@@ -62,13 +62,17 @@ auth_failed
 
 ## `POST /auth/login (Info)`
 
-| Parameter | Required? | Type | Description |
-| ---- | ----- | ---- | ----- |
-| authToken | Yes | string | User's Auth Token |
-
 ### Example URL
 
 https://www.hitbox.tv/api/auth/login
+
+### Example POST Payload
+
+```json
+{
+  "authToken":"123412312312312321321"
+}
+```
 
 ### Example Response 
 
