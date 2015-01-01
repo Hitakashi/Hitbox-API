@@ -9,7 +9,7 @@ Chat Documentation Repo: https://github.com/Hitakashi/Hitbox-Chat-Methods
 
 ### Hitbox Information
 
-I have created two accounts on hitbox called `hitakashi-test-int` and `hitakashi-test-unint` that are setup with a stream and without a stream respectively to test unauthenticated API endpoints on.
+I have created two accounts on hitbox called `hitakashi-stream-int` and `hitakashi-test-unint` that are setup with a stream and without a stream respectively to test unauthenticated API endpoints on.
 
 
 
