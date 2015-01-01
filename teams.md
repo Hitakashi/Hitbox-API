@@ -129,7 +129,7 @@ This example is not using an authToken.
             "group_default":0
          },
          "founder":{
-            "user_name":"Hitakashi",
+            "user_name":"test-admin",
             "user_cover":"\/static\/img\/channel\/cover_53fbf0653372c78.png",
             "user_status":"1",
             "user_logo":"\/static\/img\/channel\/test-admin_53f4e837eb388_large.png",
@@ -145,7 +145,7 @@ This example is not using an authToken.
          },
          "members":[
             {
-               "user_name":"Hitakashi",
+               "user_name":"test-admin",
                "user_cover":"\/static\/img\/channel\/cover_53fbf0653372c78.png",
                "user_status":"1",
                "user_logo":"\/static\/img\/channel\/test-admin_53f4e837eb388_large.png",
