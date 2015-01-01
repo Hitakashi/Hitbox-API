@@ -13,7 +13,7 @@ Runs a commercial on the specified `:channel` with the amount of ads as `:count`
 
 https://www.hitbox.tv/api/ws/combreak/test-account/1
 
-### Example POST Data
+### Example POST Payload
 
 ```json
 {
