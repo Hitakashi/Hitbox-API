@@ -16,6 +16,7 @@ Returns if you can access a live stream or video.
 | POST Data | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth  Token |
+| mediaPassword | If password protected | string | Password set on the media |
 | media_name | Yes | string | Usually media_name or media_file from the /media/(live)|(video) endpoint |
 | media_type | Yes | string | Type of media. Live or Video |
 
