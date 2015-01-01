@@ -233,7 +233,7 @@ https://www.hitbox.tv/media/live/test-account?authToken=123
    "media_type":"live",
    "media_description":"",
    "media_status":"My first hitbox Livestream",
-   "media_name":"Hitakashi-Stream-Int",
+   "media_name":"test-account",
    "media_category_id":""
 }
 ```
