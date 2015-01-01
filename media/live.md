@@ -217,6 +217,7 @@ no_media_found
 ## `POST /media/live/:channel`
 
 | Paramater | Required? | Type | Description |
+| --- | --- | --- | --- |
 | authToken | Yes | string | User's auth token |
 
 ### Example URL
