@@ -5,7 +5,8 @@ This API contains endpoints that describes the provided auth token.
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Get user account information. |
+| [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Returns live stream information. |
+| [PUT /media/live/:channel](/media/live.md#get-medialivechannel) | Updates live stream information. |
 | [POST /media/live/:channel](/media/live.md#post-medialivechannel) | Create stream on new account |
 
 ## `GET /media/live/:channel`
@@ -212,6 +213,66 @@ If showHidden=false and stream is offline
 
 ```json
 no_media_found
+```
+
+## `PUT /media/live/:channel`
+
+Allows you to update multiple values of the stream, including descriptions. 
+
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | No | string | Users Auth Token. | 
+
+### Example URL
+
+https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
+
+### Example PUT Payload
+
+```json
+{
+   "livestream":[
+      {
+         "media_user_name":"test-account",
+         "media_id":"15830",
+         "media_category_id":"455",
+         "media_live_delay":"0",
+         "media_hidden":true,
+         "media_recording":"1",
+         "media_countries":[
+            "US"
+         ],
+         "media_password":false,
+         "media_status":"This is a title.9",
+         "media_description":"222"
+      }
+   ]
+}
+```
+
+### Example Response
+
+
+```json
+{
+   "livestream":[
+      {
+         "media_user_name":"test-account",
+         "media_id":"15830",
+         "media_category_id":"455",
+         "media_live_delay":"0",
+         "media_hidden":true,
+         "media_recording":"1",
+         "media_countries":[
+            "US"
+         ],
+         "media_password":false,
+         "media_status":"This is a title.9",
+         "media_description":"222",
+         "media_description_md":"<p>222<\/p>\n"
+      }
+   ]
+}
 ```
 
 ## `POST /media/live/:channel`
