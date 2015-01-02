@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /followers/user/:channel](/.md#get-followersuserchannel) | Returns stream stats |
+| [GET /followers/user/:channel](/followers.md#get-followersuserchannel) | Returns stream stats |
 
 ## `GET /followers/user/:channel`
 
