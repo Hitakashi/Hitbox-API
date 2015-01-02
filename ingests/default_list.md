@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /ingests/default_list](/ingests/default_list.md#get-ingestsdefaultlist) | Returns the list of streaming ingests |
+| [GET /ingests/default_list](/ingests/default_list.md#get-ingestsdefault_list) | Returns the list of streaming ingests |
 
 ## `GET /ingests/default_list`
 
