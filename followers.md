@@ -6,7 +6,7 @@
 | ---- | --------------- |
 | [GET /followers/user/:channel](/.md#get-followersuserchannel) | Returns stream stats |
 
-## `GET /followersuserchannel`
+## `GET /followers/user/:channel`
 
 Returns
 
