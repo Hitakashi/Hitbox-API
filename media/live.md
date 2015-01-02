@@ -242,7 +242,6 @@ https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
          "media_countries":[
             "US"
          ],
-         "media_password":false,
          "media_status":"This is a title.9",
          "media_description":"222"
       }
