@@ -11,6 +11,10 @@
 
 Follows a user via their user id
 
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+
 ### Example URL
 
 https://www.hitbox.tv/api/follow?authToken=123213213213
