@@ -4,11 +4,13 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/config/live/:channel](/player/config/live/index.md#get-) | Returns stream stats |
+| [GET /player/config/:media_type/:user_id](/player/config/live/index.md#get-) | Returns stream stats |
 
-## `GET /player/config/live/:channel`
+## `GET /player/config/:media_type/:user_id`
 
 Returns video player information, could be useful to some people.
+
+`user_id` can be replaced with `channel` if `media_type` is live.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
@@ -23,6 +25,8 @@ Returns video player information, could be useful to some people.
 https://www.hitbox.tv/api/player/config/live/test-account
 
 ### Example Response 
+
+Live:
 
 ```json
 {
@@ -233,5 +237,131 @@ https://www.hitbox.tv/api/player/config/live/test-account
 
       ]
    }
+}
+```
+
+Video:
+
+```json
+{
+   "key":"#$54d46ea442f0438979",
+   "play":null,
+   "clip":{
+      "autoPlay":true,
+      "autoBuffering":true,
+      "bufferLength":"2",
+      "eventCategory":"test-account\/video\/22222",
+      "baseUrl":null,
+      "url":"http:\/\/edge.hls.vods.hitbox.tv\/static\/videos\/vods\/test-account\/5a1c498ed443437e74b416a97c8b80f35fdfd29-53d30943438a20\/test-account\/index.m3u8",
+      "stopLiveOnPause":true,
+      "live":false,
+      "smoothing":true,
+      "provider":"pseudo",
+      "scaling":"fit",
+      "bitrates":[
+         {
+            "url":"\/test-account\/5a1c498ed458b0b7e74b416a97c8b323235fdfd29-53d309a4d8a20\/test-account\/index.m3u8",
+            "bitrate":0,
+            "label":"HD 720p",
+            "provider":"rtmpHitbox",
+            "isDefault":true
+         }
+      ],
+      "controls":false,
+      "type":"video",
+      "adsPlayed":false
+   },
+   "plugins":{
+      "pseudo":{
+         "url":"flashlsFlowPlayer.swf",
+         "hls_debug":false,
+         "hls_debug2":false,
+         "hls_lowbufferlength":5,
+         "hls_minbufferlength":10,
+         "hls_maxbufferlength":60,
+         "hls_startfromlowestlevel":false,
+         "hls_seekfromlowestlevel":false,
+         "hls_live_flushurlcache":false,
+         "hls_seekmode":"SEGMENT"
+      },
+      "controls":null,
+      "info":{
+         "display":"none",
+         "url":"flowplayer.content-3.2.8.swf",
+         "html":"<p align=\"center\"><\/p>",
+         "width":"50%",
+         "height":30,
+         "backgroundColor":"#1A1A1A",
+         "backgroundGradient":"none",
+         "opacity":"1",
+         "borderRadius":10,
+         "borderColor":"#999999",
+         "border":0,
+         "color":"#FFFFFF",
+         "bottom":60,
+         "zIndex":"10",
+         "closeButton":true,
+         "style":{
+            "p":{
+               "fontSize":16,
+               "fontFamily":"verdana,arial,helvetica",
+               "fontWeight":"normal"
+            }
+         }
+      },
+      "gatracker":{
+         "url":"flowplayer.analytics-3.2.9.1.swf",
+         "event":{
+            "all":true
+         },
+         "debug":false,
+         "accountId":"UA-42900118-2"
+      },
+      "ova":{
+         "url":"flowplayer.liverail-3.2.7.4.swf",
+         "LR_PUBLISHER_ID":20341,
+         "LR_SCHEMA":"vast2-vpaid",
+         "LR_ADUNIT":"in",
+         "LR_VIDEO_POSITION":0,
+         "LR_AUTOPLAY":1,
+         "LR_CONTENT":6,
+         "LR_TITLE":"5a1c498ed458b0b7e74b4312321312312fdfd29-53d309a4d8a20",
+         "LR_VIDEO_ID":"180572",
+         "LR_MUTED":0,
+         "CACHEBUSTER":1420168000,
+         "TIMESTAMP":1420168000,
+         "LR_LAYOUT_SKIN_MESSAGE":"Advertisement: Stream will resume in {COUNTDOWN} seconds.",
+         "LR_LIVESTREAM":1,
+         "LR_LAYOUT_SKIN_ID":2,
+         "LR_LAYOUT_LINEAR_PAUSEONCLICKTHRU":0,
+         "LR_BITRATE":"high",
+         "LR_VIDEO_URL":"http:\/\/www.hitbox.tv\/video\/11111",
+         "LR_DESCRIPTION":"5a1c498ed4312321321312416a97c8b80f35fdfd29-53d309a4d8a20",
+         "LR_IP":"X.X.X.X"
+      }
+   },
+   "canvas":{
+      "backgroundGradient":"none"
+   },
+   "log":{
+      "level":"debug",
+      "filter":"org.osmf*"
+   },
+   "showErrors":false,
+   "settings":{
+      "media_id":"-1",
+      "max_buffer_count":"6",
+      "buffer_length":"2",
+      "max_roundtrips":"3",
+      "reset_timeout":"60000",
+      "play_timeout":"15000",
+      "start_timeout":"10000",
+      "ad_plugin":"liverail-off",
+      "default_br":null,
+      "enabled":"1"
+   },
+   "playlist":[
+
+   ]
 }
 ```
