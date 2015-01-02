@@ -221,7 +221,7 @@ Allows you to update multiple values of the stream, including descriptions.
 
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
-| authToken | No | string | Users Auth Token. | 
+| authToken | Yes | string | Users Auth Token. | 
 
 ### Example URL
 
