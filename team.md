@@ -1,8 +1,6 @@
 # Team API
 ***
 
-What is the general description of what the endpoint does. You don't have to include parameters if the endpoint doesn't have them.
-
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /team/:teamname](/team.md#get-teamteamname) | Get information about teams. |
