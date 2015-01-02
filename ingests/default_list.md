@@ -25,6 +25,6 @@ I've only listed two since it's a big list.
    {
       "ingest_location":"EU-West (Frankfurt)",
       "ingest_url":"rtmp://live.fra.hitbox.tv/push"
-   },
+   }
 ]
 ```
