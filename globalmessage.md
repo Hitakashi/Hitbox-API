@@ -19,9 +19,9 @@ https://www.hitbox.tv/api/globalmessage
 
 If global message
 
+Soon, I need to wait until another global message :)
 ```json
-coming_soon_kappa,
-i_need_to_wait_until_they_do_another_global_message
+
 ```
 
 else
