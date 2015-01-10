@@ -173,9 +173,9 @@ https://www.hitbox.tv/api/user/access/test_channel/test_auth
 
 `access_user_id` = Channel User ID
 
-Chat Moderators: `chat` is set as `user`
-
 Editors: `livestream` and `chat` are set as `admin`
+
+Chat Moderators: `chat` is set as `user`
 
 ```json
 {
