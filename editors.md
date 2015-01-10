@@ -74,9 +74,9 @@ All variables required. Toggle the `remove` boolean as needed.
 
 ```json
 {
-   "user_name":"Hitakashi",
-   "authToken":"b2733e8c4f13184465ea4b268f8667f996e3b447",
-   "editor":"hitabot",
+   "user_name":"test-account",
+   "authToken":"1111111",
+   "editor":"test-user",
    "remove":false
 }
 ```
