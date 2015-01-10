@@ -5,7 +5,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /editors/:channel](/editors.md#get-editorschannel) |  Returns list of editors |
-| [GET /editor/:user](/editors.md#get-editoruser) | Returns list of channels you are a editor of |
+| [GET /editor/:user](/editors.md#get-editoruser) | Returns list of channels a user is a editor in.|
 | [POST /editors/:channel](/editors.md#post-editorschannel) | Adds or Removes editors. |
 
 ## `GET /editors/:channel`
@@ -38,7 +38,7 @@ https://www.hitbox.tv/api/editors/test-account
 
 ## `GET /editor/:user`
 
-Returns list of editors for a channel.
+Returns list of channels a user is an editor in.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
