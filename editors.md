@@ -4,8 +4,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /editors/:channel](/editors.md#get-editorschannel) |  |
-| [POST /editors/:channel](/editors.md#get-editorschannel | |
+| [GET /editors/:channel](/editors.md#get-editorschannel) |  Returns list of editors |
+| [POST /editors/:channel](/editors.md#post-editorschannel) | Adds or Removes editors. |
 
 ## `GET /editors/:channel`
 
