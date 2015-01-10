@@ -5,9 +5,38 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /editors/:channel](/editors.md#get-editorschannel) |  Returns list of editors |
+| [GET /editor/:user](/editors.md#get-editoruser) | Returns list of channels you are a editor of |
 | [POST /editors/:channel](/editors.md#post-editorschannel) | Adds or Removes editors. |
 
 ## `GET /editors/:channel`
+
+Returns list of editors for a channel.
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+
+### Example URL
+
+https://www.hitbox.tv/api/editors/test-account
+
+### Example Response 
+
+```json
+{
+   "list":[
+      {
+         "user_name":"Another-Test",
+         "user_logo":"\/static\/img\/channel\/another-test_52274f9e8159b_large.jpg",
+         "user_logo_small":"\/static\/img\/channel\/another-test
+         _52274f9e8159b_small.jpg"
+      }
+      ...
+   ]
+}
+```
+
+## `GET /editor/:user`
 
 Returns list of editors for a channel.
 
