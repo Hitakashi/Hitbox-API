@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /subscription/info/channel/:channel](/channel/subscription/info/channel/index.md#get-subscriptioninfochannelchannel) | Returns subscription information. |
+| [GET /subscription/info/channel/:channel](/channel/subscriptioninfo.md#get-subscriptioninfochannelchannel) | Returns subscription information. |
 
 ## `GET /subscription/info/channel/:channel`
 
