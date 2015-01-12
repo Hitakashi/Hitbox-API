@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /facebook/pages](/facebook/index.md#get-facebookpages) | Return facebook pages associated with the linked facebook account |
-| [POST /facebook/pages](/facebook/index.md#post-facebookpages) | Modify `selected` value on facebook pages |
-| [POST /facebook/post](/facebook/index.md#post-facebookpost) | Send message to `selected` facebook pages |
+| [GET /facebook/pages](/user/facebook/index.md#get-facebookpages) | Return facebook pages associated with the linked facebook account |
+| [POST /facebook/pages](/user/facebook/index.md#post-facebookpages) | Modify `selected` value on facebook pages |
+| [POST /facebook/post](/user/facebook/index.md#post-facebookpost) | Send message to `selected` facebook pages |
 
 ## `GET /facebook/pages`
 
