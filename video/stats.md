@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /stats/media/:media_id](/video/stats.md#post-statsmediamediaid) | Log video view stats. |
+| [POST /stats/media/:media_id](/video/stats.md#post-statsmediamedia_id) | Log video view stats. |
 
 ## `POST /stats/media/:media_id`
 
