@@ -1,8 +1,6 @@
 # Live API
 ***
 
-This API contains endpoints that describes the provided auth token.
-
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Returns live stream information. |
