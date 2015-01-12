@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /game/:gameID](/game.md#get-gamegameid) | Returns game information |
+| [GET /game/:gameID](/game/game.md#get-gamegameid) | Returns game information |
 
 ## `GET /game/:gameID`
 
