@@ -3,11 +3,11 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /recordings/:user](/recordings.md#get-recordingsuser) | Return recordings for the user. |
+| [GET /recordings/:channel](/channel/recordings.md#get-recordingschannel) | Return recordings for the channel. |
 
-## `GET /recordings/:user`
+## `GET /recordings/:channel`
 
-Returns recordings for the user.
+Returns recordings for the channel.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
