@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /streamoverallstats/:user/:startTime/:endTime](/steamoverallstats.md#get-streamoverallstatsuserstarttimeendtime) | Returns overall stream stats |
+| [GET /streamoverallstats/:user/:startTime/:endTime](/channel/steamoverallstats.md#get-streamoverallstatsuserstarttimeendtime) | Returns overall stream stats |
 
 ## `GET /streamoverallstats/:user/:startTime/:endTime`
 
