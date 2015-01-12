@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /following/user](/following.md#get-followinguser) | Returns a list of channels a user is following. |
+| [GET /following/user](/user/following.md#get-followinguser) | Returns a list of channels a user is following. |
 
 ## `GET /following/user`
 
@@ -43,10 +43,10 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
       },
       {
          "followers":"7",
-         "user_name":"RandomDude",
+         "user_name":"RandomChannel",
          "user_id":"124",
-         "user_logo":"\/static\/img\/channel\/RandomDude_53f4e837eb388_large.png",
-         "user_logo_small":"\/static\/img\/channel\/RandomDude_53f4e837eb388_small.png",
+         "user_logo":"\/static\/img\/channel\/RandomChannel_53f4e837eb388_large.png",
+         "user_logo_small":"\/static\/img\/channel\/RandomChannel_53f4e837eb388_small.png",
          "follow_id":"124",
          "follower_user_id":"278723",
          "follower_notify":"1",
