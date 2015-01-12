@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/status/:channel](/video/media/status/index.md#get-mediastatuschannel) | Returns simple information about the stream. |
+| [GET /media/status/:channel](/video/status.md#get-mediastatuschannel) | Returns simple information about the stream. |
 
 ## `GET /media/status/:channel`
 
