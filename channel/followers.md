@@ -4,11 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-<<<<<<< HEAD:followers.md
-| [GET /followers/user/:channel](/followers.md#get-followersuserchannel) | Returns users that follow a channel. |
-=======
 | [GET /followers/user/:channel](/channel/followers.md#get-followersuserchannel) | Returns users that follow a channel. |
->>>>>>> origin/org:channel/followers.md
 
 ## `GET /followers/user/:channel`
 
