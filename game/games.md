@@ -3,8 +3,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /games](/games.md#get-games) | Return games |
-| [GET /games/top](/games.md#get-gamestop) | Return top games by viewers |
+| [GET /games](/game/games.md#get-games) | Return games |
+| [GET /games/top](/game/games.md#get-gamestop) | Return top games by viewers |
 
 ## `GET /games`
 
