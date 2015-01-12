@@ -1,4 +1,4 @@
-# Stream Stats API
+# Notification API
 ***
 
 | Endpoint | Description |
