@@ -3,8 +3,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /team/:teamname](/team.md#get-teamteamname) | Get information about teams. |
-| [POST /team](team.md#post-team) | Creates a team |
+| [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
+| [POST /team](/team/team.md#post-team) | Creates a team |
 
 ## `GET /team/:teamname`
 
