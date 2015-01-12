@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/live/:channel](/video/live.md#get-medialivechannel) | Returns live stream information. |
-| [PUT /media/live/:channel](/video/live.md#put-medialivechannel) | Updates live stream information. |
-| [POST /media/live/:channel](/video/live.md#post-medialivechannel) | Create stream on new account |
+| [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Returns live stream information. |
+| [PUT /media/live/:channel](/media/live.md#put-medialivechannel) | Updates live stream information. |
+| [POST /media/live/:channel](/media/live.md#post-medialivechannel) | Create stream on new account |
 
 ## `GET /media/live/:channel`
 
