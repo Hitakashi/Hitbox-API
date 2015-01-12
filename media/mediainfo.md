@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /mediainfo/live/:media_id](/video/mediainfo.md#get-mediainfolivemedia_id) | Return video stats. |
+| [GET /mediainfo/live/:media_id](/media/mediainfo.md#get-mediainfolivemedia_id) | Return video stats. |
 
 ## `GET /mediainfo/live/:media_id`
 
