@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /streamstats/:user/:startTime/:endTime](/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats |
+| [GET /streamstats/:user/:startTime/:endTime](/channel/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats |
 
 ## `GET /streamstats/:user/:startTime/:endTime`
 
