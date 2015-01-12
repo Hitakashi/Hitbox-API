@@ -1,8 +1,4 @@
-<<<<<<< HEAD:media/status/index.md
-# Media Status API
-=======
 #Media Status API 
->>>>>>> origin/org:media/status.md
 ***
 
 | Endpoint | Description |
