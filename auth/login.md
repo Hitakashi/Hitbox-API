@@ -1,4 +1,4 @@
-# Auth
+# Auth API
 ***
 
 Returns information about the auth token.
