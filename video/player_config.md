@@ -368,7 +368,7 @@ Video:
 
 ## `GET /player/recconfig/:channel/:rec_session`
 
-Returns player config for recordings. `rec_session` can be taken from the [recording](video/recordings.md) API.
+Returns player config for recordings. `rec_session` can be taken from the [recording](/video/recordings.md) API.
 
 ### Example URL 
 
