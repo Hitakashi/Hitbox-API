@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/config/:media_type/:user_id](/player/config/live/index.md#get-playerconfigmedia_typeuser_id) | Returns stream stats |
+| [GET /player/config/:media_type/:user_id](/video/player/config/live/index.md#get-playerconfigmedia_typeuser_id) | Returns stream stats |
 
 ## `GET /player/config/:media_type/:user_id`
 
