@@ -3,8 +3,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /mediakey/:channel](/mediakey.md#get-mediakeychannel) | Gets stream key of channel. |
-| [PUT /mediakey/:channel](/mediakey.md#put-mediakeychannel) | Resets stream key of channel. |
+| [GET /mediakey/:channel](/channel/mediakey.md#get-mediakeychannel) | Gets stream key of channel. |
+| [PUT /mediakey/:channel](/channel/mediakey.md#put-mediakeychannel) | Resets stream key of channel. |
 
 ## `GET /mediakey/:channel`
 
@@ -22,7 +22,7 @@ https://www.hitbox.tv/api/mediakey/test-account
 
 ```json
 {
-  "streamKey":"D@K0nGw1llp@ste1t"
+  "streamKey":"HeyItsMyKey"
 }
 ```
 
@@ -42,6 +42,6 @@ https://www.hitbox.tv/api/mediakey/test-account
 
 ```json
 {
-  "streamKey":"NewStreamKeyThatDaKongPasted"
+  "streamKey":"HeyItsMyKey"
 }
 ```
