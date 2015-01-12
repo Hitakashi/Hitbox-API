@@ -4,11 +4,11 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /followers/user/:channel](/followers.md#get-followersuserchannel) | Returns stream stats |
+| [GET /followers/user/:channel](/followers.md#get-followersuserchannel) | Returns users that follow a channel. |
 
 ## `GET /followers/user/:channel`
 
-Returns
+Returns users that follow a channel.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
