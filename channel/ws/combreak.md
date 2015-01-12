@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /combreak/:channel/:count](/channel/ws/combreak.md#post-combreakchannelcount) | Starts a commercial |
+| [POST /combreak/:channel/:count](/channel/combreak.md#post-combreakchannelcount) | Starts a commercial |
 
 ## `POST /combreak/:channel/:count`
 
