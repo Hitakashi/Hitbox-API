@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /teamlist](/teamlist.md#get-teamlist) | Returns a team list |
+| [GET /teamlist](/team/teamlist.md#get-teamlist) | Returns a team list |
 
 ## `GET /teamlist`
 
