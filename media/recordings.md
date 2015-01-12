@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /recordings/:channel](/video/recordings.md#get-recordingschannel) | Return recordings for the channel. |
+| [GET /recordings/:channel](/media/recordings.md#get-recordingschannel) | Return recordings for the channel. |
 
 ## `GET /recordings/:channel`
 
