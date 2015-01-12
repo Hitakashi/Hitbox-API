@@ -1,4 +1,4 @@
-# Stream Stats API
+# Recording API
 ***
 
 | Endpoint | Description |
