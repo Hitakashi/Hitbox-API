@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/config/:media_type/:user_id](/video/player/config/live/index.md#get-playerconfigmedia_typeuser_id) | Returns stream stats |
+| [GET /player/config/:media_type/:user_id](/video/player_config.md#get-playerconfigmedia_typeuser_id) | Returns stream stats |
 
 ## `GET /player/config/:media_type/:user_id`
 
@@ -363,5 +363,52 @@ Video:
    "playlist":[
 
    ]
+}
+```
+
+## `GET /player/recconfig/:channel/:rec_session`
+
+Returns player config for recordings. `rec_session` can be taken from the [recording](video/recordings.md) API.
+
+### Example URL 
+
+https://www.hitbox.tv/api/player/recconfig/test-account/312312312321312321312312312312-54b3122b336c7
+
+### Example Response
+
+```json
+{
+   "key":"#$54d46eaa11fsdfdsf32279",
+   "play":null,
+   "clip":{
+      "autoPlay":true,
+      "autoBuffering":true,
+      "url":"http:\/\/edge.hls.vods.hitbox.tv\/static\/videos\/vods\/test-account\/bb9304c4951edasdasdas02a5a937e527ac196-54b3122b336c7\/test-account\/index.m3u8",
+      "provider":"httpstreaming",
+      "scaling":"fit",
+      "start":1
+   },
+   "plugins":{
+      "controls":null,
+      "httpstreaming":{
+         "url":"flashlsFlowPlayer.swf",
+         "hls_debug":false,
+         "hls_debug2":false,
+         "hls_lowbufferlength":1,
+         "hls_minbufferlength":3,
+         "hls_maxbufferlength":60,
+         "hls_startfromlowestlevel":false,
+         "hls_seekfromlowestlevel":false,
+         "hls_live_flushurlcache":false,
+         "hls_seekmode":"SEGMENT"
+      }
+   },
+   "canvas":{
+      "backgroundGradient":"none"
+   },
+   "log":{
+      "level":"debug",
+      "filter":"org.osmf.*, org.electroteque.m3u8.*, org.flowplayer.bitrateselect.*"
+   }
 }
 ```
