@@ -5,7 +5,7 @@ This endpoint contains information about subscriber chat badges. if `badge_id` a
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /mediabadges/:channel](/mediabadges.md#get-mediabadgeschannel) | Returns subscriber chat badge. |
+| [GET /mediabadges/:channel](/channel/subscriber_badges.md#get-mediabadgeschannel) | Returns subscriber chat badge. |
 
 ## `GET /mediabadges/:channel`
 
