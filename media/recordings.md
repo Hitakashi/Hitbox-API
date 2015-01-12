@@ -3,11 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-<<<<<<< HEAD:recordings.md
-| [GET /recordings/:channel](/recordings.md#get-recordingsuser) | Return recordings for the user. |
-=======
 | [GET /recordings/:channel](/media/recordings.md#get-recordingschannel) | Return recordings for the channel. |
->>>>>>> origin/org:media/recordings.md
 
 ## `GET /recordings/:channel`
 
