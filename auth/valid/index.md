@@ -1,4 +1,4 @@
-# Stream Stats API
+# Valid Auth API
 ***
 
 | Endpoint | Description |
