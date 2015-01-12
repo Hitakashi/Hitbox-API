@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /auth/valid/:app](/auth/valid/index.md#get-authvalidapp) | Returns if the auth is valid. |
+| [GET /auth/valid/:app](/auth/valid.md#get-authvalidapp) | Returns if the auth is valid. |
 
 ## `GET /auth/valid/:app`
 
