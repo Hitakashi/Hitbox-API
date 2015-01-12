@@ -3,7 +3,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /auth/media/:media_type/:media_name](/auth/media.md#post-authmediamedia_typemedia_name) | Returns access for video. |
+| [POST /auth/media/:media_type/:media_name](/auth/media_access.md#post-authmediamedia_typemedia_name) | Returns access for video. |
 
 ## `POST /auth/media/:media_type/:media_name`
 
