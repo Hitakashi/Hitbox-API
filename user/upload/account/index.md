@@ -5,7 +5,7 @@ This API I have no clue have to actually do this via outside methods, so here's 
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /upload/account/:user/:auth](/upload/account/index.md#post-uploadaccountuserauth) | Changes a users avatar. |
+| [POST /upload/account/:user/:auth](/user/upload/account/index.md#post-uploadaccountuserauth) | Changes a users avatar. |
 
 ## `POST /upload/account/:user/:auth`
 
