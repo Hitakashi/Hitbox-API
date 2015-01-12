@@ -4,8 +4,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /follow](/follow.md#post-follow) | Follows a user |
-| [DELETE /follow](/follow.md#delete-follow) | Unfollows a user |
+| [POST /follow](/user/follow.md#post-follow) | Follows a user |
+| [DELETE /follow](/user/follow.md#delete-follow) | Unfollows a user |
 
 ## `POST /follow`
 
