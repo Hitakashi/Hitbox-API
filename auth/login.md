@@ -7,6 +7,7 @@ Returns information about the auth token.
 | ---- | --------------- |
 | [POST /auth/login](/auth/login.md#post-authlogin-auth) | Returns account information for the provided login. |
 | [POST /auth/login](/auth/login.md#post-authlogin-info) | Returns account information for the provided auth token. |
+| [POST /auth/token](/auth/login.md#post-authtoken) | Returns an auth token.
 
 ## `POST /auth/login (Auth)`
 
@@ -114,4 +115,30 @@ Will return a HTTP 400 Bad Request and response:
 
 ```json
 auth_failed
+```
+
+## `POST /auth/token`
+
+Sending a POST request with the below data returns an auth token for the account.
+
+### Example URL
+
+https://www.hitbox.tv/api/auth/token
+
+### Example POST Payload
+
+```json
+{
+   "login":"test-account",
+   "pass":"thisismypassword",
+   "rememberme":""
+}
+```
+
+### Example Response
+
+```json
+{
+   "authToken":"12312312312312321312321"
+}
 ```
