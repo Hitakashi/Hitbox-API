@@ -4,8 +4,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/config/:media_type/:user_id](/video/player_config.md#get-playerconfigmedia_typeuser_id) | Returns player config for  live video |
-| [GET /player/reconfig/:channe/:rec_session](/video/player_config.md#get-playerrecconfigchannelrec_session) | Returns player config for recordings. |
+| [GET /player/config/:media_type/:user_id](/media/player_config.md#get-playerconfigmedia_typeuser_id) | Returns player config for  live video |
+| [GET /player/reconfig/:channe/:rec_session](/media/player_config.md#get-playerrecconfigchannelrec_session) | Returns player config for recordings. |
 
 ## `GET /player/config/:media_type/:user_id`
 
