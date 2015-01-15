@@ -5,7 +5,7 @@ I won't document each and every API payload as they are all similar. I will add 
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /upload/account/:user/:auth](/user/upload/account/index.md#post-uploadaccountuserauth) | Changes a users avatar. |
+| [POST /upload/account/:user/:auth](/upload.md#post-uploadaccountuserauth) | Changes a users avatar. |
 | [GET /upload/description/:channe/:auth])() | Returns images uploaded for profile description use |
 | [POST /upload/description/:channel/:auth]() | Uploads images for profile description use |
 
