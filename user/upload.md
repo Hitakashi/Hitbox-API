@@ -6,6 +6,7 @@ I won't document each and every API payload as they are all similar. I will add 
 | Endpoint | Description |
 | ---- | --------------- |
 | [POST /upload/account/:user/:auth](/upload.md#post-uploadaccountuserauth) | Changes a users avatar. |
+| [POST /upload/account/:channel/:auth](/upload.md#) | Changes channel banners. |
 | [GET /upload/description/:channe/:auth](/upload.md#get-uploaddescriptionchannelauth) | Returns images uploaded for profile description use |
 | [POST /upload/description/:channel/:auth](upload.md#) | Uploads images for profile description use |
 
@@ -32,6 +33,29 @@ Content-Type: image/png
 
 ```
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXXXXXXXX
+```
+
+## `GET /upload/description/:channel/:auth`
+
+### Example URL
+
+https://www.hitbox.tv/api/upload/account/test-account/1237865864534342423
+
+### Example Payload
+
+```json
+------WebKitFormBoundaryxc5Hjc4MDXrAqZX6
+Content-Disposition: form-data; name="cover"; filename="test-account-profile_image-054b5323232430b-300x300.png"
+Content-Type: image/png
+
+
+------WebKitFormBoundaryxc5Hjc4MDXrAqZX6--
+```
+
+### Header
+
+```json
+Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryxc5Hjc4MDXrAqZX6
 ```
 
 ## `GET /upload/description/:channel/:auth`
