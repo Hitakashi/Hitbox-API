@@ -16,7 +16,7 @@ Update User Avatar.
 
 ### Example URL
 
-https://www.hitbox.tv/api/upload/account/test-account?authToken=123
+https://www.hitbox.tv/api/upload/account/test-account/12356765756756
 
 ### Example Payload 
 
@@ -56,6 +56,14 @@ Content-Type: image/png
 
 ```json
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryxc5Hjc4MDXrAqZX6
+```
+
+### Example Response
+
+```json
+{
+    "cover":"\/static\/img\/channel\/cover_54b72f19e8765.png"
+}
 ```
 
 ## `GET /upload/description/:channel/:auth`
