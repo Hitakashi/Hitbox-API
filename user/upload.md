@@ -35,7 +35,7 @@ Content-Type: image/png
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXXXXXXXX
 ```
 
-## `GET /upload/description/:channel/:auth`
+## `POST /upload/account/:channel/:auth`
 
 ### Example URL
 
