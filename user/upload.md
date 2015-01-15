@@ -43,7 +43,7 @@ https://www.hitbox.tv/api/upload/account/test-account/1237865864534342423
 
 ### Example Payload
 
-```json
+```
 ------WebKitFormBoundaryxc5Hjc4MDXrAqZX6
 Content-Disposition: form-data; name="cover"; filename="test-account-profile_image-054b5323232430b-300x300.png"
 Content-Type: image/png
