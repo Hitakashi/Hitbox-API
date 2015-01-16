@@ -234,6 +234,7 @@ Allows you to update multiple values of the stream, including descriptions.
 https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
 
 ### Example PUT Payload
+<a name="hostmode"></a>
 Setting `media_hosted_name` to "off" disables host mode. Set to valid username and it enabled host mode.
 
 ```json
