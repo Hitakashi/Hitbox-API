@@ -31,7 +31,7 @@ https://www.hitbox.tv/api/chat/moderators/test-account?authToken=123213213123123
          "user_id":"123",
          "user_name":"test-moderator",
          "user_logo":"\/static\/img\/channel\/test-moderator_531e431518a7_large.png"
-      }
+      },
       ...
    ]
 }
