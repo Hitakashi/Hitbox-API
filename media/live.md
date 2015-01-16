@@ -29,7 +29,7 @@ https://www.hitbox.tv/api/media/live/test-account
 
 ### Example Response
 
-If valid authToken is passed
+If valid authToken is passed and host is off
 ```json
 {
    "request":{
@@ -55,6 +55,7 @@ If valid authToken is passed
          "media_privacy":null,
          "media_hidden":"1",
          "media_notify_users":"1",
+         "media_hosted_id":null,
          "media_date_added":"2014-01-07 06:38:01",
          "media_date_updated":"2014-12-14 05:19:21",
          "media_live_since":"2014-12-14 05:18:54",
@@ -207,6 +208,12 @@ else
 }
 ```
 
+Hosting a channel:
+If you are hosting they add a these:
+
+`media_hosted_id`: Media ID of hosted channel
+`media_hosted_media`: Literally shoving this same API into this json object.
+
 If showHidden=false and stream is offline 
 
 ```json
@@ -226,6 +233,7 @@ Allows you to update multiple values of the stream, including descriptions.
 https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
 
 ### Example PUT Payload
+Setting `media_hosted_name` to "off" disables host mode. 
 
 ```json
 {
@@ -237,6 +245,7 @@ https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
          "media_live_delay":"0",
          "media_hidden":true,
          "media_recording":"1",
+         "media_hosted_name": "off",
          "media_countries":[
             "US"
          ],
@@ -246,6 +255,17 @@ https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
    ]
 }
 ```
+
+Enable Host Mode:
+```json
+host_mode_enabled
+```
+Disable Host Mode:
+
+```json
+host_mode_disabled
+```
+
 
 ### Example Response
 
