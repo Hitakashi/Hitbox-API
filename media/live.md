@@ -211,8 +211,9 @@ else
 Hosting a channel:
 If you are hosting they add a these:
 
-`media_hosted_id`: Media ID of hosted channel
-`media_hosted_media`: Literally shoving this same API into this json object.
+`media_hosted_id`: Media ID of hosted channel.
+
+`media_hosted_media`: Literally shoving this same API of hosted user into this json object.
 
 If showHidden=false and stream is offline 
 
