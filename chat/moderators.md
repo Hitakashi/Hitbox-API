@@ -1,6 +1,7 @@
 # Chat Moderator API
 ***
 
+Editors can get a list of moderators, but they are disallowed access to add or remove.
 
 | Endpoint | Description |
 | ---- | --------------- |
