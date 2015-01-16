@@ -235,7 +235,7 @@ https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
 
 ### Example PUT Payload
 <a name="hostmode"></a>
-Setting `media_hosted_name` to "off" disables host mode. Set to valid username and it enabled host mode.
+Setting `media_hosted_name` to a valid hitbox username enables host mode, setting it to "off" disables it.
 
 ```json
 {
@@ -247,7 +247,7 @@ Setting `media_hosted_name` to "off" disables host mode. Set to valid username a
          "media_live_delay":"0",
          "media_hidden":true,
          "media_recording":"1",
-         "media_hosted_name": "off",
+         "media_hosted_name": "test-host",
          "media_countries":[
             "US"
          ],
