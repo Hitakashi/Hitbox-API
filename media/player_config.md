@@ -16,10 +16,12 @@ Returns video player information, could be useful to some people.
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | No | string | User's Auth Token |
-| redis | ? | boolean | ? |
+| redis | Yes | boolean | ? |
+<!---
 | embed | ? | boolean | ? |
 | qos | ? | boolean | ? |
-| showHidden | Yes | boolean | Technically not required, but it will show no user info if the channel is offline. |
+--->
+| showHidden | Yes | boolean | Returns valid user info instead of null. |
 
 ### Example URL
 
