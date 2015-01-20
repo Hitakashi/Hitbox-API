@@ -8,8 +8,6 @@
 
 ## `GET /hosters/:channel`
 
-Returns
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
