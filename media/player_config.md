@@ -17,11 +17,12 @@ Returns video player information, could be useful to some people.
 | --- | --- | --- | --- |
 | authToken | No | string | User's Auth Token |
 | redis | Yes | boolean | ? |
+| showHidden | Yes | boolean | Returns valid user info instead of null. |
 <!---
 | embed | ? | boolean | ? |
 | qos | ? | boolean | ? |
 --->
-| showHidden | Yes | boolean | Returns valid user info instead of null. |
+
 
 ### Example URL
 
