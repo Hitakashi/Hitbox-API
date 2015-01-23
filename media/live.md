@@ -24,7 +24,6 @@ Returns stream information. You can only get this information if the user has se
 | showHidden | Sorta | boolean | This will return channel information even if the stream is offline. I would always set to true |
 | hiddenOnly | No | boolean | Hidden Streams |
 | yt | No | boolean | ? |
-| reverse | No | boolean | Reverses the API results |
 
 ### Example URL
 
