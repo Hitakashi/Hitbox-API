@@ -15,8 +15,9 @@ Returns a list of channels a user is following.
 | nocache | No | boolean | Server Side Switch? |
 | sort | No | string | Valid Sort: date_added, user_name, follow_id,user_id, follower_notify |
 | user_name | Yes | string | User's user name |
-| offset | no | int | offsets the results by the given amount |
-| limit | no | int | Limits the results |
+| offset | No | int | offsets the results by the given amount |
+| limit | No | int | Limits the results |
+| reverse | No | boolean | Reverses the results |
 
 ### Example URL
 
