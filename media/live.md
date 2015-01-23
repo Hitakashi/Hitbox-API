@@ -4,6 +4,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /media/live/:channel](/media/live.md#get-medialivechannel) | Returns live stream information. |
+| [GET /media/live/list](/media/live.md#get-medialivelist) | Returns channels |
 | [PUT /media/live/:channel](/media/live.md#put-medialivechannel) | Updates live stream information. |
 | [POST /media/live/:channel](/media/live.md#post-medialivechannel) | Create stream on new account |
 
@@ -21,6 +22,7 @@ Returns stream information. You can only get this information if the user has se
 | liveonly | No | boolean | ? |
 | publicOnly | No | boolean | ? |
 | showHidden | Sorta | boolean | This will return channel information even if the stream is offline. I would always set to true |
+| hiddenOnly | No | boolean | Hidden Streams |
 | yt | No | boolean | ? |
 | reverse | No | boolean | Reverses the API results |
 
@@ -220,6 +222,90 @@ If showHidden=false and stream is offline
 
 ```json
 no_media_found
+```
+
+## `GET /media/live/list`
+
+Params: Same as above API. Some may not work.
+
+### Example URL
+
+https://www.hitbox.tv/api/media/live/list
+
+### Example Response
+
+```json
+{
+  "request":{
+    "this":"\/media\/live\/list"
+  },
+  "media_type":"live",
+  "livestream":[
+    {
+      "media_user_name":"Yuuhi",
+      "media_id":"109219",
+      "media_file":"Yuuhi",
+      "media_user_id":"415015",
+      "media_profiles":"[{\"height\":\"360\",\"bitrate\":\"500\"},{\"height\":\"480\",\"bitrate\":\"1000\"},{\"height\":\"720\",\"bitrate\":\"2000\"}]",
+      "media_type_id":"1",
+      "media_is_live":"1",
+      "media_live_delay":"0",
+      "media_date_added":"2014-03-10 00:22:31",
+      "media_live_since":"2015-01-23 14:55:29",
+      "media_transcoding":"1",
+      "media_chat_enabled":"1",
+      "media_countries":[
+        "PL",
+        "GB"
+      ],
+      "media_hosted_id":null,
+      "user_banned":null,
+      "media_name":"yuuhi",
+      "media_display_name":"Yuuhi",
+      "media_status":"TLoU Remastered - przechodzim fabule :D - Codzienna dawka Gier.",
+      "media_title":"",
+      "media_tags":"",
+      "media_duration":"0.0000",
+      "media_bg_image":"\/static\/img\/channel\/cover_5495978d7a326.jpg",
+      "media_views":"748",
+      "media_views_daily":"0",
+      "media_views_weekly":"0",
+      "media_views_monthly":"0",
+      "category_id":"627",
+      "category_name":"The Last of Us",
+      "category_name_short":null,
+      "category_seo_key":"the-last-of-us",
+      "category_viewers":"345",
+      "category_media_count":"1",
+      "category_channels":null,
+      "category_logo_small":null,
+      "category_logo_large":"\/static\/img\/games\/2419553-397060_386577108098888_427807760_n.jpg",
+      "category_updated":"2015-01-21 23:11:42",
+      "team_name":"jarockpl",
+      "media_start_in_sec":"0",
+      "media_duration_format":"00:00:00",
+      "media_thumbnail":"\/static\/img\/media\/live\/yuuhi_mid_000.jpg",
+      "media_thumbnail_large":"\/static\/img\/media\/live\/yuuhi_large_000.jpg",
+      "channel":{
+        "followers":"10371",
+        "user_id":"415015",
+        "user_name":"Yuuhi",
+        "user_status":"1",
+        "user_logo":"\/static\/img\/channel\/Yuuhi_549599f97d8d0_large.jpg",
+        "user_cover":"\/static\/img\/channel\/cover_5495978d7a326.jpg",
+        "user_logo_small":"\/static\/img\/channel\/Yuuhi_549599f97d8d0_small.jpg",
+        "user_partner":"1",
+        "media_is_live":"1",
+        "media_live_since":"2015-01-23 14:55:29",
+        "twitter_account":null,
+        "twitter_enabled":null,
+        "livestream_count":"1",
+        "channel_link":"http:\/\/hitbox.tv\/yuuhi"
+      }
+    },
+    ...
+  ]
+}
 ```
 
 ## `PUT /media/live/:channel`
