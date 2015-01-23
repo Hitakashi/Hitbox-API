@@ -26,7 +26,7 @@ Returns video player information, could be useful to some people.
 
 ### Example URL
 
-https://www.hitbox.tv/api/player/config/live/test-account
+https://www.hitbox.tv/api/player/config/live/test-account?showHidden=true&redis=true
 
 ### Example Response 
 
