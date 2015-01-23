@@ -52,7 +52,8 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
          "follower_user_id":"278723",
          "follower_notify":"1",
          "date_added":"2015-01-02 01:55:25"
-      }
+      },
+      ...
    ],
    "max_results":"2"
 }
