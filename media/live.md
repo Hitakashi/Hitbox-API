@@ -22,6 +22,7 @@ Returns stream information. You can only get this information if the user has se
 | publicOnly | No | boolean | ? |
 | showHidden | Sorta | boolean | This will return channel information even if the stream is offline. I would always set to true |
 | yt | No | boolean | ? |
+| reverse | No | boolean | Reverses the API results |
 
 ### Example URL
 
