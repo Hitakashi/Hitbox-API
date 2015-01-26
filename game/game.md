@@ -36,7 +36,7 @@ https://www.hitbox.tv/api/game/30686
 }
 ```
 
-## `GET /game/:game-name
+## `GET /game/:game-name`
 
 
 | Parameter | Required? | Type | Description |
