@@ -3,9 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [POST /combreak/:channel/:count](/channel/combreak.md#post-combreakchannelcount) | Starts a commercial |
+| [POST /ws/combreak/:channel/:count](/channel/combreak.md#post-combreakchannelcount) | Starts a commercial |
 
-## `POST /combreak/:channel/:count`
+## `POST /ws/combreak/:channel/:count`
 
 Runs a commercial on the specified `:channel` with the amount of ads as `:count`
 
