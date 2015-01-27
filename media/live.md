@@ -17,7 +17,6 @@ Returns stream information. You can only get this information if the user has se
 | authToken | No | string | Users Auth Token. Used if wanting private user information. | 
 | nocache | No | boolean | No clue. Server side switch probably. |
 | filter | No | string | ? |
-| hiddenOnly | No | boolean | ? |
 | limit | No | int | ? |
 | liveonly | No | boolean | ? |
 | publicOnly | No | boolean | ? |
