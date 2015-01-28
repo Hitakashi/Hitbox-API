@@ -8,7 +8,7 @@ I won't document each and every API payload as they are all similar. I will add 
 | [POST /upload/account/:user/:auth](/user/upload.md#post-uploadaccountuserauth) | Changes a users avatar. |
 | [POST /upload/account/:channel/:auth](/user/upload.md#get-uploaddescriptionchannelauth) | Changes channel banners. |
 | [GET /upload/description/:channe/:auth](/user/upload.md#get-uploaddescriptionchannelauth) | Returns images uploaded for profile description use |
-| [POST /upload/description/:channel/:auth](/user/upload.md#uploaddescriptionchannelauth) | Uploads images for profile description use |
+| [POST /upload/description/:channel/:auth](/user/upload.md#post-uploaddescriptionchannelauth) | Uploads images for profile description use |
 
 ## `POST /upload/account/:user/:auth`
 
