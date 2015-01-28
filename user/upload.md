@@ -83,3 +83,26 @@ https://www.hitbox.tv/api/upload/description/test-account/1232131232132
     }
 ]
 ```
+
+## `POST /upload/description/:channel/:auth`
+
+### Example URL
+
+http://www.hitbox.tv/api/upload/description/test-account/1232132132131
+
+### Example Payload
+
+```json
+------WebKitFormBoundarybwSxxcx5yC7Zsn2G
+Content-Disposition: form-data; name="file"; filename="editor.png"
+Content-Type: image/png
+
+
+------WebKitFormBoundarybwSxxcx5yC7Zsn2G--
+```
+
+### Example Response
+
+```json
+file_saved
+```
