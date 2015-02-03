@@ -19,9 +19,10 @@ https://www.hitbox.tv/api/globalmessage
 
 If global message
 
-Soon, I need to wait until another global message :)
 ```json
-
+{
+  "message":"System Maintainence on February 3, 15:00 to 17:00 UTC"
+}
 ```
 
 else
