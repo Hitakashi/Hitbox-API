@@ -15,7 +15,7 @@ Returns chat settings for the channel.
 
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
-| authToken | Yes | boolean | Users Auth Token. | 
+| authToken | Yes | string | Users Auth Token. | 
 
 ### Example URL
 
@@ -35,7 +35,7 @@ Returns chat settings for the channel.
 
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
-| authToken | Yes | boolean | Users Auth Token. | 
+| authToken | Yes | string | Users Auth Token. | 
 
 ### Example URL
 
