@@ -54,7 +54,10 @@ https://www.hitbox.tv/api/chat/settings/test-account
 If successful
 
 ```json
-?
+{
+  "user_id":"278723",
+  "sub_images":true
+}
 ```
 
 If invalid auth (Looks like only broadcasters/editors(?) can edit this.
