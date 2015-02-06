@@ -60,7 +60,7 @@ If successful
 }
 ```
 
-If invalid auth (Looks like only broadcasters/editors(?) can edit this.
+If invalid auth (Looks like only broadcasters/editors(?) can edit this.)
 
 ```json
 unauthorized
