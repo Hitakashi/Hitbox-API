@@ -3,8 +3,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/status/:channel](/media/status.md#get-mediastatuschannel) | Returns simple information about the stream. |
-| [GET /media/views/:channel](/media/status.md#get-mediaviewschannel) | Returns total view count. |
+| [GET /media/status/:channel](/media/views.md#get-mediastatuschannel) | Returns simple information about the stream. |
+| [GET /media/views/:channel](/media/views.md#get-mediaviewschannel) | Returns total view count. |
 
 ## `GET /media/status/:channel`
 
