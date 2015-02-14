@@ -158,6 +158,15 @@ permission_denied
 
 ## `PUT /team/:teamname/:username`
 
+Disbands a team
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| nocache | No | boolean | Server Side Switch? |
+| action | Yes | string | Valid: delete_team |
+| authToken | Yes | string | Founders Auth Token |
+
+
 ### Example URL
 
 https://www.hitbox.tv/api/team/test-team/test-account?action=delete_team&authToken=123321
