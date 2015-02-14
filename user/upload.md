@@ -166,7 +166,7 @@ Team Logo:
 }
 ```
 
-Team Color:
+Team Cover:
 
 ```json
 {
