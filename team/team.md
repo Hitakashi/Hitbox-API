@@ -5,6 +5,7 @@
 | ---- | --------------- |
 | [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
 | [POST /team](/team/team.md#post-team) | Creates a team |
+| [DELETE /team/:teamname/:username](/team/team.md#deleteteamteamnameusername) | 
 
 ## `GET /team/:teamname`
 
@@ -153,3 +154,26 @@ If `authToken` is invalid
 ```json
 permission_denied
 ```
+
+## `DELETE /team/:teamname/:username`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+| group_id | Yes | int | Teams group id |
+
+`teamname` is the team you want to kick `username` from. With this API you can kick users from your own team or remove yourself. Providing the Auth Token is correct for yourself (Removing yourself from teams) or correct for the founder of the team (Removing others)
+
+Founders cannot kick themselfs, they must use the disband API.
+
+### Example URL
+
+https://www.hitbox.tv/api/team/test-team/test-account?authToken=222&group_id=123
+
+### Example Response
+
+```json
+deleted_test-account
+```
+
+It also returns a few others like `permission_denied` or `deleted_` providing the auth token or wrong or correct but the user isn't in the team.
