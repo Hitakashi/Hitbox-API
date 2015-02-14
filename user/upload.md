@@ -10,6 +10,7 @@ I won't document each and every API payload as they are all similar. I will add 
 | [GET /upload/description/:channe/:auth](/user/upload.md#get-uploaddescriptionchannelauth) | Returns images uploaded for profile description use |
 | [POST /upload/description/:channel/:auth](/user/upload.md#post-uploaddescriptionchannelauth) | Uploads images for profile description use |
 | [DELETE /upload/description/:channel/:auth](/user/upload.md#delete-uploaddescriptionchannelauth) | Deletes imagees for profile description use |
+| [POST /upload/team/:username/:auth](/user/upload.md#post-uploadteamusernameauth) | Uploads teams images |
 
 ## `POST /upload/account/:user/:auth`
 
@@ -122,4 +123,33 @@ http://www.hitbox.tv/api/upload/description/test-account/21321321321312?image_id
 
 ```json
 success
+```
+
+## `POST /upload/team/:username/:auth`
+
+### Example URL
+
+http://www.hitbox.tv/api/upload/team/test-account/12312312
+
+### Example Payload
+
+```
+------WebKitFormBoundarytEGA8o2SicDQq1bW
+Content-Disposition: form-data; name="file"; filename="hitbox-icon-green.png"
+Content-Type: image/png
+
+
+------WebKitFormBoundarytEGA8o4Sic33431bW--
+```
+
+### Example Response 
+
+```json
+{
+  "logo":{
+    "small":"/static/img/teams/logo_54dfce333ee3_small.png",
+    "large":"/static/img/teams/logo_54dfce333ee3_large.png"
+  },
+  "cover":null
+}
 ```
