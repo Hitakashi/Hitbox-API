@@ -156,6 +156,7 @@ https://www.hitbox.tv/api/media/video/123
          "media_transcoding":null,
          "media_chat_enabled":"1",
          "media_countries":null,
+         "media_hosted_id":null,
          "user_banned":null,
          "media_name":"f7fad5547948ec921167c0c74das7edd88c5d9f-53f8dcd26bc06",
          "media_display_name":"test-account",
