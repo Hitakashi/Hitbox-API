@@ -103,6 +103,7 @@ Passing a valid authToken removes the `user_is_broadcaster` token. It also chang
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | No | string | Users Auth Token. | 
+| partner | No | boolean | Only shows teams with sub buttons |
 
 ### Example URL
 
