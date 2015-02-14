@@ -5,6 +5,7 @@
 | ---- | --------------- |
 | [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
 | [POST /team](/team/team.md#post-team) | Creates a team |
+| [PUT /team/:teamname/:username](/team/team.md#put-teamnameusername) | Disbands a team |
 | [DELETE /team/:teamname/:username](/team/team.md#deleteteamteamnameusername) | Kicks a user or removes yourself from a team |
 
 ## `GET /team/:teamname`
@@ -151,6 +152,49 @@ text_required
 ```
 
 If `authToken` is invalid
+```json
+permission_denied
+```
+
+## `PUT /team/:teamname/:username`
+
+### Example URL
+
+https://www.hitbox.tv/api/team/test-team/test-account?action=delete_team&authToken=123321
+
+### Example Payload
+
+You must send the object you get from a GET /team/:teamname but can be shorted down to:
+
+```json
+{
+   "info":{
+      "group_id":"13234",
+      "founder_name":"test-admin",
+      "group_name":"testapi2",
+      "group_display_name":"testapi2"
+   },
+   "founder":{
+      "followers":"7",
+      "user_id":"123",
+      "user_name":"test-admin"
+   },
+   "members":[
+      {
+         "user_id":"123",
+         "user_name":"test-admin",
+         "group_role":"admin"
+      }
+   ]
+}
+```
+
+### Example Response
+
+If successful you will get an echo back of the PUT payload
+
+Invalid Payload or Incorrect Auth Token
+
 ```json
 permission_denied
 ```
