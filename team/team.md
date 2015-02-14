@@ -5,7 +5,7 @@
 | ---- | --------------- |
 | [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
 | [POST /team](/team/team.md#post-team) | Creates a team |
-| [PUT /team/:teamname/:username](/team/team.md#put-teamnameusername) | Disbands a team |
+| [PUT /team/:teamname/:username](/team/team.md#put-teamnameusername) | Updates a team |
 | [DELETE /team/:teamname/:username](/team/team.md#deleteteamteamnameusername) | Kicks a user or removes yourself from a team |
 
 ## `GET /team/:teamname`
@@ -158,22 +158,32 @@ permission_denied
 
 ## `PUT /team/:teamname/:username`
 
-Disbands a team
+Updates a team object
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | nocache | No | boolean | Server Side Switch? |
-| action | Yes | string | Valid: delete_team |
+| action | no | string | Valid: delete_team, delete_logo, delete_cover |
 | authToken | Yes | string | Founders Auth Token |
 
 
 ### Example URL
 
-https://www.hitbox.tv/api/team/test-team/test-account?action=delete_team&authToken=123321
+https://www.hitbox.tv/api/team/test-team/test-account?authToken=123321
 
 ### Example Payload
 
-You must send the object you get from a GET /team/:teamname but can be shorted down to:
+You must send the object you get from a GET /team/:teamname but can be shorted down:
+
+To upload a team icon you must do a [POST /upload/team/:user/:auth](https://github.com/Hitakashi/Hitbox-API/blob/master/user/upload.md#post-uploadteamusernameauth) which will return logo->small and logo->large which then can be put into `group_logo_small` and `group_logo_large` respectively.
+
+To delete a logo you must set URL param `action` to `delete_logo`
+
+To upload a team cover you must do a [POST /upload/team/:user/:auth](https://github.com/Hitakashi/Hitbox-API/blob/master/user/upload.md#post-uploadteamusernameauth) which will return cover->cover which then can be put into `group_cover`
+
+To delete a cover you must set URL param `action` to `delete_cover`
+
+Deleting a cover or logo will return `group_logo_small`, `group_logo_large` and `group_cover` as "" instead of null like a new team.
 
 ```json
 {
@@ -181,7 +191,10 @@ You must send the object you get from a GET /team/:teamname but can be shorted d
       "group_id":"13234",
       "founder_name":"test-admin",
       "group_name":"testapi2",
-      "group_display_name":"testapi2"
+      "group_display_name":"testapi2",
+      "group_logo_large":null,
+      "group_logo_small":null,
+      "group_cover":null
    },
    "founder":{
       "followers":"7",
