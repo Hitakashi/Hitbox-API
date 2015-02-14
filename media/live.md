@@ -56,7 +56,6 @@ If valid authToken is passed and host is off
          "media_privacy":null,
          "media_hidden":"1",
          "media_notify_users":"1",
-         "media_hosted_id":null,
          "media_date_added":"2014-01-07 06:38:01",
          "media_date_updated":"2014-12-14 05:19:21",
          "media_live_since":"2014-12-14 05:18:54",
@@ -73,7 +72,7 @@ If valid authToken is passed and host is off
          ],
          "media_info":null,
          "media_relay":"",
-         "media_password":null,
+         "media_password_protected":null,
          "media_yt_upload":null,
          "media_yt_upload_status":null,
          "media_processing":null,
@@ -81,6 +80,7 @@ If valid authToken is passed and host is off
          "media_monthly_views":null,
          "media_weekly_views":null,
          "media_daily_views":null,
+         "media_hosted_id":null,
          "media_featured_weight":null,
          "media_featured_forced":null,
          "media_featured_countries":null,
@@ -159,6 +159,7 @@ else
          "media_countries":[
             "US"
          ],
+         "media_hosted_id":null,
          "user_banned":null,
          "media_name":"test-account",
          "media_display_name":"test-account",
