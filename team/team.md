@@ -10,9 +10,17 @@
 
 Return members and team information.
 
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| nocache | No | boolean | Server Side Switch? |
+| limit | No | int | Limits the results. Only limits livestream & video count. |
+| liveonly | No | boolean | Only shows live only livestream channels if media=true and media_type is live. |
+| media | No | boolean | Shows the media object if set to true |
+| media_type | No | live or video | Enables showing of livestream or video objects in media. media must be true |
+
 ### Example URL
 
-https://www.hitbox.tv/api/team/:teamname
+https://www.hitbox.tv/api/team/test-team
 
 ### Example Response 
 
@@ -84,6 +92,15 @@ https://www.hitbox.tv/api/team/:teamname
       }
    ]
 }
+```
+
+If media=true and media_type is set, there will be the following json between `founder` and `members` which will be filled depending on the media_type.
+
+```json
+"media": {
+   "livestream": [],
+   "video": []
+},
 ```
 
 ## `POST /team`
