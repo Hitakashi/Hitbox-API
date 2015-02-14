@@ -1,8 +1,6 @@
 # Upload Account Avatar
 ***
 
-I won't document each and every API payload as they are all similar. I will add each API endpoint to table.
-
 | Endpoint | Description |
 | ---- | --------------- |
 | [POST /upload/account/:user/:auth](/user/upload.md#post-uploadaccountuserauth) | Changes a users avatar. |
