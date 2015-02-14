@@ -131,8 +131,9 @@ http://www.hitbox.tv/api/upload/team/test-account/12312312
 
 ### Example Payload
 
+Team Logo:
 ```
-------WebKitFormBoundarytEGA8o2SicDQq1bW
+------WebKitFormBoundarytEGA8o4Sic33431bW
 Content-Disposition: form-data; name="file"; filename="hitbox-icon-green.png"
 Content-Type: image/png
 
@@ -140,7 +141,20 @@ Content-Type: image/png
 ------WebKitFormBoundarytEGA8o4Sic33431bW--
 ```
 
+Team Cover:
+
+```
+------WebKitFormBoundaryufi8nf43Uzh0llJ
+Content-Disposition: form-data; name="cover"; filename="hitbox-icon-green.png"
+Content-Type: image/png
+
+
+------WebKitFormBoundaryufi8nf43Uzh0llJ--
+```
+
 ### Example Response 
+
+Team Logo:
 
 ```json
 {
@@ -149,5 +163,16 @@ Content-Type: image/png
     "large":"/static/img/teams/logo_54dfce333ee3_large.png"
   },
   "cover":null
+}
+```
+
+Team Color:
+
+```json
+{
+  "logo":null,
+  "cover":{
+    "cover":"/static/img/teams/cover_54dfd4873d3cc.png"
+  }
 }
 ```
