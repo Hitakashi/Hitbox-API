@@ -19,6 +19,7 @@ Return members and team information.
 | liveonly | No | boolean | Only shows live only livestream channels if media=true and media_type is live. |
 | media | No | boolean | Shows the media object if set to true |
 | media_type | No | live or video | Enables showing of livestream or video objects in media. media must be true |
+| sort | No | recent or popular | Sorts the media objects. |
 
 ### Example URL
 
