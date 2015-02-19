@@ -212,7 +212,15 @@ Returns access levels for the auth in the provided channel.
 https://www.hitbox.tv/api/user/subscription/test_channel/test_auth
 
 ### Example Response 
+If subbed
 
+```json
+{
+   "isSubscriber":true
+}
+```
+
+If not subbed
 ```json
 {
    "isSubscriber":false
