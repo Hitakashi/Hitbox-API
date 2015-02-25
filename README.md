@@ -11,7 +11,7 @@ Chat Documentation Repo: https://github.com/Hitakashi/Hitbox-Chat-Methods | http
 
 The current layout of the API documentation is sorted by what the API deals with, if it's updating user information it belongs in `/user`, if it deals with statistics in stored with `/channel` (While stats are stored within the users settings, without a channel you won't have any stats), etc.
 
-If I ever get partner API details, and it's dedicated for partner use only, it will be stored inside a `/partner` folder.
+
 
 ### Hitbox Information
 
