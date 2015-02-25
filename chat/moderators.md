@@ -59,7 +59,7 @@ Toggle `remove` for what action you want.
 }
 ```
 
-## `GET /chat/moderation/:channel`
+## `GET /chat/moderations/:channel`
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
