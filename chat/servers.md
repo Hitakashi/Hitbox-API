@@ -8,15 +8,11 @@
 
 ## `GET /chat/servers`
 
-Returns
-
-| Parameter | Required? | Type | Description |
-| --- | --- | --- | --- |
-| redis | Yes | boolean | Must be set to true. |
+Returns chat server addresses.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/servers?redis=true
+https://www.hitbox.tv/api/chat/servers
 
 ### Example Response 
 
