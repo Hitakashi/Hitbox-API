@@ -126,7 +126,7 @@ Channel without stream setup
 
 Updates the current user.
 
-As a general guideline for below passwords in POST if it's password change or email
+You just need to send passwords if you want to update an email or password.
 
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
@@ -136,7 +136,7 @@ As a general guideline for below passwords in POST if it's password change or em
 
 https://www.hitbox.tv/api/user/test-account
 
-### Example POST Payload
+### Example PUT Payload
 
 ```json
 {
