@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /chat/servers](/chat/servers.md#get-chatservers) | Returns stream stats |
+| [GET /chat/servers](/chat/servers.md#get-chatservers) | Returns chat server addresses |
 
 ## `GET /chat/servers`
 
