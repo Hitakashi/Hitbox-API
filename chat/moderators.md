@@ -5,11 +5,11 @@ Editors can get a list of moderators, but they are disallowed access to add or r
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /chat/moderators](/chat/moderators.md#get-chatmoderators) | Returns list of chat moderators. |
-| [POST /chat/moderators](/chat/moderators.md#post-chatmoderators) | Add or Removes chat moderators. |
-| [GET /chat/moderations](/chat/moderators.md#get-chatmoderations) | Get channels you are a moderator in. |
+| [GET /chat/moderators](/chat/moderators.md#get-chatmoderatorschannel) | Returns list of chat moderators. |
+| [POST /chat/moderators](/chat/moderators.md#post-chatmoderatorschannel) | Add or Removes chat moderators. |
+| [GET /chat/moderations](/chat/moderators.md#get-chatmoderationschannel) | Get channels you are a moderator in. |
 
-## `GET /chat/moderators`
+## `GET /chat/moderators/:channel`
 
 Returns list of chat moderators.
 
@@ -39,7 +39,7 @@ https://www.hitbox.tv/api/chat/moderators/test-account?authToken=123213213123123
 }
 ```
 
-## `POST /chat/moderators`
+## `POST /chat/moderators/:channel`
 
 Adds or removes chat moderators.
 
