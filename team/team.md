@@ -186,6 +186,8 @@ To delete a cover you must set URL param `action` to `delete_cover`
 
 Deleting a cover or logo will return `group_logo_small`, `group_logo_large` and `group_cover` as "" instead of null like a new team.
 
+To disband a team set `action` to `delete_team` and PUT the required data below.
+
 ```json
 {
    "info":{
