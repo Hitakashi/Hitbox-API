@@ -317,7 +317,7 @@ Allows you to update multiple values of the stream, including descriptions.
 
 ### Example URL
 
-https://hitbox.tv/api/media/live/test-account?authToken=1312321321321
+https://www.hitbox.tv/api/media/live/test-account?authToken=1312321321321
 
 ### Example PUT Payload
 <a name="hostmode"></a>
