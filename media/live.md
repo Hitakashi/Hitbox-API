@@ -344,6 +344,8 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
 }
 ```
 
+### Example Response
+
 Enable Host Mode:
 ```json
 host_mode_enabled
@@ -353,10 +355,6 @@ Disable Host Mode:
 ```json
 host_mode_disabled
 ```
-
-
-### Example Response
-
 
 ```json
 {
