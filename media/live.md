@@ -81,6 +81,7 @@ If valid authToken is passed and host is off
          "media_weekly_views":null,
          "media_daily_views":null,
          "media_hosted_id":null,
+         "media_mature":null,
          "media_featured_weight":null,
          "media_featured_forced":null,
          "media_featured_countries":null,
