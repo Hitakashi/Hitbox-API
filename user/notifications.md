@@ -3,8 +3,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /notifications](/notifications.md#get-notifications) | Returrns notification settings |
-| [PUT /notifications](/notifications.md#post-notifications) | Updates notification settings |
+| [GET /notifications](/user/notifications.md#get-notifications) | Returrns notification settings |
+| [PUT /notifications](/user/notifications.md#post-notifications) | Updates notification settings |
 
 ## `GET /notifications`
 
