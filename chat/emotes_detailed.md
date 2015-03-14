@@ -29,7 +29,8 @@ https://www.hitbox.tv/api/chat/emotes/:user
       "icon_path":"\/static\/img\/chat\/default\/angry1.png",
       "category_id":"1",
       "category_name":"defaultfaces",
-      "category_logo":"\/static\/img\/chat\/default\/smile4.png"
+      "category_logo":"\/static\/img\/chat\/default\/smile4.png",
+      "icon_premium_only":"0"
    },
    {
       "icon_id":"2",
@@ -39,7 +40,8 @@ https://www.hitbox.tv/api/chat/emotes/:user
       "icon_path":"\/static\/img\/chat\/default\/derp1.png",
       "category_id":"1",
       "category_name":"defaultfaces",
-      "category_logo":"\/static\/img\/chat\/default\/smile4.png"
+      "category_logo":"\/static\/img\/chat\/default\/smile4.png",
+      "icon_premium_only":"0"
    }
    ...
 ]
