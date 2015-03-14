@@ -25,6 +25,7 @@ https://www.hitbox.tv/api/chat/settings/test-account
 
 ```json
 {
+  "user_id":"123",
   "sub_images":false
 }
 ```
