@@ -7,7 +7,7 @@
 | [POST /upload/account/:channel/:auth](/user/upload.md#get-uploaddescriptionchannelauth) | Changes channel banners. |
 | [GET /upload/description/:channe/:auth](/user/upload.md#get-uploaddescriptionchannelauth) | Returns images uploaded for profile description use |
 | [POST /upload/description/:channel/:auth](/user/upload.md#post-uploaddescriptionchannelauth) | Uploads images for profile description use |
-| [DELETE /upload/description/:channel/:auth](/user/upload.md#delete-uploaddescriptionchannelauth) | Deletes imagees for profile description use |
+| [DELETE /upload/description/:channel/:auth](/user/upload.md#delete-uploaddescriptionchannelauth) | Deletes images for profile description use |
 | [POST /upload/team/:username/:auth](/user/upload.md#post-uploadteamusernameauth) | Uploads teams images |
 
 ## `POST /upload/account/:user/:auth`
