@@ -16,8 +16,6 @@ Returns video player information, could be useful to some people.
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | No | string | User's Auth Token |
-| redis | Yes | boolean | ? |
-| showHidden | Yes | boolean | Returns valid user info instead of null. |
 <!---
 | embed | ? | boolean | ? |
 | qos | ? | boolean | ? |
@@ -26,7 +24,7 @@ Returns video player information, could be useful to some people.
 
 ### Example URL
 
-https://www.hitbox.tv/api/player/config/live/test-account?showHidden=true&redis=true
+https://www.hitbox.tv/api/player/config/live/test-account
 
 ### Example Response 
 
