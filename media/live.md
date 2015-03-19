@@ -60,6 +60,7 @@ If valid authToken is passed and host is off
          "media_date_updated":"2014-12-14 05:19:21",
          "media_live_since":"2014-12-14 05:18:54",
          "media_live_notified":"2014-11-10 21:03:06",
+         "media_mature":null,
          "media_key":"DaKongHasIt",
          "media_chat_enabled":"1",
          "media_deleted":null,
@@ -128,6 +129,7 @@ If valid authToken is passed and host is off
             "twitter_account":"test-account",
             "twitter_enabled":"0",
             "livestream_count":"1",
+            "user_media_id":"12",
             "channel_link":"http:\/\/hitbox.tv\/test-account"
          }
       }
@@ -155,6 +157,7 @@ else
          "media_live_delay":null,
          "media_date_added":"2014-01-07 06:38:01",
          "media_live_since":"2014-12-14 05:18:54",
+         "media_mature":null,
          "media_transcoding":null,
          "media_chat_enabled":"1",
          "media_countries":[
@@ -201,6 +204,7 @@ else
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
+            "user_media_id":"12",
             "twitter_account":"test-account",
             "twitter_enabled":"0",
             "livestream_count":"1",
@@ -259,6 +263,7 @@ https://www.hitbox.tv/api/media/live/list
         "GB"
       ],
       "media_hosted_id":null,
+      "media_mature":null,
       "user_banned":null,
       "media_name":"yuuhi",
       "media_display_name":"Yuuhi",
@@ -334,6 +339,7 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
          "media_live_delay":"0",
          "media_hidden":true,
          "media_recording":"1",
+         "media_mature":"1",
          "media_hosted_name": "test-host",
          "media_countries":[
             "US"
