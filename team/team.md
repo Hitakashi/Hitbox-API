@@ -72,7 +72,7 @@ https://www.hitbox.tv/api/team/test-team
 }
 ```
 
-If media=true and media_type is set, there will be the following json between `founder` and `members` which will be filled depending on the media_type.
+If media=true and media_type is set, there will be the following json between `info` and `members` which will be filled depending on the media_type.
 
 ```json
 "media": {
