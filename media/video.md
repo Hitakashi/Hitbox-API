@@ -57,6 +57,7 @@ https://www.hitbox.tv/api/media/video/:user/list
          "media_date_added":"2014-08-23 18:36:54",
          "media_date_updated":null,
          "media_live_since":null,
+         "media_mature":null,
          "media_live_notified":null,
          "media_key":"432432",
          "media_chat_enabled":"1",
@@ -117,6 +118,7 @@ https://www.hitbox.tv/api/media/video/:user/list
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
+            "user_media_id": "12",
             "twitter_account":"test-account",
             "twitter_enabled":"0",
             "livestream_count":"1"
@@ -153,6 +155,7 @@ https://www.hitbox.tv/api/media/video/123
          "media_live_delay":"0",
          "media_date_added":"2014-08-23 18:36:54",
          "media_live_since":null,
+         "media_mature":null,
          "media_transcoding":null,
          "media_chat_enabled":"1",
          "media_countries":null,
@@ -197,6 +200,7 @@ https://www.hitbox.tv/api/media/video/123
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
+            "user_media_id":"12",
             "twitter_account":"test-account",
             "twitter_enabled":"0",
             "livestream_count":"1"
