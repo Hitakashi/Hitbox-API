@@ -23,7 +23,7 @@ Return members and team information.
 
 ### Example URL
 
-https://www.hitbox.tv/api/team/test-team
+https://www.hitbox.tv/api/team/thebestteam
 
 ### Example Response 
 
