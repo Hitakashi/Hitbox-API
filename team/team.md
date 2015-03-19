@@ -29,69 +29,44 @@ https://www.hitbox.tv/api/team/test-team
 
 ```json
 {
-   "teams":[
+   "info":{
+      "group_id":"123",
+      "founder_name":"Glorious-Leader",
+      "group_name":"TheBestTeam",
+      "group_display_name":"TheBestTeam",
+      "group_text":"We rule. Obviously.",
+      "group_logo_small":"\/static\/img\/teams\/logo_52d4870d92afaa_small.jpg",
+      "group_logo_large":"\/static\/img\/teams\/logo_52d8704d92afaa_large.jpg",
+      "group_cover":"\/static\/img\/teams\/cover_52d870a3e19343.jpg"
+   },
+   "members":[
       {
-         "info":{
-            "group_id":"123",
-            "founder_name":"Glorious-Leader",
-            "group_name":"TheBestTeam",
-            "group_display_name":"TheBestTeam",
-            "group_text":"We rule. Obviously.",
-            "group_logo_small":"\/static\/img\/teams\/logo_52d4870d92afaa_small.jpg",
-            "group_logo_large":"\/static\/img\/teams\/logo_52d8704d92afaa_large.jpg",
-            "group_cover":"\/static\/img\/teams\/cover_52d870a3e19343.jpg",
-         },
-         "founder":{
-            "user_name":"Glorious-Leader",
-            "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
-            "user_status":"1",
-            "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
-            "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
-            "user_is_broadcaster":true,
-            "followers":"46",
-            "user_partner":null,
-            "user_id":"158",
-            "is_live":"0",
-            "live_since":"2014-09-24 02:32:15",
-            "twitter_account":null,
-            "twitter_enabled":null
-         },
-         "members":[
-            {
-               "user_name":"test-account",
-               "user_cover":null,
-               "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/test-account_53867c57ba993_large.jpg",
-               "user_logo_small":"\/static\/img\/channel\/test-account_53867c57ba993_small.jpg",
-               "user_is_broadcaster":false,
-               "followers":"0",
-               "user_partner":null,
-               "user_id":"157",
-               "is_live":null,
-               "live_since":null,
-               "twitter_account":null,
-               "twitter_enabled":null,
-               "group_role":"member",
-               "group_accepted":true
-            },
-            {
-               "user_name":"Glorious-Leader",
-               "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
-               "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
-               "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
-               "user_is_broadcaster":true,
-               "followers":"46",
-               "user_partner":null,
-               "user_id":"158",
-               "is_live":"0",
-               "live_since":"2014-09-24 02:32:15",
-               "twitter_account":null,
-               "twitter_enabled":null,
-               "group_role":"admin",
-               "group_accepted":true
-            }
-         ]
+         "followers":"0",
+         "user_id":"157",
+         "user_name":"test-account",
+         "user_status":"1",
+         "user_logo":"\/static\/img\/channel\/test-account_53867c57ba993_large.jpg",
+         "user_cover":null,
+         "user_logo_small":"\/static\/img\/channel\/test-account_53867c57ba993_small.jpg",
+         "user_partner":null,
+         "admin":null,
+         "enabled":"1",
+         "group_role":"member",
+         "group_accepted":true
+      },
+      {
+         "followers":"46",
+         "user_id":"158",
+         "user_name":"Glorious-Leader",
+         "user_status":"1",
+         "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
+         "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
+         "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
+         "user_partner":null,
+         "admin":"1",
+         "enabled":"1",
+         "group_role":"admin",
+         "group_accepted":true
       }
    ]
 }
@@ -105,6 +80,37 @@ If media=true and media_type is set, there will be the following json between `f
    "video": []
 },
 ```
+
+The livestream array will be filled with:
+
+```json
+{
+   "media_display_name":"Test-Account",
+   "media_status":"Another Title!",
+   "media_name":"test-account",
+   "category_name":"DmC Devil May Cry",
+   "media_views":"132",
+   "media_countries":[
+      "US"
+   ],
+   "media_live_since":"2015-03-19 18:15:34",
+   "media_is_live":"1",
+   "user_logo":"/static/img/channel/test-account_54f988997d191_large.jpg",
+   "user_logo_small":"/static/img/channel/test-account_54f988997d191_small.jpg",
+   "user_partner":"1",
+   "media_duration_format":"00:00:00",
+   "category_logo_large":"",
+   "media_thumbnail":"/static/img/media/live/test-account_mid_000.jpg",
+   "media_thumbnail_large":"/static/img/media/live/test-account_large_000.jpg",
+   "channel":{
+      "user_logo":"/static/img/channel/test-account_54f988997d191_large.jpg",
+      "user_logo_small":"/static/img/channel/test-account_54f988997d191_small.jpg",
+      "channel_link":"http://hitbox.tv/test-account"
+   }
+}
+```
+
+The video array will be filled with the [Video Object](https://github.com/Hitakashi/Hitbox-API/blob/master/media/video.md#get-mediavideomedia_id) excluding `media_description` and `media_description_md`
 
 ## `POST /team`
 
@@ -195,14 +201,10 @@ To disband a team set `action` to `delete_team` and PUT the required data below.
       "founder_name":"test-admin",
       "group_name":"testapi2",
       "group_display_name":"testapi2",
+      "group_text":"This is a test!",
       "group_logo_large":null,
       "group_logo_small":null,
       "group_cover":null
-   },
-   "founder":{
-      "followers":"7",
-      "user_id":"123",
-      "user_name":"test-admin"
    },
    "members":[
       {
