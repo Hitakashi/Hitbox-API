@@ -72,6 +72,7 @@ if authToken
    "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
    "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
    "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+   "user_media_id":"12",
    "user_email":"example@example.com",
    "user_partner":null,
    "media_is_live":"0",
