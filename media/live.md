@@ -329,22 +329,32 @@ https://www.hitbox.tv/api/media/live/test-account?authToken=1312321321321
 <a name="hostmode"></a>
 Setting `media_hosted_name` to a valid hitbox username enables host mode, setting it to "off" disables it.
 
-```json
+```javascript
 {
    "livestream":[
       {
+         // Following two values are required
          "media_user_name":"test-account",
          "media_id":"15830",
+         // This is your game ID, You can get it from the Game API.
          "media_category_id":"455",
+         // This is how much delay hitbox will add AFTER any delay from your livestream software
          "media_live_delay":"0",
+         // This will change the visibility of your stream. If set to true, you won't show on the website and emails won't be sent out
          "media_hidden":true,
+         // Enable or Disable recordings. 1 = true 0 = false
          "media_recording":"1",
+         // Enables or disables the mature wall. 1 = true 0 = false
          "media_mature":"1",
+         // Username of channel you want to host. Setting to "off" will disable host mode.
          "media_hosted_name": "test-host",
+         // List of countries/languages that you speak. Max of 2 allowed. 
          "media_countries":[
             "US"
          ],
+         // This is your stream title
          "media_status":"This is a stream title!",
+         // This is your profile description. Markdown is valid in here.
          "media_description":"This is your profile description!"
       }
    ]
