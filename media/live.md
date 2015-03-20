@@ -344,8 +344,8 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
          "media_countries":[
             "US"
          ],
-         "media_status":"This is a title.9",
-         "media_description":"222"
+         "media_status":"This is a stream title!",
+         "media_description":"This is your profile description!"
       }
    ]
 }
