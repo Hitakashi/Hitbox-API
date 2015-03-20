@@ -329,6 +329,8 @@ https://www.hitbox.tv/api/media/live/test-account?authToken=1312321321321
 <a name="hostmode"></a>
 Setting `media_hosted_name` to a valid hitbox username enables host mode, setting it to "off" disables it.
 
+Whenever I have tested this API, It required that you send value for `media_category_id`, `media_hidden`, `media_recording`, `media_mature`, `media_countries` and `media_status` or it would set them to empty or default. (Aka disabled recordings)
+
 ```javascript
 {
    "livestream":[
@@ -340,7 +342,8 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
          "media_category_id":"455",
          // This is how much delay hitbox will add AFTER any delay from your livestream software
          "media_live_delay":"0",
-         // This will change the visibility of your stream. If set to true, you won't show on the website and emails won't be sent out
+         // This will change the visibility of your stream. 
+         // If set to true, you won't show on the website and emails won't be sent out
          "media_hidden":true,
          // Enable or Disable recordings. 1 = true 0 = false
          "media_recording":"1",
