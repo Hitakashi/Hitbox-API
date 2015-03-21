@@ -343,8 +343,8 @@ Whenever I have tested this API, It required that you send value for `media_cate
          // This is how much delay hitbox will add AFTER any delay from your livestream software
          "media_live_delay":"0",
          // This will change the visibility of your stream. 
-         // If set to true, you won't show on the website and emails won't be sent out
-         "media_hidden":true,
+         // If set to 1 you channel will be hidden
+         "media_hidden":"0",
          // Enable or Disable recordings. 1 = true 0 = false
          "media_recording":"1",
          // Enables or disables the mature wall. 1 = true 0 = false
