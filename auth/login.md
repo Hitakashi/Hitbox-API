@@ -119,7 +119,7 @@ auth_failed
 
 ## `POST /auth/token`
 
-Sending a POST request with the below data returns an auth token for the account.
+Sending a POST request with the below data returns an auth token for the account. `app` is option. The server will default to desktop.
 
 ### Example URL
 
@@ -131,7 +131,7 @@ https://www.hitbox.tv/api/auth/token
 {
    "login":"test-account",
    "pass":"thisismypassword",
-   "rememberme":""
+   "app":"desktop"
 }
 ```
 
