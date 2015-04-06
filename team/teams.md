@@ -75,8 +75,6 @@ Returns all the teams a user is a member of. Passing a valid authToken replaces 
 
 For example there's a team with "test-account" and "test-account2" and you run /teams/test-account?authToken=test-account2authToken it will replace "test-account2" user blocks with an authenticated user information.
 
-Passing a valid authToken removes the `user_is_broadcaster` token. It also changes `is_live` to `media_is_live`, `live_since` to `media_live_since` and adds `livestream_count`
-
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | No | string | Users Auth Token. | 
