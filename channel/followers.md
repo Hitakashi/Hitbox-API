@@ -15,8 +15,8 @@ Returns users that follow a channel.
 | nocache | no | string | Server Side Switch? |
 | reverse | no | boolean | Reverses the results |
 | sort | no | string | Valid: date_added, user_name, follow_id,user_id, follower_notify |
-| limit | no | int | Limits the results to provided number |
-| offset | no | int | Offsets the results by the provided number |
+| limit | no | int | Maximum number of objects to fetch. Default is 100. |
+| offset | no | int | The offset for pagination. Default is 0. |
 
 ### Example URL
 
