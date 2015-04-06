@@ -75,7 +75,6 @@ Returns a list of team objects for `:user`
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
-| authToken | No | string | Users Auth Token. | 
 | partner | No | boolean | Only shows teams with sub buttons |
 
 ### Example URL
