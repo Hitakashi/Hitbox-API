@@ -56,7 +56,7 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
       ]
    },
    "recurly":{
-      "signature":"randomsignature|nonce=randomnumbers&subscription%5Bplan_code%5D=11&subscription%5Bcurrency%5D=USD×tamp=randomnumber"
+      "signature":null
    }
 }
 ```
