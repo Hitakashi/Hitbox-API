@@ -35,7 +35,9 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
          "plan_ads":"0",
          "plan_hd":"0",
          "plan_videos":"0",
-         "plan_recurring":"1"
+         "plan_recurring":"1",
+         "plan_g2a":"1",
+         "plan_xsolla":"1"
       },
       "benefits":[
          {
