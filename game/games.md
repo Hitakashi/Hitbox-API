@@ -11,9 +11,9 @@ Returns games.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
-| q | No | string | Query to search for. |
-| limit | No | int | Number of games to limit. Default 100 |
-| liveonly | No | boolean | Only show games with live channels |
+| q | No | string | Search keyword for `category_name`. |
+| limit | No | int | Maximum number of objects to fetch. Default is 100. |
+| liveonly | No | boolean | Returns only games that have live channels. |
 
 ### Example URL
 
