@@ -5,8 +5,8 @@
 | ---- | --------------- |
 | [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
 | [POST /team](/team/team.md#post-team) | Creates a team |
-| [PUT /team/:teamname/:username](/team/team.md#put-teamnameusername) | Updates a team |
-| [DELETE /team/:teamname/:username](/team/team.md#deleteteamteamnameusername) | Kicks a user or removes yourself from a team |
+| [PUT /team/:teamname/:username](/team/team.md#put-teamteamnameusername) | Updates a team |
+| [DELETE /team/:teamname/:username](/team/team.md#delete-teamteamnameusername) | Kicks a user or removes yourself from a team |
 
 ## `GET /team/:teamname`
 
