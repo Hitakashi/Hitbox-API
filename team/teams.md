@@ -12,7 +12,7 @@ Ability to search for teams by providing a search term. The Website Search featu
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
-| search | yes | string | Team title to search for. | 
+| search | yes | string | Search keyword for `group_name`. | 
 
 ### Example URL
 
@@ -75,6 +75,9 @@ Returns a list of team objects for `:user`
 
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
+| media | No | Boolean | Boolean to show a `media` object. |
+| media_type | No | Live or Video | Toggles media type returned in `media` object. |
+| liveonly | No | Boolean | Boolean to only display live channels in `media` object. | 
 | partner | No | boolean | Only shows teams with sub buttons |
 
 ### Example URL
