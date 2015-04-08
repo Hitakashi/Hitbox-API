@@ -12,7 +12,6 @@ Returns a team list.
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | q | no | string | Query to seach for |
-| limit | no | string | Doesn't work. |
 
 ### Example URL
 
