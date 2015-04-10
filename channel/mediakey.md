@@ -8,15 +8,15 @@
 
 ## `GET /mediakey/:channel`
 
-This returns a stream key for the provided user with the correct auth. 
-
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | User's Auth Token. | 
 
+Get stream key for `:channel`
+
 ### Example URL
 
-https://www.hitbox.tv/api/mediakey/test-account
+https://www.hitbox.tv/api/mediakey/test-account?authToken=SuperSecret
 
 ### Example Response 
 
@@ -28,15 +28,15 @@ https://www.hitbox.tv/api/mediakey/test-account
 
 ## `PUT /mediakey/:channel`
 
-This resets the stream key for the specified channel.
-
 | Parameter | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | User's Auth Token. | 
 
+Reset stream key for `:channel`
+
 ### Example URL
 
-https://www.hitbox.tv/api/mediakey/test-account
+https://www.hitbox.tv/api/mediakey/test-account?authToken=SuperSecret
 
 ### Example Response 
 

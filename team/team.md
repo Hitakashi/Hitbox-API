@@ -35,9 +35,9 @@ https://www.hitbox.tv/api/team/thebestteam
       "group_name":"TheBestTeam",
       "group_display_name":"TheBestTeam",
       "group_text":"We rule. Obviously.",
-      "group_logo_small":"\/static\/img\/teams\/logo_52d4870d92afaa_small.jpg",
-      "group_logo_large":"\/static\/img\/teams\/logo_52d8704d92afaa_large.jpg",
-      "group_cover":"\/static\/img\/teams\/cover_52d870a3e19343.jpg"
+      "group_logo_small":"/static/img/teams/logo_52d4870d92afaa_small.jpg",
+      "group_logo_large":"/static/img/teams/logo_52d8704d92afaa_large.jpg",
+      "group_cover":"/static/img/teams/cover_52d870a3e19343.jpg"
    },
    "members":[
       {
@@ -45,9 +45,9 @@ https://www.hitbox.tv/api/team/thebestteam
          "user_id":"157",
          "user_name":"test-account",
          "user_status":"1",
-         "user_logo":"\/static\/img\/channel\/test-account_53867c57ba993_large.jpg",
+         "user_logo":"/static/img/channel/test-account_53867c57ba993_large.jpg",
          "user_cover":null,
-         "user_logo_small":"\/static\/img\/channel\/test-account_53867c57ba993_small.jpg",
+         "user_logo_small":"/static/img/channel/test-account_53867c57ba993_small.jpg",
          "user_partner":null,
          "admin":null,
          "enabled":"1",
@@ -59,9 +59,9 @@ https://www.hitbox.tv/api/team/thebestteam
          "user_id":"158",
          "user_name":"Glorious-Leader",
          "user_status":"1",
-         "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
-         "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
-         "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
+         "user_logo":"/static/img/channel/Glorious-Leader_52d334823811d_large.png",
+         "user_cover":"/static/img/channel/cover_532ca1307ac13.jpg",
+         "user_logo_small":"/static/img/channel/Glorious-Leader_52d334823811d_small.png",
          "user_partner":null,
          "admin":"1",
          "enabled":"1",
@@ -118,7 +118,7 @@ Create a team.
 
 ## Example URL
 
-https://www.hitbox.tv/api/team
+https://www.hitbox.tv/api/team?authToken=SuperSecret
 
 ### Example POST Payload
 
@@ -126,7 +126,7 @@ https://www.hitbox.tv/api/team
 
 ```json
 {
-   "authToken":"1233123123123123",
+   "authToken":"SuperSecret",
    "group_user_name":"test-account",
    "group_name":"TestTeam",
    "group_text":"This is a test team.",
@@ -199,19 +199,15 @@ To disband a team set `action` to `delete_team` and PUT the required data below.
    "info":{
       "group_id":"13234",
       "founder_name":"test-admin",
-      "group_name":"testapi2",
-      "group_display_name":"testapi2",
+      "group_name":"testapi",
+      "group_display_name":"testapi",
       "group_text":"This is a test!",
       "group_logo_large":null,
       "group_logo_small":null,
       "group_cover":null
    },
-   "members":[
-      {
-         "user_id":"123",
-         "user_name":"test-admin",
-         "group_role":"admin"
-      }
+   "invites": [
+    "New-Team-Member"
    ]
 }
 ```
@@ -235,11 +231,11 @@ permission_denied
 
 `teamname` is the team you want to kick `username` from. With this API you can kick users from your own team or remove yourself. Providing the Auth Token is correct for yourself (Removing yourself from teams) or correct for the founder of the team (Removing others)
 
-Founders cannot kick themselfs, they must use the disband API.
+**Note**: Founders that want to leave should disband with [PUT /team/:teamname/:username](/team/team.md#put-teamteamnameusername)
 
 ### Example URL
 
-https://www.hitbox.tv/api/team/test-team/test-account?authToken=222&group_id=123
+https://www.hitbox.tv/api/team/test-team/test-account?authToken=SuperSecret&group_id=123
 
 ### Example Response
 

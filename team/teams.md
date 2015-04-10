@@ -30,9 +30,9 @@ https://www.hitbox.tv/api/teams
             "group_name":"TheBestTeam",
             "group_display_name":"TheBestTeam",
             "group_text":"We rule. Obviously.",
-            "group_logo_small":"\/static\/img\/teams\/logo_52d4870d92afaa_small.jpg",
-            "group_logo_large":"\/static\/img\/teams\/logo_52d8704d92afaa_large.jpg",
-            "group_cover":"\/static\/img\/teams\/cover_52d870a3e19343.jpg",
+            "group_logo_small":"/static/img/teams/logo_52d4870d92afaa_small.jpg",
+            "group_logo_large":"/static/img/teams/logo_52d8704d92afaa_large.jpg",
+            "group_cover":"/static/img/teams/cover_52d870a3e19343.jpg",
             "group_default":0
          },
          "members":[
@@ -41,9 +41,9 @@ https://www.hitbox.tv/api/teams
                "user_id":"157",
                "user_name":"test-account",
                "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/test-account_53867c57ba993_large.jpg",               
+               "user_logo":"/static/img/channel/test-account_53867c57ba993_large.jpg",               
                "user_cover":null,
-               "user_logo_small":"\/static\/img\/channel\/test-account_53867c57ba993_small.jpg",
+               "user_logo_small":"/static/img/channel/test-account_53867c57ba993_small.jpg",
                "user_partner":null,
                "admin": null,
                "enabled": "1",
@@ -55,17 +55,19 @@ https://www.hitbox.tv/api/teams
                "user_id":"158",
                "user_name":"Glorious-Leader",
                "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
-               "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
-               "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
+               "user_logo":"/static/img/channel/Glorious-Leader_52d334823811d_large.png",
+               "user_cover":"/static/img/channel/cover_532ca1307ac13.jpg",
+               "user_logo_small":"/static/img/channel/Glorious-Leader_52d334823811d_small.png",
                "user_partner":null,
                "admin": "1",
                "enabled": "1",
                "group_role":"admin",
                "group_accepted":true
-            }
+            },
+            ...
          ]
-      }
+      },
+      ...
    ]
 }
 ```
@@ -110,9 +112,9 @@ This example is not using an authToken.
                "user_id":"158",
                "user_name":"Glorious-Leader",
                "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_large.png",
-               "user_cover":"\/static\/img\/channel\/cover_532ca1307ac13.jpg",
-               "user_logo_small":"\/static\/img\/channel\/Glorious-Leader_52d334823811d_small.png",
+               "user_logo":"/static/img/channel/Glorious-Leader_52d334823811d_large.png",
+               "user_cover":"/static/img/channel/cover_532ca1307ac13.jpg",
+               "user_logo_small":"/static/img/channel/Glorious-Leader_52d334823811d_small.png",
                "user_partner":null,
                "admin": "1",
                "enabled": "1",
@@ -124,17 +126,19 @@ This example is not using an authToken.
                "user_id":"157",
                "user_name":"test-account",
                "user_status":"1",
-               "user_logo":"\/static\/img\/channel\/test-account_53867c57ba993_large.jpg",               
+               "user_logo":"/static/img/channel/test-account_53867c57ba993_large.jpg",               
                "user_cover":null,
-               "user_logo_small":"\/static\/img\/channel\/test-account_53867c57ba993_small.jpg",
+               "user_logo_small":"/static/img/channel/test-account_53867c57ba993_small.jpg",
                "user_partner":null,
                "admin": null,
                "enabled": "1",
                "group_role":"member",
                "group_accepted":true
-            }
+            },
+            ...
          ]
-      }
+      },
+      ...
    ]
 }
 ```

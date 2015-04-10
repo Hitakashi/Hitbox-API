@@ -8,16 +8,15 @@
 
 ## `GET /following/user`
 
-Returns a list of channels a user is following.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
-| nocache | No | boolean | Server Side Switch? |
-| sort | No | string | Valid Sort: date_added, user_name, follow_id,user_id, follower_notify |
+| sort | No | string | Valid Sort: date_added, user_name, user_id, follower_notify |
 | user_name | Yes | string | User's user name |
 | offset | No | int | offsets the results by the given amount |
 | limit | No | int | Limits the results |
 | reverse | No | boolean | Reverses the results |
+
+Returns a list of channels a user is following.
 
 ### Example URL
 
@@ -28,15 +27,15 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
 ```json
 {
    "request":{
-      "this":"\/following\/user"
+      "this":"/following/user"
    },
    "following":[
       {
          "followers":"41",
          "user_name":"test-account",
          "user_id":"123",
-         "user_logo":"\/static\/img\/channel\/test-account_54731f215b60c_large.jpg",
-         "user_logo_small":"\/static\/img\/channel\/test-account_54731f215b60c_small.jpg",
+         "user_logo":"/static/img/channel/test-account_54731f215b60c_large.jpg",
+         "user_logo_small":"/static/img/channel/test-account_54731f215b60c_small.jpg",
          "follow_id":"123",
          "follower_user_id":"278723",
          "follower_notify":"1",
@@ -46,8 +45,8 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
          "followers":"7",
          "user_name":"RandomChannel",
          "user_id":"124",
-         "user_logo":"\/static\/img\/channel\/RandomChannel_53f4e837eb388_large.png",
-         "user_logo_small":"\/static\/img\/channel\/RandomChannel_53f4e837eb388_small.png",
+         "user_logo":"/static/img/channel/RandomChannel_53f4e837eb388_large.png",
+         "user_logo_small":"/static/img/channel/RandomChannel_53f4e837eb388_small.png",
          "follow_id":"124",
          "follower_user_id":"278723",
          "follower_notify":"1",

@@ -16,11 +16,6 @@ Returns video player information, could be useful to some people.
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | No | string | User's Auth Token |
-<!---
-| embed | ? | boolean | ? |
-| qos | ? | boolean | ? |
---->
-
 
 ### Example URL
 
@@ -38,7 +33,7 @@ Live:
       "autoPlay":true,
       "autoBuffering":true,
       "bufferLength":"2",
-      "eventCategory":"test-account\/live\/278723",
+      "eventCategory":"test-account/live/278723",
       "baseUrl":null,
       "url":"test-account",
       "stopLiveOnPause":true,
@@ -62,7 +57,7 @@ Live:
    "playlist":[
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp:\/\/fml.B6BF.edgecastcdn.net\/20B6BF",
+         "netConnectionUrl":"rtmp://fml.B6BF.edgecastcdn.net/20B6BF",
          "rtmpSubscribe":true,
          "bitrates":[
             {
@@ -78,7 +73,7 @@ Live:
    "plugins":{
       "rtmp":{
          "url":"flowplayer.rtmp-3.2.12.1.swf",
-         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
+         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
          "reconnecting":true
       },
       "hls":{
@@ -94,14 +89,14 @@ Live:
       },
       "rtmpHitbox":{
          "url":"flowplayer.rtmp-3.2.12.1.swf",
-         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
+         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
          "reconnecting":true
       },
       "pingback":{
          "url":"flowplayer.pingback-3.2.7.swf",
-         "server_url":"http:\/\/api.mawire.com\/pingback",
+         "server_url":"http://api.mawire.com/pingback",
          "video_id":"1",
-         "wsUrl":"ws:\/\/54.205.241.225\/viewers",
+         "wsUrl":"ws://54.205.241.225/viewers",
          "wsChannel":"test-account",
          "wsToken":"312312312312321321312312",
          "userName":"test-account",
@@ -120,7 +115,7 @@ Live:
       "info":{
          "display":"none",
          "url":"flowplayer.content-3.2.8.swf",
-         "html":"<\/p>",
+         "html":"</p>",
          "width":"50%",
          "height":30,
          "backgroundColor":"#1A1A1A",
@@ -167,7 +162,7 @@ Live:
          "LR_LAYOUT_SKIN_ID":2,
          "LR_LAYOUT_LINEAR_PAUSEONCLICKTHRU":0,
          "LR_BITRATE":"high",
-         "LR_VIDEO_URL":"http:\/\/www.hitbox.tv\/test-account",
+         "LR_VIDEO_URL":"http://www.hitbox.tv/test-account",
          "LR_DESCRIPTION":"test-account",
          "LR_IP":"X.X.X.X"
       }
@@ -175,7 +170,7 @@ Live:
    "cdns":[
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp:\/\/fml.B6BF.edgecastcdn.net\/20B6BF",
+         "netConnectionUrl":"rtmp://fml.B6BF.edgecastcdn.net/20B6BF",
          "rtmpSubscribe":true,
          "bitrates":[
             {
@@ -189,7 +184,7 @@ Live:
       },
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp:\/\/hitboxna06livefs.fplive.net\/hitboxna06live-live",
+         "netConnectionUrl":"rtmp://hitboxna06livefs.fplive.net/hitboxna06live-live",
          "rtmpSubscribe":true,
          "bitrates":[
             {
@@ -203,7 +198,7 @@ Live:
       },
       {
          "provider":"rtmpHitbox",
-         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
+         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
          "rtmpSubscribe":false,
          "bitrates":[
             {
@@ -252,9 +247,9 @@ Video:
       "autoPlay":true,
       "autoBuffering":true,
       "bufferLength":"2",
-      "eventCategory":"test-account\/video\/22222",
+      "eventCategory":"test-account/video/22222",
       "baseUrl":null,
-      "url":"http:\/\/edge.hls.vods.hitbox.tv\/static\/videos\/vods\/test-account\/5a1c498ed443437e74b416a97c8b80f35fdfd29-53d30943438a20\/test-account\/index.m3u8",
+      "url":"http://edge.hls.vods.hitbox.tv/static/videos/vods/test-account/5a1c498ed443437e74b416a97c8b80f35fdfd29-53d30943438a20/test-account/index.m3u8",
       "stopLiveOnPause":true,
       "live":false,
       "smoothing":true,
@@ -262,7 +257,7 @@ Video:
       "scaling":"fit",
       "bitrates":[
          {
-            "url":"\/test-account\/5a1c498ed458b0b7e74b416a97c8b323235fdfd29-53d309a4d8a20\/test-account\/index.m3u8",
+            "url":"/test-account/5a1c498ed458b0b7e74b416a97c8b323235fdfd29-53d309a4d8a20/test-account/index.m3u8",
             "bitrate":0,
             "label":"HD 720p",
             "provider":"rtmpHitbox",
@@ -337,7 +332,7 @@ Video:
          "LR_LAYOUT_SKIN_ID":2,
          "LR_LAYOUT_LINEAR_PAUSEONCLICKTHRU":0,
          "LR_BITRATE":"high",
-         "LR_VIDEO_URL":"http:\/\/www.hitbox.tv\/video\/11111",
+         "LR_VIDEO_URL":"http://www.hitbox.tv/video/11111",
          "LR_DESCRIPTION":"5a1c498ed4312321321312416a97c8b80f35fdfd29-53d309a4d8a20",
          "LR_IP":"X.X.X.X"
       }
@@ -385,7 +380,7 @@ https://www.hitbox.tv/api/player/recconfig/test-account/312312312321312321312312
    "clip":{
       "autoPlay":true,
       "autoBuffering":true,
-      "url":"http:\/\/edge.hls.vods.hitbox.tv\/static\/videos\/vods\/test-account\/bb9304c4951edasdasdas02a5a937e527ac196-54b3122b336c7\/test-account\/index.m3u8",
+      "url":"http://edge.hls.vods.hitbox.tv/static/videos/vods/test-account/bb9304c4951edasdasdas02a5a937e527ac196-54b3122b336c7/test-account/index.m3u8",
       "provider":"httpstreaming",
       "scaling":"fit",
       "start":1

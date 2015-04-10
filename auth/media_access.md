@@ -22,14 +22,14 @@ Returns if you can access a live stream or video.
 
 ### Example URL
 
-https://www.hitbox.tv/api/auth/media/video/321321321-492828234?authToken=123
-https://www.hitbox.tv/api/auth/media/live/test-account?authToken=123
+https://www.hitbox.tv/api/auth/media/video/321321321-492828234?authToken=SuperSecret
+https://www.hitbox.tv/api/auth/media/live/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 
 ```json
 {
-  "authToken":"13231323142412321",
+  "authToken":"SuperSecret",
   "mediaPassword":"123",
   "media_name":"test-account",
   "media_type":"live"

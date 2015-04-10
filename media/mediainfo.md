@@ -19,7 +19,7 @@ https://www.hitbox.tv/api/mediainfo/live/123
 ```json
 {
    "request":{
-      "this":"\/mediainfo\/live\/123"
+      "this":"/mediainfo/live/123"
    },
    "mediainfo":{
       "log_id":"102099",

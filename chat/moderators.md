@@ -11,28 +11,28 @@ Editors can get a list of moderators, but they are disallowed access to add or r
 
 ## `GET /chat/moderators/:channel`
 
-Returns list of chat moderators.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Returns list of chat moderators for `:channel`
+
 ### Example URL
 
-https://www.hitbox.tv/api/chat/moderators/test-account?authToken=1232132131231231321
+https://www.hitbox.tv/api/chat/moderators/test-account?authToken=SuperSecret
 
 ### Example Response 
 
 ```json
 {
    "request":{
-      "this":"\/chat\/moderators\/test-account"
+      "this":"/chat/moderators/test-account"
    },
    "moderators":[
       {
          "user_id":"123",
          "user_name":"test-moderator",
-         "user_logo":"\/static\/img\/channel\/test-moderator_531e431518a7_large.png"
+         "user_logo":"/static/img/channel/test-moderator_531e431518a7_large.png"
       },
       ...
    ]
@@ -41,7 +41,7 @@ https://www.hitbox.tv/api/chat/moderators/test-account?authToken=123213213123123
 
 ## `POST /chat/moderators/:channel`
 
-Adds or removes chat moderators.
+Adds or removes chat moderators. Toggle `remove` for what action you want.
 
 ### Example URL
 
@@ -49,11 +49,11 @@ https://www.hitbox.tv/api/chat/moderators/test-account
 
 ### Example Response 
 
-Toggle `remove` for what action you want.
+
 ```json
 {
    "user_name":"test-account",
-   "authToken":"12321321",
+   "authToken":"SuperSecret",
    "moderator":"test-moderator",
    "remove":false
 }
@@ -67,20 +67,20 @@ Toggle `remove` for what action you want.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/moderations/test-account?authToken=21312312
+https://www.hitbox.tv/api/chat/moderations/test-account?authToken=SuperSecret
 
 ### Example Response
 
 ```json
 {
   "request":{
-    "this":"\/chat\/moderations\/test-account"
+    "this":"/chat/moderations/test-account"
   },
   "moderations":[
     {
-      "user_id":"1231231",
+      "user_id":"12",
       "user_name":"test-broadcaster",
-      "user_logo":"\/static\/img\/channel\/test-broadcaster_5394934904055_large.jpg"
+      "user_logo":"/static/img/channel/test-broadcaster_5394934904055_large.jpg"
     },
     ...
   ]

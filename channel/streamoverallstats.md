@@ -7,15 +7,16 @@
 
 ## `GET /streamoverallstats/:user/:startTime/:endTime`
 
-Returns overall stream stats between `:startTime` and `:endTime` (These are Epoch time stamps)
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Returns overall stream stats between `:startTime` and `:endTime` (These are Epoch time stamps)
+
+
 ### Example URL
 
-https://www.hitbox.tv/api/streamoverallstats/test-account/1416182400000/1418860799000
+https://www.hitbox.tv/api/streamoverallstats/test-account/1416182400000/1418860799000?authToken=SuperSecret
 
 ### Example Response 
 

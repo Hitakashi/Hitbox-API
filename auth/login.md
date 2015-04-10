@@ -34,24 +34,24 @@ Correct credentials:
 {
    "user_id":"111",
    "user_name":"test-account",
-   "user_logo":"\/static\/img\/channel\/test-account_53aa862ac9adf_large.png",
-   "user_logo_small":"\/static\/img\/channel\/test-account_53aa862ac9adf_small.png",
+   "user_logo":"/static/img/channel/test-account_53aa862ac9adf_large.png",
+   "user_logo_small":"/static/img/channel/test-account_53aa862ac9adf_small.png",
    "user_banned":"0",
    "superadmin":"0",
    "livestream_count":"1",
    "followers":"0",
-   "authToken":"123",
+   "authToken":"SuperSecret",
    "login":"true",
    "data":{
       "user_id":"111",
       "user_name":"test-account",
-      "user_logo":"\/static\/img\/channel\/test-account_53aa862ac9adf_large.png",
-      "user_logo_small":"\/static\/img\/channel\/test-account_53aa862ac9adf_small.png",
+      "user_logo":"/static/img/channel/test-account_53aa862ac9adf_large.png",
+      "user_logo_small":"/static/img/channel/test-account_53aa862ac9adf_small.png",
       "user_banned":"0",
       "superadmin":"0",
       "livestream_count":"1",
       "followers":"0",
-      "authToken":"123",
+      "authToken":"SuperSecret",
       "login":"true"
    },
    "access":"all"
@@ -75,7 +75,7 @@ https://www.hitbox.tv/api/auth/login
 
 ```json
 {
-  "authToken":"123412312312312321321"
+  "authToken":"SuperSecret"
 }
 ```
 
@@ -86,24 +86,24 @@ Correct Auth Token:
 {
    "user_id":"111",
    "user_name":"test-account",
-   "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-   "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+   "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+   "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
    "user_banned":"0",
    "superadmin":"0",
    "livestream_count":"1",
    "followers":"7",
-   "authToken":"123",
+   "authToken":"SuperSecret",
    "login":"true",
    "data":{
       "user_id":"123",
       "user_name":"test-account",
-      "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-      "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+      "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+      "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
       "user_banned":"0",
       "superadmin":"0",
       "livestream_count":"1",
       "followers":"7",
-      "authToken":"123",
+      "authToken":"SuperSecret",
       "login":"true"
    },
    "access":"all"
@@ -139,6 +139,6 @@ https://www.hitbox.tv/api/auth/token
 
 ```json
 {
-   "authToken":"12312312312312321312321"
+   "authToken":"SuperSecret"
 }
 ```

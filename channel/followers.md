@@ -8,15 +8,14 @@
 
 ## `GET /followers/user/:channel`
 
-Returns users that follow a channel.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
-| nocache | no | string | Server Side Switch? |
 | reverse | no | boolean | Reverses the results |
-| sort | no | string | Valid: date_added, user_name, follow_id,user_id, follower_notify |
+| sort | no | string | Valid: date_added, user_name, user_id, follower_notify |
 | limit | no | int | Maximum number of objects to fetch. Default is 100. |
 | offset | no | int | The offset for pagination. Default is 0. |
+
+Returns users that follow `:channel`.
 
 ### Example URL
 
@@ -27,15 +26,15 @@ https://www.hitbox.tv/api/followers/user/test-account
 ```json
 {
    "request":{
-      "this":"\/followers\/user\/test-account"
+      "this":"/followers/user/test-account"
    },
    "followers":[
       {
          "followers":"0",
          "user_name":"RandomAccount",
          "user_id":"124",
-         "user_logo":"\/static\/img\/channel\/randomaccount_549125715fb44_large.png",
-         "user_logo_small":"\/static\/img\/channel\/randomaccount_549125715fb44_small.png",
+         "user_logo":"/static/img/channel/randomaccount_549125715fb44_large.png",
+         "user_logo_small":"/static/img/channel/randomaccount_549125715fb44_small.png",
          "follow_id":"278723",
          "follower_user_id":"124",
          "follower_notify":"1",
@@ -45,8 +44,8 @@ https://www.hitbox.tv/api/followers/user/test-account
          "followers":"7",
          "user_name":"test-account",
          "user_id":"123",
-         "user_logo":"\/static\/img\/channel\/Hitakashi_53f4e837eb388_large.png",
-         "user_logo_small":"\/static\/img\/channel\/Hitakashi_53f4e837eb388_small.png",
+         "user_logo":"/static/img/channel/Hitakashi_53f4e837eb388_large.png",
+         "user_logo_small":"/static/img/channel/Hitakashi_53f4e837eb388_small.png",
          "follow_id":"278723",
          "follower_user_id":"123",
          "follower_notify":"1",

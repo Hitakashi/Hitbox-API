@@ -49,16 +49,15 @@ user_created
 
 ## `GET /user/:user`
 
-Returns account information about the user.
-
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | No | string | Users Auth Token. Used if wanting private user information. | 
-| nocache | No | boolean | No clue. Server side switch probably. |
+
+Returns account information about the user.
 
 ### Example URL
 
-https://www.hitbox.tv/api/user/test-account
+https://www.hitbox.tv/api/user/test-account?authToken=SuperSecret
 
 ### Example Response
 
@@ -69,9 +68,9 @@ if authToken
    "user_id":"123",
    "user_name":"test-account",
    "user_status":"1",
-   "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-   "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
-   "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+   "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+   "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
+   "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
    "user_media_id":"12",
    "user_email":"example@example.com",
    "user_partner":null,
@@ -88,10 +87,10 @@ else
 ```json
 {
    "user_name":"test-account",
-   "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
+   "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
    "user_status":"1",
-   "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-   "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+   "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+   "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
    "user_is_broadcaster":true,
    "followers":"7",
    "user_partner":null,
@@ -110,12 +109,12 @@ Channel without stream setup
    "user_name":"Test-Account",
    "user_cover":null,
    "user_status":"1",
-   "user_logo":"\/static\/img\/channel\/masta_52274f9e8159b_large.jpg",
-   "user_logo_small":"\/static\/img\/channel\/masta_52274f9e8159b_small.jpg",
+   "user_logo":"/static/img/channel/masta_52274f9e8159b_large.jpg",
+   "user_logo_small":"/static/img/channel/masta_52274f9e8159b_small.jpg",
    "user_is_broadcaster":false,
    "followers":"0",
    "user_partner":null,
-   "user_id":"1111111",
+   "user_id":"123",
    "is_live":null,
    "live_since":null,
    "twitter_account":null,
@@ -205,7 +204,7 @@ Chat Moderators: `chat` is set as `user`
 
 ## `GET /user/subscription/:channel/:auth`
 
-Returns access levels for the auth in the provided channel.
+Returns subscription for the auth in the provided channel.
 
 
 ### Example URL
@@ -235,7 +234,6 @@ Returns the user list.
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | q | no | string | User to seach for. | 
-| limit | no | int | Doesn't seem to work. |
 
 ### Example URL
 
@@ -248,8 +246,8 @@ https://www.hitbox.tv/api/user/list
    {
       "user_name":"test-account",
       "user_status":"1",
-      "user_logo":"\/static\/img\/channel\/test-account_543fc6c30cbf5_large.jpg",
-      "user_logo_small":"\/static\/img\/channel\/test-account_543fc6c30cbf5_small.jpg"
+      "user_logo":"/static/img/channel/test-account_543fc6c30cbf5_large.jpg",
+      "user_logo_small":"/static/img/channel/test-account_543fc6c30cbf5_small.jpg"
    },
    ...
 ]
@@ -265,7 +263,7 @@ Changes default team that shows on your channel.
 
 ## Example URL
 
-https://www.hitbox.tv/api/user/test-account/team/default
+https://www.hitbox.tv/api/user/test-account/team/default?authToken=SuperSecret
 
 ### Example POST Payload
 

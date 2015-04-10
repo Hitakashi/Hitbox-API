@@ -3,12 +3,12 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /media/video/:user/list](/media/video.md#get-mediavideouserlist) | Return VOD data |
+| [GET /media/video/:channel/list](/media/video.md#get-mediavideouserlist) | Return VOD data |
 | [GET /media/video/:media_id](/media/video.md#get-mediavideomedia_id) | Return VOD data |
+| [POST /media/video/:channel](/media/video.md#post-mediavideochannel) | Create VOD from Recording |
+| [PUT /media/video/:video_id](/media/video.md#put-mediavideovideo_id) | Updates VOD data |
 
-## `GET /media/video/:user/list`
-
-Returns VOD data for the user. Some parameters overlap, no clue which overrides which.
+## `GET /media/video/:channel/list`
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
@@ -16,25 +16,24 @@ Returns VOD data for the user. Some parameters overlap, no clue which overrides 
 | filter | No | recent,popular | Video Filter |
 | hiddenOnly | No | boolean | Shows only private VODs |
 | limit | No | integer | Default: 100 Max: ?; Limits amount of VODs given |
-| liveonly | No | boolean | Default: False; Use: ? |
-| nocache | No | boolean | Server Side Switch, Gives fresh data |
 | publicOnly | No | boolean | Shows only public VODs only |
 | search | No | string | Search titles of VODs |
 | showHidden | No | boolean | Shows or Hide private VODs |
 | yt | No | boolean | Shows only yt VODs |
 
+Returns VOD list for the `:user`.
+
 ### Example URL
 
-https://www.hitbox.tv/api/media/video/:user/list
+https://www.hitbox.tv/api/media/video/test-account/list
 
 ### Example Response 
 ```json
 {
    "request":{
-      "this":"\/media\/video\/test-account\/list"
+      "this":"/media/video/test-account/list"
    },
    "media_type":"video",
-   "authToken":"1232131",
    "video":[
       {
          "media_user_name":"test-account",
@@ -43,7 +42,7 @@ https://www.hitbox.tv/api/media/video/:user/list
          "media_user_id":"27873323",
          "media_category_id":"2433650",
          "media_file":"f7fad5547948ec921167c0cdsde7edd88c5d9f-53f8dcd26bc06",
-         "media_profiles":"[{\"url\":\"\\\/test-account\\\/f7fad55432432ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06\\\/test-account\\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
+         "media_profiles":"[{\"url\":\"\\/test-account\\/f7fad55432432ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06\\/test-account\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
          "media_host":null,
          "media_hosted_id":null,
          "media_rec_session":null,
@@ -99,22 +98,22 @@ https://www.hitbox.tv/api/media/video/:user/list
          "category_media_count":"1",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/2198350-microvolts_logo.jpg",
+         "category_logo_large":"/static/img/games/2198350-microvolts_logo.jpg",
          "category_updated":"2014-12-13 20:40:22",
          "team_name":"TheBestTeam",
          "media_start_in_sec":"0",
-         "media_download_link":"http:\/\/edge.bf.hitbox.tv\/download\/\/test-account\/f7fad3232348ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06\/test-account\/index.m3u8?h=1Wdqn7PSvlE8kWQKC4XICA&e=1418815005",
+         "media_download_link":"http://edge.bf.hitbox.tv/download//test-account/f7fad3232348ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06/test-account/index.m3u8?h=1Wdqn7PSvlE8kWQKC4XICA&e=1418815005",
          "media_duration_format":"00:04:55",
-         "media_thumbnail":"\/static\/img\/media\/videos\/f7f\/f7fad5547321312167c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
-         "media_thumbnail_large":"\/static\/img\/media\/videos\/f7f\/f7fad5321328ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
+         "media_thumbnail":"/static/img/media/videos/f7f/f7fad5547321312167c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
+         "media_thumbnail_large":"/static/img/media/videos/f7f/f7fad5321328ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
          "channel":{
             "followers":"7",
             "user_id":"21312",
             "user_name":"test-account",
             "user_status":"1",
-            "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-            "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
-            "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+            "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+            "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
+            "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
@@ -132,15 +131,15 @@ https://www.hitbox.tv/api/media/video/:user/list
 
 Return VOD data for the user. It's exactly the same as above except it returns a `media_description` value.
 
-## Example URL
+### Example URL
 
 https://www.hitbox.tv/api/media/video/123
 
-## Example Response
+### Example Response
 ```json
 {
    "request":{
-      "this":"\/media\/video\/123"
+      "this":"/media/video/123"
    },
    "media_type":"video",
    "video":[
@@ -149,13 +148,14 @@ https://www.hitbox.tv/api/media/video/123
          "media_id":"123",
          "media_file":"f7fad5547948ec921167dac748cde7edd88c5d9f-53f8dcd26bc06",
          "media_user_id":"278723",
-         "media_profiles":"[{\"url\":\"\\\/test-account\\\/f7fad5547948ec921das167c0c748cde7edd88c5d9f-53f8dcd26bc06\\\/test-account\\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
+         "media_profiles":"[{\"url\":\"\\/test-account\\/f7fad5547948ec921das167c0c748cde7edd88c5d9f-53f8dcd26bc06\\/test-account\\/index.m3u8\",\"height\":\"720\",\"bitrate\":0}]",
          "media_type_id":"2",
          "media_is_live":"1",
          "media_live_delay":"0",
          "media_date_added":"2014-08-23 18:36:54",
          "media_live_since":null,
          "media_mature":null,
+         "media_hidden":null,
          "media_transcoding":null,
          "media_chat_enabled":"1",
          "media_countries":null,
@@ -182,21 +182,21 @@ https://www.hitbox.tv/api/media/video/123
          "category_media_count":"1",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/2198350-microvolts_logo.jpg",
+         "category_logo_large":"/static/img/games/2198350-microvolts_logo.jpg",
          "category_updated":"2014-12-13 20:40:22",
          "team_name":"TheBestTeam",
          "media_start_in_sec":"0",
          "media_duration_format":"00:04:55",
-         "media_thumbnail":"\/static\/img\/media\/videos\/f7f\/f7fad5547948e543c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
-         "media_thumbnail_large":"\/static\/img\/media\/videos\/f7f\/f7fad5547948ec9543c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
+         "media_thumbnail":"/static/img/media/videos/f7f/f7fad5547948e543c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
+         "media_thumbnail_large":"/static/img/media/videos/f7f/f7fad5547948ec9543c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
          "channel":{
             "followers":"7",
             "user_id":"123",
             "user_name":"test-account",
             "user_status":"1",
-            "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-            "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
-            "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+            "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+            "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
+            "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
@@ -207,5 +207,94 @@ https://www.hitbox.tv/api/media/video/123
          }
       }
    ]
+}
+```
+
+## `POST /media/video/:channel`
+
+Creates VOD from Recording object. `rec_session` can be retrieved from the [Recording API](/media/recordings.md). `clip_start` and `clip_duration` are where you want to cut in seconds.
+
+### Example URL
+
+https://www.hitbox.tv/api/media/video/test-account
+
+### Example POST Payload
+
+```json
+{
+  "user_name":"test-account",
+  "authToken":"SuperSecret",
+  "media_type":"video",
+  "media_status":"This is the video title!",
+  "media_category_id":"50055",
+  "clip_duration":554,
+  "clip_start":0,
+  "rec_session":"SuperSecretRecSession"
+}
+```
+
+### Example Response
+
+Successful
+```
+media_created
+```
+
+Failed (Title too short, rec_session incorrect, etc)
+
+```
+media_error
+```
+
+## `PUT /media/video/:video_id`
+
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | Yes | string | Users Auth Token. | 
+
+Updates VOD data.
+
+**Caution**: To correctly update this API, You must send **all** values below except `media_description` which is optional unless you want to update the video description.
+
+### Example URL
+
+https://www.hitbox.tv/api/media/video/123
+
+### Example PUT Payload
+
+```json
+{
+  "video":[
+    {
+      "media_user_name":"test-account",
+      "media_id":"481290",
+      "media_category_id":"24146",
+      "media_hidden":"0",
+      "media_status":"This is a video title!",
+      "media_description":""
+    }
+  ]
+}
+```
+
+### Example Response 
+
+```json
+{
+  "video":[
+    {
+      "media_user_name":"masta",
+      "media_id":"481290",
+      "media_category_id":"24146",
+      "media_hidden":"0",
+      "media_status":"This is a video title!",
+      "media_description":""
+    }
+  ],
+  "livestream":[
+    {
+      "media_description_md":null
+    }
+  ]
 }
 ```

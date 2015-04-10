@@ -10,15 +10,17 @@
 
 ## `GET /editors/:channel`
 
-Returns list of editors for a channel.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Returns list of editor objects that have access to '':channel''.
+
+**Note**: Only the broadcaster of `:channel` can view this API.
+
 ### Example URL
 
-https://www.hitbox.tv/api/editors/test-account
+https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
 
 ### Example Response 
 
@@ -27,8 +29,8 @@ https://www.hitbox.tv/api/editors/test-account
    "list":[
       {
          "user_name":"Another-Test",
-         "user_logo":"\/static\/img\/channel\/another-test_52274f9e8159b_large.jpg",
-         "user_logo_small":"\/static\/img\/channel\/another-test
+         "user_logo":"/static/img/channel/another-test_52274f9e8159b_large.jpg",
+         "user_logo_small":"/static/img/channel/another-test
          _52274f9e8159b_small.jpg"
       }
       ...
@@ -38,15 +40,15 @@ https://www.hitbox.tv/api/editors/test-account
 
 ## `GET /editor/:user`
 
-Returns list of channels a user is an editor in.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Returns list of editor objects that `:user` has access to.
+
 ### Example URL
 
-https://www.hitbox.tv/api/editors/test-account
+https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
 
 ### Example Response 
 
@@ -55,8 +57,8 @@ https://www.hitbox.tv/api/editors/test-account
    "list":[
       {
          "user_name":"Another-Test",
-         "user_logo":"\/static\/img\/channel\/another-test_52274f9e8159b_large.jpg",
-         "user_logo_small":"\/static\/img\/channel\/another-test
+         "user_logo":"/static/img/channel/another-test_52274f9e8159b_large.jpg",
+         "user_logo_small":"/static/img/channel/another-test
          _52274f9e8159b_small.jpg"
       }
       ...
@@ -66,7 +68,9 @@ https://www.hitbox.tv/api/editors/test-account
 
 ## `POST /editors/:channel`
 
-Adds or Removes users from the editor list.
+Add or Remove Editors for '':channel''
+
+**Note**: Only the broadcaster of '':channel'' can modify this API.
 
 ### Example POST Payload
 
@@ -75,7 +79,7 @@ All variables required. Toggle the `remove` boolean as needed.
 ```json
 {
    "user_name":"test-account",
-   "authToken":"1111111",
+   "authToken":"SuperSecret",
    "editor":"test-user",
    "remove":false
 }

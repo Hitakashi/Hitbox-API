@@ -93,7 +93,7 @@ https://www.hitbox.tv/api/facebook/post
 
 ```json
 {
-   "authToken":"12312312312312",
+   "authToken":"SuperSecret",
    "user_name":"test-account",
    "message":"Hello Facebook!"
 }

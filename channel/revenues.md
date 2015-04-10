@@ -7,284 +7,64 @@
 
 ## `GET /revenues/channel/:user`
 
-Returns revenues for given channel between `startDate` and `endDate`
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
-| endDate | Yes | Epoch | Epoch time stamp |
-| startDate | Yes | Epoch | Epoch time stamp |
+| endDate | Yes | Date | Date in YYYY-MM-DD |
+| startDate | Yes | Date | Date in YYYY-MM-DD |
+
+Returns revenues for given channel between `startDate` and `endDate`
 
 ### Example URL
 
-https://www.hitbox.tv/api/revenues/channel/test-account?authToken=123&endDate=1418860799&startDate=1416182400
+https://www.hitbox.tv/api/revenues/channel/test-account?authToken=SuperSecret&endDate=2015-04-08&startDate=2015-03-07
 
 ### Example Response 
 
 Non-Parter Info: (I assume Partners follow the same layout)
 ```json
 {
-   "request":{
-      "this":"/revenues/channel/test-account",
-      "type":"channel",
-      "user":"test-account"
-   },
-   "revenues":{
-      "summary":{
-         "currency":"EUR",
-         "total_earnings":0,
-         "max_earnings":null
-      },
-      "plans":[
+  "request":{
+    "this":"/revenues/channel/test-account",
+    "type":"channel",
+    "user":"test-account"
+  },
+  "revenues":{
+    "summary":{
+      "currency":"EUR",
+      "total_earnings":0,
+      "max_earnings":null
+    },
+    "plans":[
 
-      ],
-      "timeline":[
-         [
-            1423785600000,
-            0
-         ],
-         [
-            1423872000000,
-            0
-         ],
-         [
-            1423958400000,
-            0
-         ],
-         [
-            1424044800000,
-            0
-         ],
-         [
-            1424131200000,
-            0
-         ],
-         [
-            1424217600000,
-            0
-         ],
-         [
-            1424304000000,
-            0
-         ],
-         [
-            1424390400000,
-            0
-         ],
-         [
-            1424476800000,
-            0
-         ],
-         [
-            1424563200000,
-            0
-         ],
-         [
-            1424649600000,
-            0
-         ],
-         [
-            1424736000000,
-            0
-         ],
-         [
-            1424822400000,
-            0
-         ],
-         [
-            1424908800000,
-            0
-         ],
-         [
-            1424995200000,
-            0
-         ],
-         [
-            1425081600000,
-            0
-         ],
-         [
-            1425168000000,
-            0
-         ],
-         [
-            1425254400000,
-            0
-         ],
-         [
-            1425340800000,
-            0
-         ],
-         [
-            1425427200000,
-            0
-         ],
-         [
-            1425513600000,
-            0
-         ],
-         [
-            1425600000000,
-            0
-         ],
-         [
-            1425686400000,
-            0
-         ],
-         [
-            1425772800000,
-            0
-         ],
-         [
-            1425859200000,
-            0
-         ],
-         [
-            1425945600000,
-            0
-         ],
-         [
-            1426032000000,
-            0
-         ],
-         [
-            1426118400000,
-            0
-         ],
-         [
-            1426204800000,
-            0
-         ],
-         [
-            1426291200000,
-            0
-         ],
-         [
-            1426377600000,
-            0
-         ],
-         [
-            1426464000000,
-            0
-         ]
-      ],
-      "daily":{
-         "2015-02-13":{
-            "earnings":0
-         },
-         "2015-02-14":{
-            "earnings":0
-         },
-         "2015-02-15":{
-            "earnings":0
-         },
-         "2015-02-16":{
-            "earnings":0
-         },
-         "2015-02-17":{
-            "earnings":0
-         },
-         "2015-02-18":{
-            "earnings":0
-         },
-         "2015-02-19":{
-            "earnings":0
-         },
-         "2015-02-20":{
-            "earnings":0
-         },
-         "2015-02-21":{
-            "earnings":0
-         },
-         "2015-02-22":{
-            "earnings":0
-         },
-         "2015-02-23":{
-            "earnings":0
-         },
-         "2015-02-24":{
-            "earnings":0
-         },
-         "2015-02-25":{
-            "earnings":0
-         },
-         "2015-02-26":{
-            "earnings":0
-         },
-         "2015-02-27":{
-            "earnings":0
-         },
-         "2015-02-28":{
-            "earnings":0
-         },
-         "2015-03-01":{
-            "earnings":0
-         },
-         "2015-03-02":{
-            "earnings":0
-         },
-         "2015-03-03":{
-            "earnings":0
-         },
-         "2015-03-04":{
-            "earnings":0
-         },
-         "2015-03-05":{
-            "earnings":0
-         },
-         "2015-03-06":{
-            "earnings":0
-         },
-         "2015-03-07":{
-            "earnings":0
-         },
-         "2015-03-08":{
-            "earnings":0
-         },
-         "2015-03-09":{
-            "earnings":0
-         },
-         "2015-03-10":{
-            "earnings":0
-         },
-         "2015-03-11":{
-            "earnings":0
-         },
-         "2015-03-12":{
-            "earnings":0
-         },
-         "2015-03-13":{
-            "earnings":0
-         },
-         "2015-03-14":{
-            "earnings":0
-         },
-         "2015-03-15":{
-            "earnings":0
-         },
-         "2015-03-16":{
-            "earnings":0
-         }
-      },
-      "top":{
-         "countries":[
-
-         ],
-         "content":{
-            "live":{
-               "earnings":0
-            },
-            "video":{
-               "earnings":0
-            },
-            "subscriptions":{
-               "earnings":0
-            }
-         }
-      },
-      "revenues_new":[
-
+    ],
+    "timeline":[
+      [
+        1427673600000,
+        0
       ]
-   }
+    ],
+    "daily":{
+      "2015-03-30":{
+        "earnings":0
+      }
+    },
+    "top":{
+      "countries":[
+
+      ],
+      "content":{
+        "live":{
+          "earnings":0
+        },
+        "video":{
+          "earnings":0
+        },
+        "subscriptions":{
+          "earnings":0
+        }
+      }
+    }
+  }
 }
 ```

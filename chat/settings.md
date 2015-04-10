@@ -11,11 +11,11 @@ Returns hitbox chat emoticons.
 
 ## `GET /chat/settings/:channel`
 
-Returns chat settings for the channel.
-
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users Auth Token. | 
+
+Returns chat settings for `:channel`
 
 ### Example URL
 
@@ -26,7 +26,8 @@ https://www.hitbox.tv/api/chat/settings/test-account
 ```json
 {
   "user_id":"123",
-  "sub_images":false
+  "sub_images":false,
+  "whisper":true
 }
 ```
 
@@ -40,7 +41,7 @@ Returns chat settings for the channel.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/settings/test-account
+https://www.hitbox.tv/api/chat/settings/test-account?authToken=SuperSecret
 
 ### Example Payload 
 

@@ -62,7 +62,7 @@ Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryxc5Hjc4MDXrAqZX
 
 ```json
 {
-    "cover":"\/static\/img\/channel\/cover_54b72f19e8765.png"
+    "cover":"/static/img/channel/cover_54b72f19e8765.png"
 }
 ```
 
@@ -78,7 +78,7 @@ https://www.hitbox.tv/api/upload/description/test-account/1232131232132
 [
     {
         "image_id":"123",
-        "image_path":"\/static\/img\/channel\/test-account-profile-image-054b2d1096530c0b-300x300-png_54b7309baa686.png",
+        "image_path":"/static/img/channel/test-account-profile-image-054b2d1096530c0b-300x300-png_54b7309baa686.png",
         "image_date_added":"2015-01-14 23:49:45"
     }
 ]

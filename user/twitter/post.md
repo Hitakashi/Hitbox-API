@@ -16,7 +16,7 @@ Sending a POST request with the data below will send a tweet to twitter.
 
 ### Example URL
 
-https://www.hitbox.tv/api/twitter/post?authToken=123&user_name=test-account
+https://www.hitbox.tv/api/twitter/post?authToken=SuperSecret&user_name=test-account
 
 ### Example POST Payload
 

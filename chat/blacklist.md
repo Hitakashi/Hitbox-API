@@ -8,32 +8,31 @@
 
 ## `GET /chat/blacklist/:channel`
 
-Returns the `channel` chat blacklist. Does not need authentication.
+Returns the `channel` chat blacklist.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/blacklist/:channel
+https://www.hitbox.tv/api/chat/blacklist/test-account
 
 ### Example Response 
 
 ```json
 [
-  "example.com",
-  "superlongthingtonottrigger"
+  "example.com"
 ]
 ```
 
 ## `POST /chat/blacklist/:channel`
 
-Updates `channel` blacklist.
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Updates `channel` blacklist
+
 ### Example URL
 
-https://www.hitbox.tv/api/chat/blacklist/test-account?authToken=123
+https://www.hitbox.tv/api/chat/blacklist/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 

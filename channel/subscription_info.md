@@ -9,6 +9,8 @@
 
 Returns subscription information for given channel.
 
+**Note**: If the channel does not have a subscription button this API will return `subscription_not_found`
+
 ### Example URL
 
 https://www.hitbox.tv/api/subscription/info/channel/test-account
@@ -18,13 +20,13 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
 ```json
 {
    "request":{
-      "this":"\/subscription\/info\/channel\/theebstream"
+      "this":"/subscription/info/channel/test-account"
    },
    "subscription":{
       "plan":{
-         "user_id":"111",
+         "user_id":"1",
          "group_id":"0",
-         "plan_id":"123",
+         "plan_id":"5",
          "date_added":"2014-07-22 12:15:24",
          "plan_group_id":null,
          "plan_name":"test-account",
@@ -61,9 +63,4 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
       "signature":null
    }
 }
-```
-
-If not in partnership with subscription 
-```json
-subscription_not_found
 ```

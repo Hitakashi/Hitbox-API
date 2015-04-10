@@ -17,7 +17,7 @@ Returns the users notification settings.
 
 ### Example URL
 
-https://www.hitbox.tv/api/notifications?authToken=123&user_name=test-account
+https://www.hitbox.tv/api/notifications?authToken=SuperSecret&user_name=test-account
 
 ### Example Response 
 

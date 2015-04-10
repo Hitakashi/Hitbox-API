@@ -17,7 +17,7 @@ Returns global chat emoticons.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/icons/:user
+https://www.hitbox.tv/api/chat/icons/test-account
 
 ### Example Response 
 
@@ -25,12 +25,12 @@ https://www.hitbox.tv/api/chat/icons/:user
 {
    "icons":{
       ":heart:":[
-         "\/static\/img\/chat\/default\/heart.png",
+         "/static/img/chat/default/heart.png",
          ":heart:",
          ":heart:"
       ],
       "...@":[
-         "\/static\/img\/chat\/default\/tumbleweed.png",
+         "/static/img/chat/default/tumbleweed.png",
          "..@",
          "..@"
       ],

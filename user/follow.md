@@ -9,23 +9,22 @@
 
 ## `POST /follow`
 
-Follows a user via their user id
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 
+Follows a user via their user id (`follow_id`)
+
 ### Example URL
 
-https://www.hitbox.tv/api/follow?authToken=123213213213
+https://www.hitbox.tv/api/follow?authToken=SuperSecret
 
 ### Example POST Payload 
 
 ```json
 {
    "type":"user",
-   "follow_id":"278723",
-   "authToken":"12321312312321"
+   "follow_id":"278723"
 }
 ```
 
@@ -37,17 +36,17 @@ following
 
 ## `DELETE /follow`
 
-Unfollows a user via their user id
-
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
 | follow_id | Yes | string | User's ID |
 | type | Yes | string | Unknown, Default: user |
 
+Unfollows a user via their user id (`follow_id`)
+
 ### Example URL
 
-https://www.hitbox.tv/api/follow?authToken=1321321&follow_id=278723&type=user
+https://www.hitbox.tv/api/follow?authToken=SuperSecret&follow_id=278723&type=user
 
 ### Example Response 
 

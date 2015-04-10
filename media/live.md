@@ -10,18 +10,21 @@
 
 ## `GET /media/live/:channel`
 
-Returns stream information. You can only get this information if the user has setup their livestream.
-
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | No | string | Users Auth Token. Used if wanting private user information. | 
-| nocache | No | boolean | No clue. Server side switch probably. |
-| filter | No | string | ? |
-| limit | No | int | ? |
-| liveonly | No | boolean | ? |
-| publicOnly | No | boolean | ? |
-| showHidden | Sorta | boolean | This will return channel information even if the stream is offline. I would always set to true |
-| hiddenOnly | No | boolean | Hidden Streams |
+| showHidden | Sorta | boolean | Show Hidden Streams. |
+
+Returns stream information. You can only get this information if the user has setup their livestream.
+
+I recommend only using `showHidden` when you have 'permission' for example they join your bot to their channel.
+
+Hosting a channel:
+If a channel is being hosted they add a these:
+
+`media_hosted_id`: Media ID of hosted channel.
+
+`media_hosted_media`: Literally shoving this same API of hosted user into this json object.
 
 ### Example URL
 
@@ -33,10 +36,9 @@ If valid authToken is passed and host is off
 ```json
 {
    "request":{
-      "this":"\/media\/live\/test-account"
+      "this":"/media/live/test-account"
    },
    "media_type":"live",
-   "authToken":"DaKongInChat",
    "livestream":[
       {
          "media_user_name":"test-account",
@@ -93,7 +95,7 @@ If valid authToken is passed and host is off
          "media_description_md":"<p>Stream Profile in Markdown<\/p>\n",
          "media_tags":"",
          "media_duration":"0.0000",
-         "media_bg_image":"\/static\/img\/channel\/cover_53f21bf06572c78.png",
+         "media_bg_image":"/static/img/channel/cover_53f21bf06572c78.png",
          "media_views":"0",
          "media_views_daily":"0",
          "media_views_weekly":"0",
@@ -106,22 +108,22 @@ If valid authToken is passed and host is off
          "category_media_count":"9",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/elite-dangerous.png",
+         "category_logo_large":"/static/img/games/elite-dangerous.png",
          "category_updated":"2014-12-18 00:42:25",
          "team_name":"TheBestTeam",
          "media_start_in_sec":"0",
-         "media_download_link":"http:\/\/edge.bf.hitbox.tv\/download\/?h=wkq9jK_GLOyY222213orqw&e=1418867029",
+         "media_download_link":"http://edge.bf.hitbox.tv/download/?h=wkq9jK_GLOyY222213orqw&e=1418867029",
          "media_duration_format":"00:00:00",
-         "media_thumbnail":"\/static\/img\/media\/live\/test-account_mid_000.jpg",
-         "media_thumbnail_large":"\/static\/img\/media\/live\/test-account_large_000.jpg",
+         "media_thumbnail":"/static/img/media/live/test-account_mid_000.jpg",
+         "media_thumbnail_large":"/static/img/media/live/test-account_large_000.jpg",
          "channel":{
             "followers":"7",
             "user_id":"1321312",
             "user_name":"test-account",
             "user_status":"1",
-            "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-            "user_cover":"\/static\/img\/channel\/cover_53fbf01572c78.png",
-            "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+            "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+            "user_cover":"/static/img/channel/cover_53fbf01572c78.png",
+            "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
@@ -129,7 +131,7 @@ If valid authToken is passed and host is off
             "twitter_enabled":"0",
             "livestream_count":"1",
             "user_media_id":"12",
-            "channel_link":"http:\/\/hitbox.tv\/test-account"
+            "channel_link":"http://hitbox.tv/test-account"
          }
       }
    ]
@@ -141,7 +143,7 @@ else
 ```json
 {
    "request":{
-      "this":"\/media\/live\/test-account"
+      "this":"/media/live/test-account"
    },
    "media_type":"live",
    "livestream":[
@@ -169,10 +171,10 @@ else
          "media_status":"Stream Title",
          "media_title":"",
          "media_description":"Stream Profile without markdown",
-         "media_description_md":"<p>Stream Profile in Markdown<\/p>\n",
+         "media_description_md":"<p>Stream Profile in Markdown</p>\n",
          "media_tags":"",
          "media_duration":"0.0000",
-         "media_bg_image":"\/static\/img\/channel\/cover_53fb21572c78.png",
+         "media_bg_image":"/static/img/channel/cover_53fb21572c78.png",
          "media_views":"0",
          "media_views_daily":"0",
          "media_views_weekly":"0",
@@ -185,21 +187,21 @@ else
          "category_media_count":"10",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/elite-dangerous.png",
+         "category_logo_large":"/static/img/games/elite-dangerous.png",
          "category_updated":"2014-12-18 01:04:25",
          "team_name":"TheBestTeam",
          "media_start_in_sec":"0",
          "media_duration_format":"00:00:00",
-         "media_thumbnail":"\/static\/img\/media\/live\/test-account_mid_000.jpg",
-         "media_thumbnail_large":"\/static\/img\/media\/live\/test-account_large_000.jpg",
+         "media_thumbnail":"/static/img/media/live/test-account_mid_000.jpg",
+         "media_thumbnail_large":"/static/img/media/live/test-account_large_000.jpg",
          "channel":{
             "followers":"7",
             "user_id":"278123",
             "user_name":"test-account",
             "user_status":"1",
-            "user_logo":"\/static\/img\/channel\/test-account_53f4e837eb388_large.png",
-            "user_cover":"\/static\/img\/channel\/cover_53fbf06572c78.png",
-            "user_logo_small":"\/static\/img\/channel\/test-account_53f4e837eb388_small.png",
+            "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
+            "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
+            "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
@@ -207,29 +209,25 @@ else
             "twitter_account":"test-account",
             "twitter_enabled":"0",
             "livestream_count":"1",
-            "channel_link":"http:\/\/hitbox.tv\/test-account"
+            "channel_link":"http://hitbox.tv/test-account"
          }
       }
    ]
 }
 ```
 
-Hosting a channel:
-If you are hosting they add a these:
-
-`media_hosted_id`: Media ID of hosted channel.
-
-`media_hosted_media`: Literally shoving this same API of hosted user into this json object.
-
-If showHidden=false and stream is offline 
-
-```json
-no_media_found
-```
-
 ## `GET /media/live/list`
 
-Params: Same as above API. Some may not work.
+| Paramater | Required? | Type | Description |
+| ---- | ----- | ---- | ----- |
+| authToken | No | string | Users Auth Token. Used if wanting private user information. | 
+| publicOnly | No | boolean | Show only visible streams. |
+| showHidden | Sorta | boolean | Show Hidden Streams. |
+| liveonly | No | boolean | Show non-live media objects. |
+| filter | No | string | Valid: recent, popular (default). |
+| limit | No | int | Maximum number of objects to fetch. Default and Max. is 100. |
+
+Returns a list of media objects. 
 
 ### Example URL
 
@@ -240,7 +238,7 @@ https://www.hitbox.tv/api/media/live/list
 ```json
 {
   "request":{
-    "this":"\/media\/live\/list"
+    "this":"/media/live/list"
   },
   "media_type":"live",
   "livestream":[
@@ -270,7 +268,7 @@ https://www.hitbox.tv/api/media/live/list
       "media_title":"",
       "media_tags":"",
       "media_duration":"0.0000",
-      "media_bg_image":"\/static\/img\/channel\/cover_5495978d7a326.jpg",
+      "media_bg_image":"/static/img/channel/cover_5495978d7a326.jpg",
       "media_views":"748",
       "media_views_daily":"0",
       "media_views_weekly":"0",
@@ -283,28 +281,28 @@ https://www.hitbox.tv/api/media/live/list
       "category_media_count":"1",
       "category_channels":null,
       "category_logo_small":null,
-      "category_logo_large":"\/static\/img\/games\/2419553-397060_386577108098888_427807760_n.jpg",
+      "category_logo_large":"/static/img/games/2419553-397060_386577108098888_427807760_n.jpg",
       "category_updated":"2015-01-21 23:11:42",
       "team_name":"jarockpl",
       "media_start_in_sec":"0",
       "media_duration_format":"00:00:00",
-      "media_thumbnail":"\/static\/img\/media\/live\/yuuhi_mid_000.jpg",
-      "media_thumbnail_large":"\/static\/img\/media\/live\/yuuhi_large_000.jpg",
+      "media_thumbnail":"/static/img/media/live/yuuhi_mid_000.jpg",
+      "media_thumbnail_large":"/static/img/media/live/yuuhi_large_000.jpg",
       "channel":{
         "followers":"10371",
         "user_id":"415015",
         "user_name":"Yuuhi",
         "user_status":"1",
-        "user_logo":"\/static\/img\/channel\/Yuuhi_549599f97d8d0_large.jpg",
-        "user_cover":"\/static\/img\/channel\/cover_5495978d7a326.jpg",
-        "user_logo_small":"\/static\/img\/channel\/Yuuhi_549599f97d8d0_small.jpg",
+        "user_logo":"/static/img/channel/Yuuhi_549599f97d8d0_large.jpg",
+        "user_cover":"/static/img/channel/cover_5495978d7a326.jpg",
+        "user_logo_small":"/static/img/channel/Yuuhi_549599f97d8d0_small.jpg",
         "user_partner":"1",
         "media_is_live":"1",
         "media_live_since":"2015-01-23 14:55:29",
         "twitter_account":null,
         "twitter_enabled":null,
         "livestream_count":"1",
-        "channel_link":"http:\/\/hitbox.tv\/yuuhi"
+        "channel_link":"http://hitbox.tv/yuuhi"
       }
     },
     ...
@@ -314,49 +312,39 @@ https://www.hitbox.tv/api/media/live/list
 
 ## `PUT /media/live/:channel`
 
-Allows you to update multiple values of the stream, including descriptions. 
-
 | Paramater | Required? | Type | Description |
 | ---- | ----- | ---- | ----- |
 | authToken | Yes | string | Users Auth Token. | 
 
+Allows you to update multiple values of the stream, including descriptions. 
+
+
 ### Example URL
 
-https://www.hitbox.tv/api/media/live/test-account?authToken=1312321321321
+https://www.hitbox.tv/api/media/live/test-account?authToken=SuperSecret
 
 ### Example PUT Payload
 <a name="hostmode"></a>
 Setting `media_hosted_name` to a valid hitbox username enables host mode, setting it to "off" disables it.
 
-Whenever I have tested this API, It required that you send value for `media_category_id`, `media_hidden`, `media_recording`, `media_mature`, `media_countries` and `media_status` or it would set them to empty or default. (Aka disabled recordings)
+**Caution**: To correctly update this API, You must send all values below except media_description, which is optional unless you want to update the channel description.
 
 ```javascript
 {
    "livestream":[
       {
-         // Following two values are required
          "media_user_name":"test-account",
          "media_id":"15830",
-         // This is your game ID, You can get it from the Game API.
          "media_category_id":"455",
-         // This is how much delay hitbox will add AFTER any delay from your livestream software
          "media_live_delay":"0",
-         // This will change the visibility of your stream. 
-         // If set to 1 you channel will be hidden
          "media_hidden":"0",
-         // Enable or Disable recordings. 1 = true 0 = false
          "media_recording":"1",
-         // Enables or disables the mature wall. 1 = true 0 = false
          "media_mature":"1",
-         // Username of channel you want to host. Setting to "off" will disable host mode.
          "media_hosted_name": "test-host",
-         // List of countries/languages that you speak. Max of 2 allowed. 
          "media_countries":[
             "US"
          ],
-         // This is your stream title
          "media_status":"This is a stream title!",
-         // This is your profile description. Markdown is valid in here.
          "media_description":"This is your profile description!"
       }
    ]
@@ -370,7 +358,6 @@ Enable Host Mode:
 host_mode_enabled
 ```
 Disable Host Mode:
-
 ```json
 host_mode_disabled
 ```
@@ -405,7 +392,7 @@ host_mode_disabled
 
 ### Example URL
 
-https://www.hitbox.tv/media/live/test-account?authToken=123
+https://www.hitbox.tv/media/live/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 

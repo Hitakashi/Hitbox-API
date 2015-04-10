@@ -24,7 +24,7 @@ https://www.hitbox.tv/api/games
 ```json
 {
    "request":{
-      "this":"\/games"
+      "this":"/games"
    },
    "categories":[
       {
@@ -36,7 +36,7 @@ https://www.hitbox.tv/api/games
          "category_media_count":"1",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/team_fortress_2.jpg",
+         "category_logo_large":"/static/img/games/team_fortress_2.jpg",
          "category_updated":"2014-12-17 19:42:24"
       },
       {
@@ -48,7 +48,7 @@ https://www.hitbox.tv/api/games
          "category_media_count":"1",
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/games\/1047035-team_fortress_classic_box.jpg",
+         "category_logo_large":"/static/img/games/1047035-team_fortress_classic_box.jpg",
          "category_updated":"2014-11-29 04:08:15"
       },
       {
@@ -60,7 +60,7 @@ https://www.hitbox.tv/api/games
          "category_media_count":null,
          "category_channels":null,
          "category_logo_small":null,
-         "category_logo_large":"\/static\/img\/generic\/blank.gif",
+         "category_logo_large":"/static/img/generic/blank.gif",
          "category_updated":"2014-05-05 13:51:37"
       }
    ]

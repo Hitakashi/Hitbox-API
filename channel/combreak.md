@@ -17,7 +17,7 @@ https://www.hitbox.tv/api/ws/combreak/test-account/1
 
 ```json
 {
-   "authToken":"12312321312312"
+   "authToken":"SuperSecret"
 }
 ```
 
@@ -30,8 +30,8 @@ https://www.hitbox.tv/api/ws/combreak/test-account/1
       "channel":"test-account",
       "count":"1",
       "delay":"0",
-      "token":"authToken",
-      "url":"http:\/\/hitbox.tv",
+      "token":"SuperSecret",
+      "url":"http://hitbox.tv",
       "timestamp":1418876364
    }
 }
