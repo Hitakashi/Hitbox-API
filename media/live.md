@@ -226,6 +226,7 @@ else
 | liveonly | No | boolean | Show non-live media objects. |
 | filter | No | string | Valid: recent, popular (default). |
 | limit | No | int | Maximum number of objects to fetch. Default and Max. is 100. |
+| follow_id | No | String | Shows only live streams that `follow_id` (user ID) follows. |
 
 Returns a list of media objects. 
 
