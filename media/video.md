@@ -237,7 +237,9 @@ https://www.hitbox.tv/api/media/video/test-account
 
 Successful
 ```
-media_created
+{
+  "media_id":"487354"
+}
 ```
 
 Failed (Title too short, rec_session incorrect, etc)
