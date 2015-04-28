@@ -125,6 +125,7 @@ If valid authToken is passed and host is off
             "user_cover":"/static/img/channel/cover_53fbf01572c78.png",
             "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
+            "user_beta_profile": "1",
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
             "twitter_account":"test-account",
