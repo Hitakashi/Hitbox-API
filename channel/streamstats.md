@@ -4,6 +4,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /streamstats/:user/:startTime/:endTime](/channel/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats |
+| [GET /streamedseconds/:channel/:startDate/:endDate](/channel/streamstats.md#get-streamedsecondschannelstartdateenddate) | Returns seconds streamed |
 
 ## `GET /streamstats/:user/:startTime/:endTime`
 
@@ -111,5 +112,31 @@ https://www.hitbox.tv/api/streamstats/test-account/1416182400000/1418860799000?a
       ]
     ]
   }
+}
+```
+
+
+## `GET /streamedseconds/:channel/:startDate/:endDate`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+
+Returns streamed time in seconds between `:startDate` and `:endDate`
+
+Both dates are epoch times.
+
+### Example URL
+
+https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/1430956800000
+
+### Example Response
+
+```json
+{
+   "channel":"test-account",
+   "startTime":1428192000000,
+   "endTime":1430956800000,
+   "streamed_seconds":1412
 }
 ```
