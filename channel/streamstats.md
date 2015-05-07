@@ -128,7 +128,7 @@ Both dates are epoch times.
 
 ### Example URL
 
-https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/1430956800000
+https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/1430956800000?authToken=SuperSecret
 
 ### Example Response
 
