@@ -4,8 +4,8 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /subscriptionlist/:user](/subscribers.md#get-subscriptionlistuser) | Returns Subscriptions List |
-| [GET /subscriberlist/:user](/subscribers.md#get-subscriberlistuser) | Returns Subscribers List |
+| [GET /subscriptionlist/:user](/user/subscribers.md#get-subscriptionlistuser) | Returns Subscriptions List |
+| [GET /subscriberlist/:user](/user/subscribers.md#get-subscriberlistuser) | Returns Subscribers List |
 
 ## `GET /subscriptionlist/:user`
 
