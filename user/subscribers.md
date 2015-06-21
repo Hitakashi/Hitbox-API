@@ -76,7 +76,7 @@ Returns users that have subscribed to `:user`
 
 Will return `no_subscribers_found` if you have no subscribers.
 
-##$ Example URL 
+### Example URL 
 
 https://www.hitbox.tv/api/subscriberlist/test-account?authToken=SuperSecret
 
