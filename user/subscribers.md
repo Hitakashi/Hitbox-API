@@ -1,10 +1,11 @@
-# Subscription List API
+# Subscriber API
 ***
 
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /subscriptionlist/:user](/subscriptionlist.md#get-subscriptionlistuser) | Returns stream stats |
+| [GET /subscriptionlist/:user](/subscribers.md#get-subscriptionlistuser) | Returns Subscriptions List |
+| [GET /subscriberlist/:user](/subscribers.md#get-subscriberlistuser) | Returns Subscribers List |
 
 ## `GET /subscriptionlist/:user`
 
@@ -13,11 +14,10 @@ Returns channels you have subscribed to.
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | Yes | string | User's Auth Token |
-| nocache | no | string | ? |
 
 ### Example URL
 
-https://www.hitbox.tv/api/subscriptionlist/test-account?authToken=12312321312
+https://www.hitbox.tv/api/subscriptionlist/test-account?authToken=SuperSecret
 
 ### Example Response 
 
@@ -62,4 +62,43 @@ No Subscriptions:
 
 ```json
 subscription_not_found
+```
+
+## `GET /subscriberlist/:user`
+
+Returns users that have subscribed to `:user`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+
+**Note**: Always check `sub_date_valid` as `canceled` can be incorrect. (Canceling outside of the website)
+
+Will return `no_subscribers_found` if you have no subscribers.
+
+##$ Example URL 
+
+https://www.hitbox.tv/api/subscriberlist/test-account?authToken=SuperSecret
+
+### Example Response
+
+```json
+{
+   "request":{
+      "this":"/subscriberlist/test-account"
+   },
+   "subscribers":[
+      {
+         "followers":"123",
+         "user_name":"Masta",
+         "user_id":"1",
+         "user_logo":"/static/img/channel/masta_55270735d51ac_large.jpg",
+         "user_logo_small":"/static/img/channel/masta_55270735d51ac_small.jpg",
+         "sub_date_added":"2015-01-20 15:49:51",
+         "sub_date_valid":"2015-07-20 04:35:31",
+         "sub_payment_method":"paypal",
+         "canceled":null
+      }
+   ]
+}
 ```
