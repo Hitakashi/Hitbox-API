@@ -184,7 +184,7 @@ Chat Moderators: `chat` is set as `user`
    "settings":"anon",
    "account":"anon",
    "livestreams":"anon",
-   "partner":"anon",
+   "partner":null,
    "broadcast":"anon",
    "videos":"anon",
    "recordings":"anon",
@@ -197,6 +197,7 @@ Chat Moderators: `chat` is set as `user`
    "subscriptions":"anon",
    "admin":null,
    "superadmin":null,
+   "payments":"",
    "isSubscriber":false,
    "isFollower":false
 }
