@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/chat/servers
 
 ### Example Response 
 
-```json
+```javascript
 [
    {
       "server_ip":"ec2-54-211-95-56.compute-1.amazonaws.com"

@@ -22,7 +22,7 @@ https://www.hitbox.tv/api/facebook/pages
 
 ### Example Response 
 
-```json
+```javascript
 {
    "pages":[
       {
@@ -56,7 +56,7 @@ https://www.hitbox.tv/api/facebook/pages
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "pages":[
       {
@@ -77,7 +77,7 @@ https://www.hitbox.tv/api/facebook/pages
 
 ### Example Response
 
-```json
+```javascript
 success
 ```
 
@@ -91,7 +91,7 @@ https://www.hitbox.tv/api/facebook/post
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "authToken":"SuperSecret",
    "user_name":"test-account",
@@ -102,6 +102,6 @@ https://www.hitbox.tv/api/facebook/post
 ### Example Response
 
 Even if it's successful
-```json
+```javascript
 post_failed
 ```

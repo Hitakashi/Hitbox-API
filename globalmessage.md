@@ -19,7 +19,7 @@ https://www.hitbox.tv/api/globalmessage
 
 If global message
 
-```json
+```javascript
 {
   "message":"System Maintainence on February 3, 15:00 to 17:00 UTC"
 }
@@ -27,7 +27,7 @@ If global message
 
 else
 
-```json
+```javascript
 {
     "success":false,
     "error":true,

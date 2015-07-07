@@ -20,7 +20,7 @@ https://www.hitbox.tv/api/teams
 
 ### Example Response 
 
-```json
+```javascript
 {
    "teams":[
       {
@@ -94,7 +94,7 @@ https://www.hitbox.tv/api/teams/test-account
 ### Example Response 
 
 This example is not using an authToken.
-```json
+```javascript
 {
    "teams":[
       {

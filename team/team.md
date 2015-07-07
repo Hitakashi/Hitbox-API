@@ -27,7 +27,7 @@ https://www.hitbox.tv/api/team/thebestteam
 
 ### Example Response 
 
-```json
+```javascript
 {
    "info":{
       "group_id":"123",
@@ -77,9 +77,9 @@ https://www.hitbox.tv/api/team/thebestteam
 }
 ```
 
-If media=true and media_type is set, there will be the following json between `info` and `members` which will be filled depending on the media_type.
+If media=true and media_type is set, there will be the following javascript between `info` and `members` which will be filled depending on the media_type.
 
-```json
+```javascript
 "media": {
    "livestream": [],
    "video": []
@@ -88,7 +88,7 @@ If media=true and media_type is set, there will be the following json between `i
 
 The livestream array will be filled with:
 
-```json
+```javascript
 {
    "media_display_name":"Test-Account",
    "media_status":"Another Title!",
@@ -131,7 +131,7 @@ https://www.hitbox.tv/api/team?authToken=SuperSecret
 
 `group_display_name` must match `group_name` except in casing.
 
-```json
+```javascript
 {
    "authToken":"SuperSecret",
    "group_user_name":"test-account",
@@ -146,7 +146,7 @@ https://www.hitbox.tv/api/team?authToken=SuperSecret
 This API actually returns information!
 
 If group is successfully created
-```json
+```javascript
 {
     "success":true,
     "success_msg":"team_created"
@@ -154,7 +154,7 @@ If group is successfully created
 ```
 
 If group name is taken
-```json
+```javascript
 {
     "success":false,
     "error":true,
@@ -163,7 +163,7 @@ If group name is taken
 ```
 
 If `group_display_name` is different than `group_name`
-```json
+```javascript
 {
     "error":true,
     "error_msg":"invalid_display_name"
@@ -171,7 +171,7 @@ If `group_display_name` is different than `group_name`
 ```
 
 If `group_text` is too short or invalid
-```json
+```javascript
 {
     "error":true,
     "error_msg":"text_required"
@@ -179,7 +179,7 @@ If `group_text` is too short or invalid
 ```
 
 If `authToken` is invalid
-```json
+```javascript
 {
     "success":false,
     "error":true,
@@ -218,7 +218,7 @@ Deleting a cover or logo will return `group_logo_small`, `group_logo_large` and 
 
 To disband a team set `action` to `delete_team` and PUT the required data below.
 
-```json
+```javascript
 {
    "info":{
       "group_id":"13234",
@@ -242,7 +242,7 @@ If successful you will get an echo back of the PUT payload
 
 Invalid Payload or Incorrect Auth Token
 
-```json
+```javascript
 permission_denied
 ```
 
@@ -263,7 +263,7 @@ https://www.hitbox.tv/api/team/test-team/test-account?authToken=SuperSecret&grou
 
 ### Example Response
 
-```json
+```javascript
 {
     "success":true,
     "success_msg":"deleted_Hitakashi-Test"

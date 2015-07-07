@@ -16,6 +16,6 @@ https://www.hitbox.tv/api/stats/media/123
 
 ### Example Response 
 
-```json
+```javascript
 logged
 ```

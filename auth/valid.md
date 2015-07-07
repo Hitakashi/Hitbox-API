@@ -19,11 +19,11 @@ Returns if the auth is valid. This only checks if the auth is valid but not if i
 https://www.hitbox.tv/api/auth/valid/desktop?token=123
 
 ### Example Response 
-```json
+```javascript
 logged_in
 ````
 
 If invalid auth:
-```json
+```javascript
 auth_failed
 ```

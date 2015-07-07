@@ -54,13 +54,13 @@ Content-Type: image/png
 
 ### Header
 
-```json
+```javascript
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryxc5Hjc4MDXrAqZX6
 ```
 
 ### Example Response
 
-```json
+```javascript
 {
     "cover":"/static/img/channel/cover_54b72f19e8765.png"
 }
@@ -74,7 +74,7 @@ https://www.hitbox.tv/api/upload/description/test-account/1232131232132
 
 ### Example Response 
 
-```json
+```javascript
 [
     {
         "image_id":"123",
@@ -92,7 +92,7 @@ http://www.hitbox.tv/api/upload/description/test-account/1232132132131
 
 ### Example Payload
 
-```json
+```javascript
 ------WebKitFormBoundarybwSxxcx5yC7Zsn2G
 Content-Disposition: form-data; name="file"; filename="editor.png"
 Content-Type: image/png
@@ -103,7 +103,7 @@ Content-Type: image/png
 
 ### Example Response
 
-```json
+```javascript
 file_saved
 ```
 
@@ -119,7 +119,7 @@ http://www.hitbox.tv/api/upload/description/test-account/21321321321312?image_id
 
 ### Example Response 
 
-```json
+```javascript
 success
 ```
 
@@ -156,7 +156,7 @@ Content-Type: image/png
 
 Team Logo:
 
-```json
+```javascript
 {
   "logo":{
     "small":"/static/img/teams/logo_54dfce333ee3_small.png",
@@ -168,7 +168,7 @@ Team Logo:
 
 Team Cover:
 
-```json
+```javascript
 {
   "logo":null,
   "cover":{

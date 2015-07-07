@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/ingests/default_list
 
 I've only listed two since it's a big list.
 
-```json
+```javascript
 [
    {
       "ingest_location":"Default",

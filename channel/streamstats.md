@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/streamstats/test-account/1416182400000/1418860799000?a
 
 ### Example Response 
 
-```json
+```javascript
 {
    "channel":"test-account",
    "startTime":"1416182400000",
@@ -133,7 +133,7 @@ https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/14309568000
 
 ### Example Response
 
-```json
+```javascript
 {
    "channel":"test-account",
    "startTime":1428192000000,
@@ -154,7 +154,7 @@ https://www.hitbox.tv/api/followerstats/test-account?authToken=SuperSecret
 
 ### Example Response
 
-```json
+```javascript
 {
    "followers":[
       {

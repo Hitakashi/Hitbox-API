@@ -20,7 +20,7 @@ https://www.hitbox.tv/api/recordings/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 [
    {
       "rec_id":"199025512",

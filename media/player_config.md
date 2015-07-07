@@ -25,7 +25,7 @@ https://www.hitbox.tv/api/player/config/live/test-account
 
 Live:
 
-```json
+```javascript
 {
    "key":"#$54d46ea213123213979",
    "play":null,
@@ -239,7 +239,7 @@ Live:
 
 Video:
 
-```json
+```javascript
 {
    "key":"#$54d46ea442f0438979",
    "play":null,
@@ -373,7 +373,7 @@ https://www.hitbox.tv/api/player/recconfig/test-account/312312312321312321312312
 
 ### Example Response
 
-```json
+```javascript
 {
    "key":"#$54d46eaa11fsdfdsf32279",
    "play":null,

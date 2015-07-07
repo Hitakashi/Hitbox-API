@@ -20,7 +20,7 @@ https://www.hitbox.tv/api/twitter/post?authToken=SuperSecret&user_name=test-acco
 
 ### Example POST Payload
 
-```json
+```javascript
 {
   "message":"Hello Twitter!"
 }
@@ -30,7 +30,7 @@ https://www.hitbox.tv/api/twitter/post?authToken=SuperSecret&user_name=test-acco
 
 Success:
 
-```json
+```javascript
 {
     "success":true,
     "error":false,

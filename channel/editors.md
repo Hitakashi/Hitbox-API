@@ -24,7 +24,7 @@ https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 {
    "list":[
       {
@@ -51,7 +51,7 @@ https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 {
    "list":[
       {
@@ -74,7 +74,7 @@ Add or Remove Editors for '':channel''
 
 All variables required. Toggle the `remove` boolean as needed.
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "authToken":"SuperSecret",
@@ -86,7 +86,7 @@ All variables required. Toggle the `remove` boolean as needed.
 ### Example Response
 
 Even on duplicate 
-```json
+```javascript
 {
     "error":false
     "error_msg":"success"
@@ -96,7 +96,7 @@ Even on duplicate
 
 If user is not found
 
-```json
+```javascript
 {
     "error":true
     "error_msg":"editor_not_found"
@@ -106,7 +106,7 @@ If user is not found
 
 Failure adding editor
 
-```json
+```javascript
 {
     "error":true
     "error_msg":"error_adding_editor"

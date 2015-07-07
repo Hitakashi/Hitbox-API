@@ -19,7 +19,7 @@ https://www.hitbox.tv/api/auth/login
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "login":"test-account",
    "pass":"thisismypassword",
@@ -30,7 +30,7 @@ https://www.hitbox.tv/api/auth/login
 ### Example Response 
 
 Correct credentials:
-```json
+```javascript
 {
    "user_id":"111",
    "user_name":"test-account",
@@ -63,7 +63,7 @@ Correct credentials:
 Incorrect:
 Will return a HTTP 400 Bad Request and response:
 
-```json
+```javascript
 auth_failed
 ```
 
@@ -75,7 +75,7 @@ https://www.hitbox.tv/api/auth/login
 
 ### Example POST Payload
 
-```json
+```javascript
 {
   "app":"desktop",
   "authToken":"SuperSecret"
@@ -85,7 +85,7 @@ https://www.hitbox.tv/api/auth/login
 ### Example Response 
 
 Correct Auth Token:
-```json
+```javascript
 {
    "user_id":"111",
    "user_name":"test-account",
@@ -118,7 +118,7 @@ Correct Auth Token:
 Incorrect:
 Will return a HTTP 400 Bad Request and response:
 
-```json
+```javascript
 auth_failed
 ```
 
@@ -132,7 +132,7 @@ https://www.hitbox.tv/api/auth/token
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "login":"test-account",
    "pass":"thisismypassword",
@@ -142,7 +142,7 @@ https://www.hitbox.tv/api/auth/token
 
 ### Example Response
 
-```json
+```javascript
 {
    "authToken":"SuperSecret"
 }

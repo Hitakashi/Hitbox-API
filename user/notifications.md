@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/notifications?authToken=SuperSecret&user_name=test-acc
 
 ### Example Response 
 
-```json
+```javascript
 {
    "notify_email":"0",
    "notify_facebook":"0",
@@ -46,7 +46,7 @@ https://www.hitbox.tv/api/notifications?authToken=123&user_name=test-account
 
 ### Example POST Payload 
 
-```json
+```javascript
 {
    "notify_email":"0",
    "notify_facebook":"0",

@@ -13,7 +13,7 @@ Removes application that has access to your account.
 
 ### Example POST Payload
 
-```json
+```javascript
 {
   "authToken":"SuperSecret",
   "enabled":true,
@@ -24,7 +24,7 @@ Removes application that has access to your account.
 ### Example Response
 
 Success
-```json
+```javascript
 {
   "success":true
 }
@@ -40,7 +40,7 @@ https://www.hitbox.tv/api/profile/test-account
 
 ### Example Response
 
-```json
+```javascript
 {
    "profile":{
       "panels":[
@@ -92,7 +92,7 @@ Updates panels for user account.
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "authToken":"SuperSecret",
@@ -142,7 +142,7 @@ Updates panels for user account.
 
 ### Example Response
 
-```json
+```javascript
 {
   "error":false
 }

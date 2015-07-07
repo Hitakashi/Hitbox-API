@@ -19,7 +19,7 @@ https://www.hitbox.tv/api/teamlist?q=TheBestTeam
 
 ### Example Response 
 
-```json
+```javascript
 {
    "teams":[
       {

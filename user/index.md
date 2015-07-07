@@ -28,7 +28,7 @@ https://www.hitbox.tv/api/user?user_name=test-account
 
 ### Example Post Payload
 
-```json
+```javascript
 {
    "user_email":"user@example.com",
    "user_password":"password",
@@ -43,7 +43,7 @@ https://www.hitbox.tv/api/user?user_name=test-account
 
 ### Example Response
 
-```json
+```javascript
 user_created
 ```
 
@@ -62,7 +62,7 @@ https://www.hitbox.tv/api/user/test-account?authToken=SuperSecret
 ### Example Response
 
 if authToken
-```json
+```javascript
 {
    "followers":"0",
    "user_id":"123",
@@ -85,7 +85,7 @@ if authToken
 
 else
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
@@ -106,7 +106,7 @@ else
 
 Channel without stream setup
 
-```json
+```javascript
 {
    "user_name":"Test-Account",
    "user_cover":null,
@@ -141,7 +141,7 @@ https://www.hitbox.tv/api/user/test-account
 
 ### Example PUT Payload
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "user_email":"test@example.com",
@@ -157,7 +157,7 @@ https://www.hitbox.tv/api/user/test-account
 ### Example Response
 
 if authToken
-```json
+```javascript
 {
     "success":true,
     "error":false,
@@ -184,7 +184,7 @@ Editors: `livestream` and `chat` are set as `admin`
 
 Chat Moderators: `chat` is set as `user`
 
-```json
+```javascript
 {
    "user_id":"123",
    "access_user_id":"124",
@@ -222,14 +222,14 @@ https://www.hitbox.tv/api/user/subscription/test_channel/test_auth
 ### Example Response 
 If subbed
 
-```json
+```javascript
 {
    "isSubscriber":true
 }
 ```
 
 If not subbed
-```json
+```javascript
 {
    "isSubscriber":false
 }
@@ -249,7 +249,7 @@ https://www.hitbox.tv/api/user/list
 
 ### Example Response
 
-```json
+```javascript
 [
    {
       "user_name":"test-account",
@@ -275,7 +275,7 @@ https://www.hitbox.tv/api/user/test-account/team/default?authToken=SuperSecret
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "group_id":"123"
 }
@@ -284,7 +284,7 @@ https://www.hitbox.tv/api/user/test-account/team/default?authToken=SuperSecret
 ### Example Response
 
 Again, Even if it fails to change the default group (Ex: Not even in the group):
-```json
+```javascript
 {
     "success":true,
     "error":false,

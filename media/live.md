@@ -24,7 +24,7 @@ If a channel is being hosted they add a these:
 
 `media_hosted_id`: Media ID of hosted channel.
 
-`media_hosted_media`: Literally shoving this same API of hosted user into this json object.
+`media_hosted_media`: Literally shoving this same API of hosted user into this javascript object.
 
 ### Example URL
 
@@ -33,7 +33,7 @@ https://www.hitbox.tv/api/media/live/test-account
 ### Example Response
 
 If valid authToken is passed and host is off
-```json
+```javascript
 {
    "request":{
       "this":"/media/live/test-account"
@@ -145,7 +145,7 @@ If valid authToken is passed and host is off
 
 else
 
-```json
+```javascript
 {
    "request":{
       "this":"/media/live/test-account"
@@ -225,7 +225,7 @@ else
 
 ### Errors
 
-```json
+```javascript
 {
    "success":false,
    "error":true,
@@ -254,7 +254,7 @@ https://www.hitbox.tv/api/media/live/list
 
 ### Example Response
 
-```json
+```javascript
 {
   "request":{
     "this":"/media/live/list"
@@ -335,7 +335,7 @@ https://www.hitbox.tv/api/media/live/list
 
 ### Errors
 
-```json
+```javascript
 {
    "success":false,
    "error":true,
@@ -387,7 +387,7 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
 ### Example Response
 
 Enable Host Mode:
-```json
+```javascript
 {
    "success":true,
    "error":false,
@@ -395,7 +395,7 @@ Enable Host Mode:
 }
 ```
 Disable Host Mode:
-```json
+```javascript
 {
    "success":true,
    "error":false,
@@ -403,7 +403,7 @@ Disable Host Mode:
 }
 ```
 
-```json
+```javascript
 {
    "livestream":[
       {
@@ -437,7 +437,7 @@ https://www.hitbox.tv/media/live/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "authToken":"132123",
@@ -451,6 +451,6 @@ https://www.hitbox.tv/media/live/test-account?authToken=SuperSecret
 
 ### Example Response
 
-```json
+```javascript
 media_created
 ```

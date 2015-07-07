@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/follow?authToken=SuperSecret
 
 ### Example POST Payload 
 
-```json
+```javascript
 {
    "type":"user",
    "follow_id":"278723"
@@ -30,7 +30,7 @@ https://www.hitbox.tv/api/follow?authToken=SuperSecret
 
 ### Example Response
 
-```json
+```javascript
 {
     "success":true,
     "error":false,
@@ -54,7 +54,7 @@ https://www.hitbox.tv/api/follow?authToken=SuperSecret&follow_id=278723&type=use
 
 ### Example Response 
 
-```json
+```javascript
 {
     "success":true,
     "error":false,

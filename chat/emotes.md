@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/chat/icons/test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
    "icons":{
       ":heart:":[

@@ -28,7 +28,7 @@ Returns VOD list for the `:user`.
 https://www.hitbox.tv/api/media/video/test-account/list
 
 ### Example Response 
-```json
+```javascript
 {
    "request":{
       "this":"/media/video/test-account/list"
@@ -139,7 +139,7 @@ Return VOD data for the user. It's exactly the same as above except it returns a
 https://www.hitbox.tv/api/media/video/123
 
 ### Example Response
-```json
+```javascript
 {
    "request":{
       "this":"/media/video/123"
@@ -225,7 +225,7 @@ https://www.hitbox.tv/api/media/video/test-account
 
 ### Example POST Payload
 
-```json
+```javascript
 {
   "user_name":"test-account",
   "authToken":"SuperSecret",
@@ -249,7 +249,7 @@ Successful
 
 Failed (Title too short, rec_session incorrect, etc)
 
-```json
+```javascript
 {
     "error":true",
     "error_msg":media_error",
@@ -273,7 +273,7 @@ https://www.hitbox.tv/api/media/video/123
 
 ### Example PUT Payload
 
-```json
+```javascript
 {
   "video":[
     {
@@ -290,7 +290,7 @@ https://www.hitbox.tv/api/media/video/123
 
 ### Example Response 
 
-```json
+```javascript
 {
   "video":[
     {

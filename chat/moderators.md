@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/chat/moderators/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/chat/moderators/test-account"
@@ -50,7 +50,7 @@ https://www.hitbox.tv/api/chat/moderators/test-account
 ### Example Response 
 
 
-```json
+```javascript
 {
    "user_name":"test-account",
    "authToken":"SuperSecret",
@@ -71,7 +71,7 @@ https://www.hitbox.tv/api/chat/moderations/test-account?authToken=SuperSecret
 
 ### Example Response
 
-```json
+```javascript
 {
   "request":{
     "this":"/chat/moderations/test-account"

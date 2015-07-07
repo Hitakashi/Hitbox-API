@@ -25,7 +25,7 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/following/user"
@@ -71,7 +71,7 @@ https://www.hitbox.tv/api/following/user/test-account?user_name=test-account
 
 ### Example Response
 
-```json
+```javascript
 {
    "following":{
       "follow_id":"278723",
@@ -81,7 +81,7 @@ https://www.hitbox.tv/api/following/user/test-account?user_name=test-account
 }
 ```
 
-```json
+```javascript
 {
    "success":false,
    "error":true,

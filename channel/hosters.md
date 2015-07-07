@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/hosters/test-account?authToken=SuperSecert
 ### Example Response 
 
 Hosters:
-```json
+```javascript
 {
   "hosters":[
     {
@@ -34,7 +34,7 @@ Hosters:
 ```
 
 No Hosters:
-```json
+```javascript
 {
   "hosters":[]
 }

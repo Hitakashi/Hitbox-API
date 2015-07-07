@@ -15,7 +15,7 @@ https://www.hitbox.tv/api/ws/combreak/test-account/1
 
 ### Example POST Payload
 
-```json
+```javascript
 {
    "authToken":"SuperSecret"
 }
@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/ws/combreak/test-account/1
 
 ### Example Response 
 
-```json
+```javascript
 {
    "method":"commercialBreak",
    "params":{

@@ -17,7 +17,7 @@ https://www.hitbox.tv/api/mediabadges/:channel
 ### Example Response 
 
 If account has a subscribe button.
-```json
+```javascript
 {
    "request":{
       "this":"/mediabadges/test-account"

@@ -49,6 +49,6 @@ https://www.hitbox.tv/api/
 
 ### Example Response 
 
-```json
+```javascript
 
 ```

@@ -17,7 +17,7 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/subscription/info/channel/test-account"

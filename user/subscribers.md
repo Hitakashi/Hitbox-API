@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/subscriptionlist/test-account?authToken=SuperSecret
 
 If subscriptions are found:
 
-```json
+```javascript
 {
   "request":{
     "this":"/subscriptionlist/test-account"
@@ -60,7 +60,7 @@ If subscriptions are found:
 
 No Subscriptions:
 
-```json
+```javascript
 subscription_not_found
 ```
 
@@ -82,7 +82,7 @@ https://www.hitbox.tv/api/subscriberlist/test-account?authToken=SuperSecret
 
 ### Example Response
 
-```json
+```javascript
 {
    "request":{
       "this":"/subscriberlist/test-account"

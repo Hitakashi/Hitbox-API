@@ -24,7 +24,7 @@ https://www.hitbox.tv/api/revenues/channel/test-account?authToken=SuperSecret&en
 ### Example Response 
 
 Non-Parter Info: (I assume Partners follow the same layout)
-```json
+```javascript
 {
   "request":{
     "this":"/revenues/channel/test-account",

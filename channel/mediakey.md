@@ -20,7 +20,7 @@ https://www.hitbox.tv/api/mediakey/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 {
   "streamKey":"HeyItsMyKey"
 }
@@ -40,7 +40,7 @@ https://www.hitbox.tv/api/mediakey/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 {
   "streamKey":"HeyItsMyKey"
 }

@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/chat/emotes/test-account
 
 ### Example Response 
 
-```json
+```javascript
 [
    {
       "icon_id":"1",

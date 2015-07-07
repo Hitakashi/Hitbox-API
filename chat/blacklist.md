@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/chat/blacklist/test-account
 
 ### Example Response 
 
-```json
+```javascript
 [
   "example.com"
 ]
@@ -36,7 +36,7 @@ https://www.hitbox.tv/api/chat/blacklist/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 
-```json
+```javascript
 {
 	"blacklist":["example.com"]
 }
@@ -44,6 +44,6 @@ https://www.hitbox.tv/api/chat/blacklist/test-account?authToken=SuperSecret
 
 ### Example Response 
 
-```json
+```javascript
 saved
 ```

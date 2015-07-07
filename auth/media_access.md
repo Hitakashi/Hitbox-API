@@ -27,7 +27,7 @@ https://www.hitbox.tv/api/auth/media/live/test-account?authToken=SuperSecret
 
 ### Example POST Payload
 
-```json
+```javascript
 {
   "authToken":"SuperSecret",
   "mediaPassword":"123",
@@ -40,12 +40,12 @@ https://www.hitbox.tv/api/auth/media/live/test-account?authToken=SuperSecret
 
 This is used for when Staff members password protect streams for breaking TOS
 
-```json
+```javascript
 access_granted
 ```
 
 If incorrect password or just joining a channel
 
-```json
+```javascript
 access_denied
 ```

@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/game/30686
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/game/30686"
@@ -49,7 +49,7 @@ https://www.hitbox.tv/api/game/dota-2?seo=true
 
 ### Example Response 
 
-```json
+```javascript
 {
   "request":{
     "this":"/game/dota-2"

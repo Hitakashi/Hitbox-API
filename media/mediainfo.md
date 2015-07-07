@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/mediainfo/live/123
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/mediainfo/live/123"

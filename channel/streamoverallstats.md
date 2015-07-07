@@ -20,7 +20,7 @@ https://www.hitbox.tv/api/streamoverallstats/test-account/1416182400000/14188607
 
 ### Example Response 
 
-```json
+```javascript
 {
    "channel":"test-account",
    "startTime":1416182400000,

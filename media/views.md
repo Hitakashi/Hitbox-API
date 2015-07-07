@@ -16,7 +16,7 @@ https://www.hitbox.tv/api/media/status/test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
   "media_is_live":"1",
   "media_views":"1111"
@@ -33,7 +33,7 @@ https://www.hitbox.tv/api/media/views/test-account
 
 ### Example Response
 
-```json
+```javascript
 {
   "total_live_views":"92718"
 }

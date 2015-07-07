@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/followers/user/test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/followers/user/test-account"

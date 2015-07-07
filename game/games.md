@@ -21,7 +21,7 @@ https://www.hitbox.tv/api/games
 
 ### Example Response 
 
-```json
+```javascript
 {
    "request":{
       "this":"/games"

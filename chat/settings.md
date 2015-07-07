@@ -23,7 +23,7 @@ https://www.hitbox.tv/api/chat/settings/test-account
 
 ### Example Response 
 
-```json
+```javascript
 {
   "user_id":"123",
   "sub_images":false,
@@ -45,7 +45,7 @@ https://www.hitbox.tv/api/chat/settings/test-account?authToken=SuperSecret
 
 ### Example Payload 
 
-```json
+```javascript
 {
   "channel":"test-account",
   "sub_images":true
@@ -55,7 +55,7 @@ https://www.hitbox.tv/api/chat/settings/test-account?authToken=SuperSecret
 ### Example Response
 If successful
 
-```json
+```javascript
 {
   "user_id":"278723",
   "sub_images":true
@@ -64,6 +64,6 @@ If successful
 
 If invalid auth (Looks like only broadcasters/editors(?) can edit this.)
 
-```json
+```javascript
 unauthorized
 ```
