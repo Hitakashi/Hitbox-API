@@ -50,6 +50,7 @@ If valid authToken is passed and host is off
          "media_profiles":null,
          "media_host":"x.x.x.x",
          "media_rec_session":"b33e94023fe4973416d8d815addd290e07d50624",
+         "media_repair_source": null,
          "media_ingest_host":null,
          "media_is_live":"0",
          "media_live_delay":null,
@@ -67,6 +68,7 @@ If valid authToken is passed and host is off
          "media_deleted":null,
          "media_playing":"1",
          "media_transcoding":null,
+         "media_uploaded": null,
          "media_recording":"1",
          "media_dvr":"0",
          "media_countries":[
@@ -88,6 +90,7 @@ If valid authToken is passed and host is off
          "media_featured_forced":null,
          "media_featured_countries":null,
          "media_name":"test-account",
+         "media_offline_id":null,
          "media_display_name":"test-account",
          "media_status":"LiveStream Title",
          "media_title":"",
@@ -111,6 +114,7 @@ If valid authToken is passed and host is off
          "category_logo_large":"/static/img/games/elite-dangerous.png",
          "category_updated":"2014-12-18 00:42:25",
          "team_name":"TheBestTeam",
+         "user_banned":null,
          "media_start_in_sec":"0",
          "media_download_link":"http://edge.bf.hitbox.tv/download/?h=wkq9jK_GLOyY222213orqw&e=1418867029",
          "media_duration_format":"00:00:00",
@@ -152,6 +156,7 @@ else
          "media_user_name":"test-account",
          "media_id":"15820",
          "media_file":"test-account",
+         "media_hidden":null,
          "media_user_id":"278123",
          "media_profiles":null,
          "media_type_id":"1",
@@ -218,6 +223,16 @@ else
 }
 ```
 
+### Errors
+
+```json
+{
+   "success":false,
+   "error":true,
+   "error_msg":"no_media_found"
+}
+```
+
 ## `GET /media/live/list`
 
 | Paramater | Required? | Type | Description |
@@ -250,6 +265,7 @@ https://www.hitbox.tv/api/media/live/list
       "media_user_name":"Yuuhi",
       "media_id":"109219",
       "media_file":"Yuuhi",
+      "media_hidden":null,
       "media_user_id":"415015",
       "media_profiles":"[{\"height\":\"360\",\"bitrate\":\"500\"},{\"height\":\"480\",\"bitrate\":\"1000\"},{\"height\":\"720\",\"bitrate\":\"2000\"}]",
       "media_type_id":"1",
@@ -267,6 +283,7 @@ https://www.hitbox.tv/api/media/live/list
       "media_mature":null,
       "user_banned":null,
       "media_name":"yuuhi",
+      "media_offline_id":null,
       "media_display_name":"Yuuhi",
       "media_status":"TLoU Remastered - przechodzim fabule :D - Codzienna dawka Gier.",
       "media_title":"",
@@ -307,11 +324,22 @@ https://www.hitbox.tv/api/media/live/list
         "twitter_account":null,
         "twitter_enabled":null,
         "livestream_count":"1",
+        "user_media_id":"109219",
         "channel_link":"http://hitbox.tv/yuuhi"
       }
     },
     ...
   ]
+}
+```
+
+### Errors
+
+```json
+{
+   "success":false,
+   "error":true,
+   "error_msg":"no_media_found"
 }
 ```
 
@@ -332,7 +360,7 @@ https://www.hitbox.tv/api/media/live/test-account?authToken=SuperSecret
 <a name="hostmode"></a>
 Setting `media_hosted_name` to a valid hitbox username enables host mode, setting it to "off" disables it.
 
-**Caution**: To correctly update this API, You must send all values below except media_description, which is optional unless you want to update the channel description.
+**Caution**: To correctly update this API, You must send all values below except media_hosted_name and media_description, which is optional unless you want to update the hosted channel or channel description.
 
 ```javascript
 {
@@ -360,11 +388,19 @@ Setting `media_hosted_name` to a valid hitbox username enables host mode, settin
 
 Enable Host Mode:
 ```json
-host_mode_enabled
+{
+   "success":true,
+   "error":false,
+   "message":"host_mode_enabled"
+}
 ```
 Disable Host Mode:
 ```json
-host_mode_disabled
+{
+   "success":true,
+   "error":false,
+   "message":"host_mode_disabled"
+}
 ```
 
 ```json

@@ -3,8 +3,9 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /streamstats/:user/:startTime/:endTime](/channel/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats |
-| [GET /streamedseconds/:channel/:startDate/:endDate](/channel/streamstats.md#get-streamedsecondschannelstartdateenddate) | Returns seconds streamed |
+| [GET /streamstats/:user/:startTime/:endTime](/channel/streamstats.md#get-streamstatsuserstarttimeendtime) | Returns stream stats. |
+| [GET /streamedseconds/:channel/:startDate/:endDate](/channel/streamstats.md#get-streamedsecondschannelstartdateenddate) | Returns seconds streamed. |
+| [GET /followstats/:channel](/channel/streamstats.md#get-followerstatschannel) | Returns follower stats. |
 
 ## `GET /streamstats/:user/:startTime/:endTime`
 
@@ -138,5 +139,29 @@ https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/14309568000
    "startTime":1428192000000,
    "endTime":1430956800000,
    "streamed_seconds":1412
+}
+```
+
+## `GET /followerstats/:channel``
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+
+## Example URL
+
+https://www.hitbox.tv/api/followerstats/test-account?authToken=SuperSecret
+
+### Example Response
+
+```json
+{
+   "followers":[
+      {
+         "date":"2014-06-06",
+         "followers":"2"
+      },
+      ...
+   ]
 }
 ```

@@ -30,8 +30,7 @@ https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
       {
          "user_name":"Another-Test",
          "user_logo":"/static/img/channel/another-test_52274f9e8159b_large.jpg",
-         "user_logo_small":"/static/img/channel/another-test
-         _52274f9e8159b_small.jpg"
+         "user_logo_small":"/static/img/channel/another-test_52274f9e8159b_small.jpg"
       }
       ...
    ]
@@ -58,8 +57,7 @@ https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
       {
          "user_name":"Another-Test",
          "user_logo":"/static/img/channel/another-test_52274f9e8159b_large.jpg",
-         "user_logo_small":"/static/img/channel/another-test
-         _52274f9e8159b_small.jpg"
+         "user_logo_small":"/static/img/channel/another-test_52274f9e8159b_small.jpg"
       }
       ...
    ]
@@ -89,11 +87,29 @@ All variables required. Toggle the `remove` boolean as needed.
 
 Even on duplicate 
 ```json
-success
+{
+    "error":false
+    "error_msg":"success"
+    "success":true
+}
 ```
 
 If user is not found
 
 ```json
-editor_not_found
+{
+    "error":true
+    "error_msg":"editor_not_found"
+    "success":false
+}
+```
+
+Failure adding editor
+
+```json
+{
+    "error":true
+    "error_msg":"error_adding_editor"
+    "success":false
+}
 ```

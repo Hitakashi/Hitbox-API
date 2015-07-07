@@ -25,7 +25,8 @@ https://www.hitbox.tv/api/teamlist?q=TheBestTeam
       {
          "group_id":"1",
          "group_name":"TheBestTeamAround"
-      }
+      },
+      ...
    ]
 }
 ```

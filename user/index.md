@@ -78,6 +78,7 @@ if authToken
    "media_live_since":"2014-12-14 05:18:54",
    "twitter_account":"test-account",
    "twitter_enabled":"1",
+   "user_beta_profile":"1"
    "livestream_count":"1"
 }
 ```
@@ -98,7 +99,8 @@ else
    "is_live":"0",
    "live_since":"2014-12-14 05:18:54",
    "twitter_account":"test-account",
-   "twitter_enabled":"1"
+   "twitter_enabled":"1",
+   "user_beta_profile":"1"
 }
 ```
 
@@ -118,7 +120,8 @@ Channel without stream setup
    "is_live":null,
    "live_since":null,
    "twitter_account":null,
-   "twitter_enabled":null
+   "twitter_enabled":null,
+   "user_beta_profile":"1"
 }
 ```
 
@@ -155,7 +158,11 @@ https://www.hitbox.tv/api/user/test-account
 
 if authToken
 ```json
-user_updated
+{
+    "success":true,
+    "error":false,
+    "message":"user_updated"
+}
 ```
 
 ## `GET /user/access/:channel/:auth`
@@ -278,5 +285,9 @@ https://www.hitbox.tv/api/user/test-account/team/default?authToken=SuperSecret
 
 Again, Even if it fails to change the default group (Ex: Not even in the group):
 ```json
-success
+{
+    "success":true,
+    "error":false,
+    "message":"successful"
+}
 ```

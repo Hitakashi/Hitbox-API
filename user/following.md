@@ -5,6 +5,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /following/user](/user/following.md#get-followinguser) | Returns a list of channels a user is following. |
+| [GET /following/user/:channel](/user/following.md#getfollowinguserchannel) | Returns following information for channel. |
 
 ## `GET /following/user`
 
@@ -55,5 +56,35 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
       ...
    ],
    "max_results":"2"
+}
+```
+
+## `GET /following/user/:channel`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| user_name | Yes | string | User's user name |
+
+## Example URL
+
+https://www.hitbox.tv/api/following/user/test-account?user_name=test-account
+
+### Example Response
+
+```json
+{
+   "following":{
+      "follow_id":"278723",
+      "follower_user_id":"278723",
+      "follower_notify":"1"
+   }
+}
+```
+
+```json
+{
+   "success":false,
+   "error":true,
+   "error_msg":"not_following"
 }
 ```

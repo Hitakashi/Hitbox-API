@@ -37,7 +37,8 @@ https://www.hitbox.tv/api/team/thebestteam
       "group_text":"We rule. Obviously.",
       "group_logo_small":"/static/img/teams/logo_52d4870d92afaa_small.jpg",
       "group_logo_large":"/static/img/teams/logo_52d8704d92afaa_large.jpg",
-      "group_cover":"/static/img/teams/cover_52d870a3e19343.jpg"
+      "group_cover":"/static/img/teams/cover_52d870a3e19343.jpg",
+      "members_total":2
    },
    "members":[
       {
@@ -52,6 +53,8 @@ https://www.hitbox.tv/api/team/thebestteam
          "admin":null,
          "enabled":"1",
          "group_role":"member",
+         "is_default":"1",
+         "revenues_enabled":null,
          "group_accepted":true
       },
       {
@@ -65,6 +68,8 @@ https://www.hitbox.tv/api/team/thebestteam
          "user_partner":null,
          "admin":"1",
          "enabled":"1",
+         "is_default":"1",
+         "revenues_enabled":null,
          "group_role":"admin",
          "group_accepted":true
       }
@@ -98,6 +103,8 @@ The livestream array will be filled with:
    "user_logo":"/static/img/channel/test-account_54f988997d191_large.jpg",
    "user_logo_small":"/static/img/channel/test-account_54f988997d191_small.jpg",
    "user_partner":"1",
+   "media_offline_id":null,
+   "media_id":1",
    "media_duration_format":"00:00:00",
    "category_logo_large":"",
    "media_thumbnail":"/static/img/media/live/test-account_mid_000.jpg",
@@ -140,27 +147,44 @@ This API actually returns information!
 
 If group is successfully created
 ```json
-team_created
+{
+    "success":true,
+    "success_msg":"team_created"
+}
 ```
 
 If group name is taken
 ```json
-group_taken
+{
+    "success":false,
+    "error":true,
+    "error_msg":"group_taken"
+}
 ```
 
 If `group_display_name` is different than `group_name`
 ```json
-invalid_display_name
+{
+    "error":true,
+    "error_msg":"invalid_display_name"
+}
 ```
 
 If `group_text` is too short or invalid
 ```json
-text_required
+{
+    "error":true,
+    "error_msg":"text_required"
+}
 ```
 
 If `authToken` is invalid
 ```json
-permission_denied
+{
+    "success":false,
+    "error":true,
+    "error_msg":"permission_denied"
+}
 ```
 
 ## `PUT /team/:teamname/:username`
@@ -240,7 +264,10 @@ https://www.hitbox.tv/api/team/test-team/test-account?authToken=SuperSecret&grou
 ### Example Response
 
 ```json
-deleted_test-account
+{
+    "success":true,
+    "success_msg":"deleted_Hitakashi-Test"
+}
 ```
 
 It also returns a few others like `permission_denied` or `deleted_` providing the auth token or wrong or correct but the user isn't in the team.

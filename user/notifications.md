@@ -52,6 +52,5 @@ https://www.hitbox.tv/api/notifications?authToken=123&user_name=test-account
    "notify_facebook":"0",
    "push_facebook":"0",
    "push_twitter":"0",
-   "push_youtube":"0"
 }
 ```

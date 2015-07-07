@@ -60,7 +60,7 @@ https://www.hitbox.tv/api/subscription/info/channel/test-account
       ]
    },
    "recurly":{
-      "signature":null
+      "signature":"RandomString"
    }
 }
 ```

@@ -28,5 +28,9 @@ If global message
 else
 
 ```json
-nothing_found
+{
+    "success":false,
+    "error":true,
+    "error_msg":"not_found"
+}
 ```

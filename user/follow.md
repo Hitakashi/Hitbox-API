@@ -31,7 +31,11 @@ https://www.hitbox.tv/api/follow?authToken=SuperSecret
 ### Example Response
 
 ```json
-following
+{
+    "success":true,
+    "error":false,
+    "message":"following"
+}
 ```
 
 ## `DELETE /follow`
@@ -51,5 +55,9 @@ https://www.hitbox.tv/api/follow?authToken=SuperSecret&follow_id=278723&type=use
 ### Example Response 
 
 ```json
-un-followed
+{
+    "success":true,
+    "error":false,
+    "message":"un-followed"
+}
 ```

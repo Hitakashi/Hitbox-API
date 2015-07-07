@@ -33,6 +33,7 @@ https://www.hitbox.tv/api/teams
             "group_logo_small":"/static/img/teams/logo_52d4870d92afaa_small.jpg",
             "group_logo_large":"/static/img/teams/logo_52d8704d92afaa_large.jpg",
             "group_cover":"/static/img/teams/cover_52d870a3e19343.jpg",
+            "members_total":2,
             "group_default":0
          },
          "members":[
@@ -45,8 +46,10 @@ https://www.hitbox.tv/api/teams
                "user_cover":null,
                "user_logo_small":"/static/img/channel/test-account_53867c57ba993_small.jpg",
                "user_partner":null,
-               "admin": null,
-               "enabled": "1",
+               "admin":null,
+               "enabled":"1",
+               "is_default":null,
+               "revenues_enabled": null,
                "group_role":"member",
                "group_accepted":true
             },
@@ -59,8 +62,10 @@ https://www.hitbox.tv/api/teams
                "user_cover":"/static/img/channel/cover_532ca1307ac13.jpg",
                "user_logo_small":"/static/img/channel/Glorious-Leader_52d334823811d_small.png",
                "user_partner":null,
-               "admin": "1",
-               "enabled": "1",
+               "admin":"1",
+               "enabled":"1",
+               "is_default":null,
+               "revenues_enabled": null,
                "group_role":"admin",
                "group_accepted":true
             },
@@ -102,6 +107,7 @@ This example is not using an authToken.
             "group_logo_small":null,
             "group_logo_large":null,
             "group_cover":null,
+            "members_total":109,
             "group_role":"member",
             "group_accepted":true,
             "group_default":0
@@ -116,8 +122,10 @@ This example is not using an authToken.
                "user_cover":"/static/img/channel/cover_532ca1307ac13.jpg",
                "user_logo_small":"/static/img/channel/Glorious-Leader_52d334823811d_small.png",
                "user_partner":null,
-               "admin": "1",
-               "enabled": "1",
+               "admin":"1",
+               "enabled":"1",
+               "is_default": null,
+               "revenues_enabled": null,
                "group_role":"admin",
                "group_accepted":true
             },
@@ -131,6 +139,8 @@ This example is not using an authToken.
                "user_logo_small":"/static/img/channel/test-account_53867c57ba993_small.jpg",
                "user_partner":null,
                "admin": null,
+               "enabled":"1",
+               "is_default": null,
                "enabled": "1",
                "group_role":"member",
                "group_accepted":true

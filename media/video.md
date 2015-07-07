@@ -106,6 +106,8 @@ https://www.hitbox.tv/api/media/video/test-account/list
          "media_duration_format":"00:04:55",
          "media_thumbnail":"/static/img/media/videos/f7f/f7fad5547321312167c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
          "media_thumbnail_large":"/static/img/media/videos/f7f/f7fad5321328ec921167c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
+         "user_banned":null,
+         "media_offline_id":null,
          "channel":{
             "followers":"7",
             "user_id":"21312",
@@ -190,6 +192,7 @@ https://www.hitbox.tv/api/media/video/123
          "media_duration_format":"00:04:55",
          "media_thumbnail":"/static/img/media/videos/f7f/f7fad5547948e543c0c748cde7edd88c5d9f-53f8dcd26bc06_mid_000.jpg",
          "media_thumbnail_large":"/static/img/media/videos/f7f/f7fad5547948ec9543c0c748cde7edd88c5d9f-53f8dcd26bc06_large_000.jpg",
+         "media_offline_id":null,
          "channel":{
             "followers":"7",
             "user_id":"123",
@@ -246,8 +249,12 @@ Successful
 
 Failed (Title too short, rec_session incorrect, etc)
 
-```
-media_error
+```json
+{
+    "error":true",
+    "error_msg":media_error",
+    "success":false
+}
 ```
 
 ## `PUT /media/video/:video_id`

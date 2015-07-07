@@ -43,6 +43,7 @@ Correct credentials:
    "authToken":"SuperSecret",
    "login":"true",
    "data":{
+      "app":"desktop",
       "user_id":"111",
       "user_name":"test-account",
       "user_logo":"/static/img/channel/test-account_53aa862ac9adf_large.png",
@@ -54,7 +55,8 @@ Correct credentials:
       "authToken":"SuperSecret",
       "login":"true"
    },
-   "access":"all"
+   "access":"all",
+   "app":"desktop"
 }
 ```
 
@@ -75,6 +77,7 @@ https://www.hitbox.tv/api/auth/login
 
 ```json
 {
+  "app":"desktop",
   "authToken":"SuperSecret"
 }
 ```
@@ -95,6 +98,7 @@ Correct Auth Token:
    "authToken":"SuperSecret",
    "login":"true",
    "data":{
+      "app":"desktop",
       "user_id":"123",
       "user_name":"test-account",
       "user_logo":"/static/img/channel/test-account_53f4e837eb388_large.png",
@@ -106,7 +110,8 @@ Correct Auth Token:
       "authToken":"SuperSecret",
       "login":"true"
    },
-   "access":"all"
+   "access":"all",
+   "app":"desktop"
 }
 ```
 

@@ -75,6 +75,7 @@ https://www.hitbox.tv/api/recordings/test-account?authToken=SuperSecret
       "thumbnail_large":"/static/img/media/videos/0e6/0e61e005633c9b3239a330ee4c812950d0784c24728-548bf4333a867_large_000.jpg",
       "rec_duration_sec":"19.3700",
       "rec_download_link":"http://edge.bf.hitbox.tv/download/index.m3u8?h=zLrNdpX33DNTlp_1L3Ke1pkpA&e=1418811941"
-   }
+   },
+   ...
 ]
 ```

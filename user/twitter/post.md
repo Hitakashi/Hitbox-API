@@ -28,7 +28,12 @@ https://www.hitbox.tv/api/twitter/post?authToken=SuperSecret&user_name=test-acco
 
 ### Example Response 
 
-Even if it fails:
+Success:
+
 ```json
-success
+{
+    "success":true,
+    "error":false,
+    "message":"success"
+}
 ```

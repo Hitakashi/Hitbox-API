@@ -13,7 +13,9 @@
 | endDate | Yes | Date | Date in YYYY-MM-DD |
 | startDate | Yes | Date | Date in YYYY-MM-DD |
 
-Returns revenues for given channel between `startDate` and `endDate`
+Returns revenues for given channel between `startDate` and `endDate`.
+
+I have truncated each array to just one property.
 
 ### Example URL
 
