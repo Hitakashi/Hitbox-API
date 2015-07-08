@@ -39,6 +39,7 @@ If valid authToken is passed and host is off
       "this":"/media/live/test-account"
    },
    "media_type":"live",
+   "authToken":"SuperSecret",
    "livestream":[
       {
          "media_user_name":"test-account",
