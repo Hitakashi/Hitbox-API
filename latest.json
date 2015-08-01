@@ -1,0 +1,1292 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "hitbox API"
+    },
+    "host": "api.hitbox.tv",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "pet",
+            "description": "Everything about your Pets"
+        },
+        {
+            "name": "store",
+            "description": "Access to Petstore orders"
+        },
+        {
+            "name": "user",
+            "description": "Operations about user"
+        },
+        {
+            "name": "auth",
+            "description": "Operations for authentication"
+        },
+        {
+            "name": "channel",
+            "description": "Operations for channels"
+        },
+        {
+            "name": "media",
+            "description": "Operations for media objects"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Authenticates user with username and password.",
+                "description": "This API returns a object containing information about the authenticated user.\n\nYou can optionally pass just an 'authToken' value in JSON to return the same valid credentials object\n",
+                "operationId": "authUserPass",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "User object that needs to be authenticated.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ValidLogin"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Credentials",
+                        "schema": {
+                            "$ref": "#/definitions/InvalidLogin"
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/token": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Authenticates user with username and password, only returning an authentication token.",
+                "operationId": "authToken",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Status values that need to be considered for filter",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Credentials",
+                        "schema": {
+                            "$ref": "#/definitions/ValidLoginToken"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Credentials",
+                        "schema": {
+                            "$ref": "#/definitions/InvalidLogin"
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/valid/{app}": {
+            "get": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Verify token to App",
+                "description": "Verify that the provided token is valid to app",
+                "operationId": "verifyAuth",
+                "produces": [
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "app",
+                        "in": "path",
+                        "description": "App Name to verify token against",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Auth Token to verify against app.",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid token for app.",
+                        "schema": {
+                            "$ref": "#/definitions/ValidAuth"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid token for app",
+                        "schema": {
+                            "$ref": "#/definitions/InvalidLogin"
+                        }
+                    }
+                }
+            }
+        },
+        "/ws/combreak/{channel}/{count}": {
+            "post": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Runs a commercial",
+                "description": "",
+                "operationId": "runCom",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "description": "Name of channel to run ad on.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "count",
+                        "in": "path",
+                        "description": "Number of commercials to run.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "authToken that has access to channel.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AuthToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Input",
+                        "schema": {
+                            "$ref": "#/definitions/ComBreak"
+                        }
+                    },
+                    "403": {
+                        "description": "Invalid AuthToken",
+                        "schema": {
+                            "$ref": "#/definitions/AuthRequired"
+                        }
+                    }
+                }
+            }
+        },
+        "/editors/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Gets channel editors",
+                "operationId": "getEditors",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "type": "string",
+                        "description": "authToken of channel owner",
+                        "required": true
+                    },
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Token",
+                        "schema": {
+                            "$ref": "#/definitions/EditorsList"
+                        }
+                    },
+                    "403": {
+                        "description": "Invalid Token",
+                        "schema": {
+                            "$ref": "#/definitions/EditorsListUnAuth"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Modify channel editor list.",
+                "operationId": "modifyEditors",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ModifyEditorsList"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Token",
+                        "schema": {
+                            "$ref": "#/definitions/Success"
+                        }
+                    },
+                    "400": {
+                        "description": "Cannot Add Editor",
+                        "schema": {
+                            "$ref": "#/definitions/EditorsBadRequest"
+                        }
+                    },
+                    "403": {
+                        "description": "Invalid Token",
+                        "schema": {
+                            "$ref": "#/definitions/EditorsListUnAuth"
+                        }
+                    },
+                    "404": {
+                        "description": "User doesn't exist",
+                        "schema": {
+                            "$ref": "#/definitions/EditorsNotFound"
+                        }
+                    }
+                }
+            }
+        },
+        "/followers/user/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Gets users that follower channel.",
+                "operationId": "getFollowers",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel",
+                        "schema": {
+                            "$ref": "#/definitions/FollowersList"
+                        }
+                    }
+                }
+            }
+        },
+        "/pet/{petId}/uploadImage": {
+            "post": {
+                "tags": [
+                    "pet"
+                ],
+                "summary": "uploads an image",
+                "description": "",
+                "operationId": "uploadFile",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "description": "ID of pet to update",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "name": "additionalMetadata",
+                        "in": "formData",
+                        "description": "Additional data to pass to server",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "file to upload",
+                        "required": false,
+                        "type": "file"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/store/inventory": {
+            "get": {
+                "tags": [
+                    "store"
+                ],
+                "summary": "Returns pet inventories by status",
+                "description": "Returns a map of status codes to quantities",
+                "operationId": "getInventory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "integer",
+                                "format": "int32"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/store/order": {
+            "post": {
+                "tags": [
+                    "store"
+                ],
+                "summary": "Place an order for a pet",
+                "description": "",
+                "operationId": "placeOrder",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "order placed for purchasing the pet",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Order"
+                    }
+                }
+            }
+        },
+        "/store/order/{orderId}": {
+            "get": {
+                "tags": [
+                    "store"
+                ],
+                "summary": "Find purchase order by ID",
+                "description": "For valid response try integer IDs with value <= 5 or > 10. Other values will generated exceptions",
+                "operationId": "getOrderById",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of pet that needs to be fetched",
+                        "required": true,
+                        "type": "integer",
+                        "maximum": 5,
+                        "minimum": 1,
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    },
+                    "404": {
+                        "description": "Order not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "store"
+                ],
+                "summary": "Delete purchase order by ID",
+                "description": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
+                "operationId": "deleteOrder",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "ID of the order that needs to be deleted",
+                        "required": true,
+                        "type": "string",
+                        "minimum": 1
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID supplied"
+                    },
+                    "404": {
+                        "description": "Order not found"
+                    }
+                }
+            }
+        },
+        "/user": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "createUser",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created user object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/user/createWithArray": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "createUsersWithArrayInput",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "List of user object",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/user/createWithList": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Creates list of users with given input array",
+                "description": "",
+                "operationId": "createUsersWithListInput",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "List of user object",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/User"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Logs user into the system",
+                "description": "",
+                "operationId": "loginUser",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "The user name for login",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "The password for login in clear text",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "headers": {
+                            "X-Rate-Limit": {
+                                "type": "integer",
+                                "format": "int32",
+                                "description": "calls per hour allowed by the user"
+                            },
+                            "X-Expires-After": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "date in UTC when toekn expires"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid username/password supplied"
+                    }
+                }
+            }
+        },
+        "/user/logout": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Logs out current logged in user session",
+                "description": "",
+                "operationId": "logoutUser",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/user/{username}": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get user by user name",
+                "description": "",
+                "operationId": "getUserByName",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be fetched. Use user1 for testing. ",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid username supplied"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Updated user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "updateUser",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "name that need to be deleted",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated user object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid user supplied"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Delete user",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "deleteUser",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "description": "The name that needs to be deleted",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid username supplied"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Order": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "petId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "shipDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Order Status",
+                    "enum": [
+                        "placed",
+                        "approved",
+                        "delivered"
+                    ]
+                },
+                "complete": {
+                    "type": "boolean",
+                    "default": false
+                }
+            },
+            "xml": {
+                "name": "Order"
+            }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "userStatus": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "User Status"
+                }
+            },
+            "xml": {
+                "name": "User"
+            }
+        },
+        "Login": {
+            "type": "object",
+            "required": [
+                "login",
+                "pass"
+            ],
+            "properties": {
+                "login": {
+                    "type": "string",
+                    "example": "test-account"
+                },
+                "pass": {
+                    "type": "string",
+                    "example": "SuperSecret"
+                }
+            }
+        },
+        "ValidLogin": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "default": "1"
+                },
+                "user_name": {
+                    "type": "string",
+                    "default": "test-account"
+                },
+                "user_logo": {
+                    "type": "string",
+                    "default": "/static/img/channel/test-account_53aa862ac9adf_large.png"
+                },
+                "user_logo_small": {
+                    "type": "string",
+                    "default": "/static/img/channel/test-account_53aa862ac9adf_small.png"
+                },
+                "user_banned": {
+                    "type": "string",
+                    "default": "0"
+                },
+                "user_banned_channel": {
+                    "type": "string",
+                    "default": "0"
+                },
+                "superadmin": {
+                    "type": "string",
+                    "default": "0"
+                },
+                "livestream_count": {
+                    "type": "string",
+                    "default": "1"
+                },
+                "followers": {
+                    "type": "string",
+                    "default": "0"
+                },
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                },
+                "login": {
+                    "type": "string",
+                    "default": true
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "app": {
+                            "type": "string",
+                            "default": "desktop"
+                        },
+                        "user_id": {
+                            "type": "string",
+                            "default": "1"
+                        },
+                        "user_name": {
+                            "type": "string",
+                            "default": "test-account"
+                        },
+                        "user_logo": {
+                            "type": "string",
+                            "default": "/static/img/channel/test-account_53aa862ac9adf_large.png"
+                        },
+                        "user_logo_small": {
+                            "type": "string",
+                            "default": "/static/img/channel/test-account_53aa862ac9adf_small.png"
+                        },
+                        "user_banned": {
+                            "type": "string",
+                            "default": "0"
+                        },
+                        "superadmin": {
+                            "type": "string",
+                            "default": "0"
+                        },
+                        "livestream_count": {
+                            "type": "string",
+                            "default": "1"
+                        },
+                        "followers": {
+                            "type": "string",
+                            "default": "0"
+                        },
+                        "authToken": {
+                            "type": "string",
+                            "default": "SuperSecret"
+                        },
+                        "login": {
+                            "type": "string",
+                            "default": true
+                        }
+                    }
+                },
+                "access": {
+                    "type": "string",
+                    "default": "all"
+                },
+                "app": {
+                    "type": "string",
+                    "default": "desktop"
+                }
+            }
+        },
+        "InvalidLogin": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "auth_failed"
+                }
+            }
+        },
+        "ValidLoginToken": {
+            "type": "object",
+            "properties": {
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                }
+            }
+        },
+        "ValidAuth": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "msg": {
+                    "type": "string",
+                    "default": "logged_in"
+                }
+            }
+        },
+        "ComBreak": {
+            "type": "object",
+            "properties": {
+                "method": {
+                    "type": "string",
+                    "default": "commercialBreak"
+                },
+                "params": {
+                    "type": "object",
+                    "properties": {
+                        "channel": {
+                            "type": "string",
+                            "default": "test-account"
+                        },
+                        "count": {
+                            "type": "string",
+                            "default": "1"
+                        },
+                        "delay": {
+                            "type": "string",
+                            "default": "1"
+                        },
+                        "token": {
+                            "type": "string",
+                            "default": "SuperSecret"
+                        },
+                        "url": {
+                            "type": "string",
+                            "default": "http://hitbox.tv"
+                        },
+                        "timestamp": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        },
+        "AuthToken": {
+            "type": "object",
+            "required": [
+                "authToken"
+            ],
+            "properties": {
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                }
+            }
+        },
+        "EditorsList": {
+            "type": "object",
+            "properties": {
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "user_name": {
+                                "type": "string",
+                                "default": "test-account"
+                            },
+                            "user_logo": {
+                                "type": "string",
+                                "default": "/static/img/channel/test-account_52274f9e8159b_large.jpg"
+                            },
+                            "user_logo_small": {
+                                "type": "string",
+                                "default": "/static/img/channel/another-test_52274f9e8159b_small.jpg"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ModifyEditorsList": {
+            "type": "object",
+            "required": [
+                "authToken",
+                "editor",
+                "remove"
+            ],
+            "properties": {
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                },
+                "editor": {
+                    "type": "string",
+                    "default": "test-editor"
+                },
+                "remove": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "FollowersList": {
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "this": {
+                            "type": "string",
+                            "default": "/followers/user/test-account"
+                        }
+                    }
+                },
+                "followers": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "followers": {
+                                "type": "string",
+                                "default": 0
+                            },
+                            "user_name": {
+                                "type": "string",
+                                "default": "test-account"
+                            },
+                            "user_id": {
+                                "type": "string",
+                                "default": 124
+                            },
+                            "user_logo": {
+                                "type": "string",
+                                "default": "/static/img/channel/test-account_549125715fb44_large.png"
+                            },
+                            "user_logo_small": {
+                                "type": "string",
+                                "default": "/static/img/channel/test-account_549125715fb44_small.png"
+                            },
+                            "follow_id": {
+                                "type": "string",
+                                "default": 278723
+                            },
+                            "follower_user_id": {
+                                "type": "string",
+                                "default": 124
+                            },
+                            "follower_notify": {
+                                "type": "string",
+                                "default": 1
+                            },
+                            "date_added": {
+                                "type": "string",
+                                "default": "2014-06-06 08:53:28"
+                            }
+                        }
+                    }
+                },
+                "max_results": {
+                    "type": "string",
+                    "default": 1
+                }
+            }
+        },
+        "Success": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "message": {
+                    "type": "string",
+                    "default": "success"
+                }
+            }
+        },
+        "EditorsListUnAuth": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "unauthorized"
+                }
+            }
+        },
+        "AuthRequired": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "auth_required"
+                }
+            }
+        },
+        "EditorsBadRequest": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "error_adding_editor"
+                }
+            }
+        },
+        "EditorsNotFound": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "editor_not_found"
+                }
+            }
+        },
+        "ApiResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
