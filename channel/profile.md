@@ -9,7 +9,7 @@
 
 ## `POST /profileenable/:user`
 
-Removes application that has access to your account.
+Enables or disables channel panel layout.
 
 ### Example POST Payload
 
