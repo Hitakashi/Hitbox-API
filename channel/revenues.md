@@ -26,47 +26,76 @@ https://www.hitbox.tv/api/revenues/channel/test-account?authToken=SuperSecret&en
 Non-Parter Info: (I assume Partners follow the same layout)
 ```javascript
 {
-  "request":{
-    "this":"/revenues/channel/test-account",
-    "type":"channel",
-    "user":"test-account"
-  },
-  "revenues":{
-    "summary":{
-      "currency":"EUR",
-      "total_earnings":0,
-      "max_earnings":null
-    },
-    "plans":[
-
-    ],
-    "timeline":[
-      [
-        1427673600000,
-        0
-      ]
-    ],
-    "daily":{
-      "2015-03-30":{
-        "earnings":0
-      }
-    },
-    "top":{
-      "countries":[
+   "request":{
+      "this":"/revenues/channel/test-account",
+      "type":"channel",
+      "user":"test-account"
+   },
+   "revenues":{
+      "summary":{
+         "currency":"EUR",
+         "total_earnings":0,
+         "max_earnings":null,
+         "viewed_hours":0,
+         "unique_user":0
+      },
+      "plans":[
 
       ],
-      "content":{
-        "live":{
-          "earnings":0
-        },
-        "video":{
-          "earnings":0
-        },
-        "subscriptions":{
-          "earnings":0
-        }
+      "timeline":[
+         [
+            1427673600000,
+            0
+         ]
+      ],
+      "daily":{
+         "2015-03-30":{
+            "earnings":0
+         }
+      },
+      "groups":{
+         "1425686400000":[
+            null,
+            null
+         ]
+      },
+      "live":{
+         "1425686400000":null
+      },
+      "total":{
+         "1425686400000":null
+      },
+      "timeline_ads":[
+         [
+            1425686400000,
+            null
+         ]
+      ],
+      "timeline_subs":[
+         [
+            1425686400000,
+            null
+         ]
+      ],
+      "subs":{
+         "1425686400000":null
+      },
+      "top":{
+         "countries":[
+
+         ],
+         "content":{
+            "live":{
+               "earnings":0
+            },
+            "video":{
+               "earnings":0
+            },
+            "subscriptions":{
+               "earnings":0
+            }
+         }
       }
-    }
-  }
+   }
 }
 ```
