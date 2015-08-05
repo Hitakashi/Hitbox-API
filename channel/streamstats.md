@@ -142,7 +142,7 @@ https://www.hitbox.tv/api/streamedseconds/test-account/1428192000000/14309568000
 }
 ```
 
-## `GET /followerstats/:channel``
+## `GET /followerstats/:channel`
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
