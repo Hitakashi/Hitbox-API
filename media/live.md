@@ -246,6 +246,7 @@ else
 | game | No | string | Sorts Media Objects by category id, Game SEO or URL Encoded game name. |
 | limit | No | int | Maximum number of objects to fetch. Default and Max. is 100. |
 | follow_id | No | String | Shows only live streams that `follow_id` (user ID) follows. |
+| search | No | String | Search keyboard for `media_status`. |
 
 Returns a list of media objects. 
 
