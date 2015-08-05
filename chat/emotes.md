@@ -46,7 +46,8 @@ Returns properties about a chat emoji.
 
 ### Example URL
 
-https://www.hitbox.tv/api/chat/icon/:testemote:
+[https://www.hitbox.tv/api/chat/icon/:testemote:](https://www.hitbox.tv/api/chat/icon/:testemote:)
+
 
 ### Example Response
 
