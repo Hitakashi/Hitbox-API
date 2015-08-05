@@ -33,7 +33,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "/Hitbox-API/latest.json";
+        url = "http://petstore.swagger.io/v2/swagger.json";
       }
 
       // Pre load translate...
@@ -83,7 +83,6 @@
       }
 
       $('#input_apiKey').change(addApiKeyAuthorization);
-	  $('#input_apiKey').hide();
 
       // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
       /*
