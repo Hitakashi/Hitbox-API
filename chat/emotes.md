@@ -6,7 +6,7 @@ Returns hitbox chat emoticons.
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /chat/icons/:user](/chat/emotes.md#get-chaticonsuser) | Get channel emotes |
-| [GET /chat/icon/:icon_name](/chat/emotes.md#getchaticoniconname) | Get Icon Properties |
+| [GET /chat/icon/:icon_name](/chat/emotes.md#get-chaticonicon_name) | Get Icon Properties |
 
 ## `GET /chat/icons/:user`
 
