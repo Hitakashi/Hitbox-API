@@ -233,7 +233,7 @@
                     "403": {
                         "description": "Invalid Token",
                         "schema": {
-                            "$ref": "#/definitions/EditorsListUnAuth"
+                            "$ref": "#/definitions/Unauthorized"
                         }
                     }
                 }
@@ -280,7 +280,7 @@
                     "403": {
                         "description": "Invalid Token",
                         "schema": {
-                            "$ref": "#/definitions/EditorsListUnAuth"
+                            "$ref": "#/definitions/Unauthorized"
                         }
                     },
                     "404": {
@@ -320,6 +320,277 @@
                     }
                 }
             }
+        },
+        "/hosters/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Get channels that host 'channel'",
+                "operationId": "getHosters",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Editor or higher Auth Token",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/HostersList"
+                        }
+                    },
+                    "403": {
+                        "description": "Invalid Auth or Channel",
+                        "schema": {
+                            "$ref": "#/definitions/PermissionDenied"
+                        }
+                    }
+                }
+            }
+        },
+        "/mediakey/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Get Stream key for channel",
+                "operationId": "getStreamKey",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Editor or Higher Auth Token",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/MediaKey"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Reset Stream Key for channel",
+                "operationId": "resetStreamKey",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Editor or Higher Auth Token",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/MediaKey"
+                        }
+                    }
+                }
+            }
+        },
+        "/profileenable/{channel}": {
+            "post": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Toggles panel layout on descriptions",
+                "operationId": "toggleProfile",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Post Data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProfileEnable"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessOnly"
+                        }
+                    },
+                    "403": {
+                        "description": "Incorrect Channel or Auth",
+                        "schema": {
+                            "$ref": "#/definitions/AuthRequired"
+                        }
+                    }
+                }
+            }
+        },
+        "/profile/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Gets panel data",
+                "operationId": "getPanels",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel",
+                        "schema": {
+                            "$ref": "#/definitions/PanelProfile"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Updates Panel Data",
+                "operationId": "updatePanels",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Post Data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PanelUpdate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/ErrorOnly"
+                        }
+                    }
+                }
+            }
+        },
+        "/revenues/channel/{channel}": {
+            "get": {
+                "tags": [
+                    "channel"
+                ],
+                "summary": "Get Revenue Stats",
+                "operationId": "getRevenueStats",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "channel",
+                        "in": "path",
+                        "type": "string",
+                        "description": "Channel Name",
+                        "required": true
+                    },
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Owners Auth Token",
+                        "required": true
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Start Date in YYYY-MM-DD",
+                        "required": true
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "query",
+                        "type": "string",
+                        "description": "End Date in YYYY-MM-DD",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Valid Channel & Auth",
+                        "schema": {
+                            "$ref": "#/definitions/RevenueStats"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -342,6 +613,22 @@
         },
         "ValidLogin": {
             "type": "object",
+            "required": [
+                "user_id",
+                "user_name",
+                "user_logo",
+                "user_logo_small",
+                "user_banned",
+                "user_banned_channel",
+                "superadmin",
+                "livestream_count",
+                "followers",
+                "authToken",
+                "login",
+                "data",
+                "access",
+                "app"
+            ],
             "properties": {
                 "user_id": {
                     "type": "string",
@@ -389,6 +676,19 @@
                 },
                 "data": {
                     "type": "object",
+                    "required": [
+                        "app",
+                        "user_id",
+                        "user_name",
+                        "user_logo",
+                        "user_logo_small",
+                        "user_banned",
+                        "superadmin",
+                        "livestream_count",
+                        "followers",
+                        "authToken",
+                        "login"
+                    ],
                     "properties": {
                         "app": {
                             "type": "string",
@@ -448,6 +748,11 @@
         },
         "InvalidLogin": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -465,6 +770,9 @@
         },
         "ValidLoginToken": {
             "type": "object",
+            "required": [
+                "authToken"
+            ],
             "properties": {
                 "authToken": {
                     "type": "string",
@@ -474,6 +782,11 @@
         },
         "ValidAuth": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -491,6 +804,10 @@
         },
         "ComBreak": {
             "type": "object",
+            "required": [
+                "method",
+                "params"
+            ],
             "properties": {
                 "method": {
                     "type": "string",
@@ -498,6 +815,14 @@
                 },
                 "params": {
                     "type": "object",
+                    "required": [
+                        "channel",
+                        "count",
+                        "delay",
+                        "token",
+                        "url",
+                        "timestamp"
+                    ],
                     "properties": {
                         "channel": {
                             "type": "string",
@@ -540,11 +865,22 @@
         },
         "EditorsList": {
             "type": "object",
+            "required": [
+                "list"
+            ],
             "properties": {
                 "list": {
                     "type": "array",
+                    "required": [
+                        "items"
+                    ],
                     "items": {
                         "type": "object",
+                        "required": [
+                            "user_name",
+                            "user_logo",
+                            "user_logo_small"
+                        ],
                         "properties": {
                             "user_name": {
                                 "type": "string",
@@ -587,9 +923,17 @@
         },
         "FollowersList": {
             "type": "object",
+            "required": [
+                "request",
+                "followers",
+                "max_results"
+            ],
             "properties": {
                 "request": {
                     "type": "object",
+                    "required": [
+                        "this"
+                    ],
                     "properties": {
                         "this": {
                             "type": "string",
@@ -599,8 +943,22 @@
                 },
                 "followers": {
                     "type": "array",
+                    "required": [
+                        "max_results"
+                    ],
                     "items": {
                         "type": "object",
+                        "required": [
+                            "followers",
+                            "user_name",
+                            "user_id",
+                            "user_logo",
+                            "user_logo_small",
+                            "follow_id",
+                            "follower_user_id",
+                            "follower_notify",
+                            "date_added"
+                        ],
                         "properties": {
                             "followers": {
                                 "type": "string",
@@ -647,8 +1005,426 @@
                 }
             }
         },
+        "HostersList": {
+            "type": "object",
+            "required": [
+                "hosters"
+            ],
+            "properties": {
+                "hosters": {
+                    "type": "array",
+                    "required": [
+                        "items"
+                    ],
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "user_name",
+                            "user_logo"
+                        ],
+                        "properties": {
+                            "user_name": {
+                                "type": "string",
+                                "default": "test-account"
+                            },
+                            "user_logo": {
+                                "type": "string",
+                                "default": "/static/img/channel/test-hosters_54b7307c3d741_large.png"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "MediaKey": {
+            "type": "object",
+            "required": [
+                "streamKey"
+            ],
+            "properties": {
+                "streamKey": {
+                    "type": "string"
+                }
+            }
+        },
+        "ProfileEnable": {
+            "type": "object",
+            "required": [
+                "authToken",
+                "enabled",
+                "user_name"
+            ],
+            "properties": {
+                "authToken": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "user_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "PanelProfile": {
+            "type": "object",
+            "properties": {
+                "profile": {
+                    "type": "object",
+                    "properties": {
+                        "panels": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "default": 2
+                                    },
+                                    "template": {
+                                        "type": "string",
+                                        "default": "content"
+                                    },
+                                    "headline": {
+                                        "type": "string",
+                                        "default": "Panel 2 w/o image"
+                                    },
+                                    "link": {
+                                        "type": "string",
+                                        "default": ""
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "default": "Super Secret Text!"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "default": ""
+                                    }
+                                }
+                            }
+                        },
+                        "sorted": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "default": 2
+                                    },
+                                    "template": {
+                                        "type": "string",
+                                        "default": "content"
+                                    },
+                                    "headline": {
+                                        "type": "string",
+                                        "default": "Panel 2 w/o image"
+                                    },
+                                    "link": {
+                                        "type": "string",
+                                        "default": ""
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "default": "Super Secret Text!"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "default": ""
+                                    }
+                                }
+                            }
+                        },
+                        "preview": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "PanelUpdate": {
+            "type": "object",
+            "properties": {
+                "user_name": {
+                    "type": "string",
+                    "default": "Test-Account"
+                },
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                },
+                "profile": {
+                    "type": "object",
+                    "properties": {
+                        "panels": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "default": 2
+                                    },
+                                    "template": {
+                                        "type": "string",
+                                        "default": "content"
+                                    },
+                                    "headline": {
+                                        "type": "string",
+                                        "default": "Panel 2 w/o image"
+                                    },
+                                    "link": {
+                                        "type": "string",
+                                        "default": ""
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "default": "Super Secret Text!"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "default": ""
+                                    }
+                                }
+                            }
+                        },
+                        "sorted": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "default": 2
+                                    },
+                                    "template": {
+                                        "type": "string",
+                                        "default": "content"
+                                    },
+                                    "headline": {
+                                        "type": "string",
+                                        "default": "Panel 2 w/o image"
+                                    },
+                                    "link": {
+                                        "type": "string",
+                                        "default": ""
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "default": "Super Secret Text!"
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "default": ""
+                                    }
+                                }
+                            }
+                        },
+                        "preview": {
+                            "type": "array",
+                            "items": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "RevenueStats": {
+            "type": "object",
+            "properties": {
+                "request": {
+                    "type": "object",
+                    "properties": {
+                        "this": {
+                            "type": "string",
+                            "default": "/revenues/channel/test-account"
+                        },
+                        "type": {
+                            "type": "string",
+                            "default": "channel"
+                        },
+                        "user": {
+                            "type": "string",
+                            "default": "test-account"
+                        }
+                    }
+                },
+                "revenues": {
+                    "type": "object",
+                    "properties": {
+                        "summary": {
+                            "type": "object",
+                            "properties": {
+                                "currency": {
+                                    "type": "string",
+                                    "default": "EUR"
+                                },
+                                "total_earnings": {
+                                    "type": "integer",
+                                    "default": 0
+                                },
+                                "max_earnings": {
+                                    "type": "string",
+                                    "default": "null"
+                                },
+                                "viewed_hours": {
+                                    "type": "integer",
+                                    "default": 0
+                                },
+                                "unique_user": {
+                                    "type": "integer",
+                                    "default": 0
+                                }
+                            }
+                        },
+                        "plans": {
+                            "type": "array",
+                            "items": {
+                                "type": "array"
+                            }
+                        },
+                        "timeline": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "integer",
+                                    "default": 0
+                                }
+                            }
+                        },
+                        "daily": {
+                            "type": "object",
+                            "properties": {
+                                "2015-03-30": {
+                                    "type": "object",
+                                    "properties": {
+                                        "earnings": {
+                                            "type": "integer",
+                                            "default": 0
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "groups": {
+                            "type": "object",
+                            "properties": {
+                                "1425686400000": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "default": "null"
+                                    }
+                                }
+                            }
+                        },
+                        "live": {
+                            "type": "object",
+                            "properties": {
+                                "1425686400000": {
+                                    "type": "string",
+                                    "default": "null"
+                                }
+                            }
+                        },
+                        "total": {
+                            "type": "object",
+                            "properties": {
+                                "1425686400000": {
+                                    "type": "string",
+                                    "default": "null"
+                                }
+                            }
+                        },
+                        "timeline_ads": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "default": "null"
+                                }
+                            }
+                        },
+                        "timeline_subs": {
+                            "type": "array",
+                            "items": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "default": "null"
+                                }
+                            }
+                        },
+                        "subs": {
+                            "type": "object",
+                            "properties": {
+                                "1425686400000": {
+                                    "type": "string",
+                                    "default": "null"
+                                }
+                            }
+                        },
+                        "top": {
+                            "type": "object",
+                            "properties": {
+                                "countries": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    }
+                                },
+                                "content": {
+                                    "type": "object",
+                                    "properties": {
+                                        "live": {
+                                            "type": "object",
+                                            "properties": {
+                                                "earnings": {
+                                                    "type": "integer",
+                                                    "default": 0
+                                                }
+                                            }
+                                        },
+                                        "video": {
+                                            "type": "object",
+                                            "properties": {
+                                                "earnings": {
+                                                    "type": "integer",
+                                                    "default": 0
+                                                }
+                                            }
+                                        },
+                                        "subscriptions": {
+                                            "type": "object",
+                                            "properties": {
+                                                "earnings": {
+                                                    "type": "integer",
+                                                    "default": 0
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "Success": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "message"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -664,8 +1440,37 @@
                 }
             }
         },
-        "EditorsListUnAuth": {
+        "SuccessOnly": {
             "type": "object",
+            "required": [
+                "success"
+            ],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "ErrorOnly": {
+            "type": "object",
+            "required": [
+                "error"
+            ],
+            "properties": {
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "Unauthorized": {
+            "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -683,6 +1488,11 @@
         },
         "AuthRequired": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -698,8 +1508,35 @@
                 }
             }
         },
+        "PermissionDenied": {
+            "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "permission_denied"
+                }
+            }
+        },
         "EditorsBadRequest": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -717,6 +1554,11 @@
         },
         "EditorsNotFound": {
             "type": "object",
+            "required": [
+                "success",
+                "error",
+                "error_msg"
+            ],
             "properties": {
                 "success": {
                     "type": "boolean",
@@ -732,9 +1574,5 @@
                 }
             }
         }
-    },
-    "externalDocs": {
-        "description": "Find out more about Swagger",
-        "url": "http://swagger.io"
     }
 }
