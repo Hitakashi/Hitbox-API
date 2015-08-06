@@ -5,7 +5,7 @@ This is an unofficial documentation of hitbox.tv API.
 
 Chat Documentation: Old: http://hitakashi.github.io/Hitbox-Chat-Methods/ | New: https://github.com/Hitakashi/Hitbox-Chat-Doc
 
-Chat Documentation Repo: https://github.com/Hitakashi/Hitbox-Chat-Methods | https://github.com/Hitakashi/Hitbox-Chat-Doc
+Chat Documentation Repo: Old: https://github.com/Hitakashi/Hitbox-Chat-Methods | New: https://github.com/Hitakashi/Hitbox-Chat-Doc
 
 ### Repo Information
 
