@@ -227,14 +227,29 @@ https://www.hitbox.tv/api/media/video/test-account
 
 ```javascript
 {
-  "user_name":"test-account",
-  "authToken":"SuperSecret",
-  "media_type":"video",
-  "media_status":"This is the video title!",
-  "media_category_id":"50055",
-  "clip_duration":554,
-  "clip_start":0,
-  "rec_session":"SuperSecretRecSession"
+   "user_name":"test-account",
+   "authToken":"SuperSecret",
+   "media_type":"video",
+   "media_title":"This is a strean title! - Aug 6th #3",
+   "media_status":"This is a stream title! - Aug 6th #3",
+   "media_name":"test-account",
+   "media_hidden":1,
+   "media_category_id":{
+      "category_id":"447",
+      "category_name":"Quake Live",
+      "category_name_short":null,
+      "category_seo_key":"quake-live",
+      "category_viewers":"0",
+      "category_media_count":"1",
+      "category_channels":null,
+      "category_logo_small":null,
+      "category_logo_large":"/static/img/games/293456-quakelive2.jpg",
+      "category_updated":"2015-08-06 02:21:12"
+   },
+   "clip_duration":23.658077999999996,
+   "clip_start":8.76451,
+   "rec_session":"d4ae1ceb9f3849f14bgfdyhtr8734fdsa3e695-55c2b7e5c981a",
+   "original":false
 }
 ```
 
