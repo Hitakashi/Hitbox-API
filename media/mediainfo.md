@@ -1,6 +1,6 @@
 # Media Info API
 ***
-*Partner Channels Only*
+*Transcoding Feature Only*
 
 | Endpoint | Description |
 | ---- | --------------- |
