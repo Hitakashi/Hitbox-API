@@ -30315,6 +30315,15 @@ request.get = function(url, data, fn){
   return req;
 };
 
+request.update = function (url, data, fn) {
+  var req = request('UPDATE', url);
+  if ('function' == typeof data) fn = data, data = null;
+  if (data) req.query(data);
+  if (fn) req.end(fn);
+  return req;
+};
+
+
 /**
  * HEAD `url` with optional callback `fn(res)`.
  *
@@ -30401,6 +30410,8 @@ request.put = function(url, data, fn){
   if (fn) req.end(fn);
   return req;
 };
+
+
 
 /**
  * Expose `request`.
