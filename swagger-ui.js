@@ -1142,7 +1142,7 @@ var reservedApiTags = [
   'path',
   'tag'
 ];
-var supportedOperationMethods = ['delete', 'get', 'head', 'options', 'patch', 'post', 'put'];
+var supportedOperationMethods = ['delete', 'get', 'head', 'options', 'patch', 'post', 'put', 'update'];
 var SwaggerClient = module.exports = function (url, options) {
   this.authorizations = null;
   this.authorizationScheme = null;
