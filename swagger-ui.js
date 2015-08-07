@@ -30647,7 +30647,8 @@ window.SwaggerUi = Backbone.Router.extend({
         'delete',
         'head',
         'options',
-        'patch'
+        'patch',
+        'update'
       ];
     }
 
