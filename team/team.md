@@ -6,6 +6,7 @@
 | [GET /team/:teamname](/team/team.md#get-teamteamname) | Get information about teams. |
 | [POST /team](/team/team.md#post-team) | Creates a team |
 | [PUT /team/:teamname/:username](/team/team.md#put-teamteamnameusername) | Updates a team |
+| [UPDATE /team/:teamname/:username](/team/team.md#update-teamteamnameusername) | Accepts Invite |
 | [DELETE /team/:teamname/:username](/team/team.md#delete-teamteamnameusername) | Kicks a user or removes yourself from a team |
 
 ## `GET /team/:teamname`
@@ -123,7 +124,7 @@ The video array will be filled with the [Video Object](https://github.com/Hitaka
 
 Create a team.
 
-## Example URL
+### Example URL
 
 https://www.hitbox.tv/api/team?authToken=SuperSecret
 
@@ -244,6 +245,28 @@ Invalid Payload or Incorrect Auth Token
 
 ```javascript
 permission_denied
+```
+
+## `UPDATE /team/:teamname/:username`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | Yes | string | User's Auth Token |
+| group_id | Yes | int | Teams group id |
+
+`:teamname` is the team you want to accept the invite.
+
+### Example URL
+
+https://www.hitbox.tv/api/team/test-team/test-account?authToken=SuperSecret&group_id=123
+
+### Example Responses
+
+```javascript
+{
+    "success":true,
+    "success_msg":"accepted_test-account"
+}
 ```
 
 ## `DELETE /team/:teamname/:username`
