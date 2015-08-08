@@ -2,7 +2,12 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "hitbox API"
+        "title": "hitbox API",
+        "description": "Notice anything incorrect? Send me a tweet at the following contact information.",
+        "contact": {
+            "name": "hitakashi",
+            "url": "https://twitter.com/hitakashi"
+        }
     },
     "host": "api.hitbox.tv",
     "basePath": "/api",
