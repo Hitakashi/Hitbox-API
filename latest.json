@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "title": "hitbox API",
         "description": "Notice anything incorrect? Send me a tweet at the following contact information.",
         "contact": {
@@ -323,7 +323,7 @@
                 "tags": [
                     "channel"
                 ],
-                "summary": "Gets users that follower channel.",
+                "summary": "Gets users that follow a channel.",
                 "operationId": "getFollowers",
                 "produces": [
                     "application/json"
@@ -335,6 +335,40 @@
                         "type": "string",
                         "description": "Channel Name",
                         "required": true
+                    },
+                    {
+                        "name": "reverse",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Reverse Sort",
+                        "required": false
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "type": "string",
+                        "enum": [
+                            "date_added",
+                            "user_name",
+                            "user_id",
+                            "follower_notify"
+                        ],
+                        "description": "Sort Objects",
+                        "required": false
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Limit number of objects",
+                        "required": false
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Number to offset objects by.",
+                        "required": false
                     }
                 ],
                 "responses": {
