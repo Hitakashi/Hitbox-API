@@ -3063,7 +3063,7 @@
                     "200": {
                         "description": "Correct Auth & Channel",
                         "schema": {
-                            "$ref": "#/definitions/Notification"
+                            "$ref": "#/definitions/Notifications"
                         }
                     },
                     "403": {
