@@ -6,7 +6,8 @@
         "description": "Notice anything incorrect? Send me a tweet at the following contact information.",
         "contact": {
             "name": "hitakashi",
-            "url": "https://twitter.com/hitakashi"
+            "url": "https://twitter.com/hitakashi",
+            "email": "whfalex+htbxapi@gmail.com"
         }
     },
     "host": "api.hitbox.tv",
