@@ -56,7 +56,7 @@
                     "auth"
                 ],
                 "summary": "Authenticates user with username and password.",
-                "description": "This API returns a object containing information about the authenticated user.\n\nYou can optionally pass just an 'authToken' value in JSON to return the same valid credentials object\n",
+                "description": "This API returns a object containing information about the authenticated user.\n\n\nYou can optionally pass just an 'authToken' value in JSON to return the same valid credentials object\n",
                 "operationId": "authUserPass",
                 "consumes": [
                     "application/json"
@@ -2194,7 +2194,7 @@
                 ],
                 "summary": "Updates Team Object (Invites)",
                 "operationId": "UpdateTeam",
-                "description": "To upload a team icon you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a logo->small and logo->large which then can be put into 'group_logo_small' and 'group_logo_large' respectively.\n\nTo delete a logo you must set the URL parameter 'action' to 'delete_logo'\n\nTo upload a team cover you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a cover->cover which then can be put into 'group_cover'\n\nTo delete a cover you must set the URL paramter 'action' to 'delete_cover'\n\nDeleting a cover or logo will return 'group_logo_small', 'group_logo_large', 'group_cover' as \"\" instead of null like a new team.\n\nTo disband a team you must set the URL paramter 'action' to 'delete_team' and PUT a valid body.\n",
+                "description": "To upload a team icon you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a logo->small and logo->large which then can be put into 'group_logo_small' and 'group_logo_large' respectively.\n\n\nTo delete a logo you must set the URL parameter 'action' to 'delete_logo'\n\n\nTo upload a team cover you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a cover->cover which then can be put into 'group_cover'\n\n\nTo delete a cover you must set the URL paramter 'action' to 'delete_cover'\n\n\nDeleting a cover or logo will return 'group_logo_small', 'group_logo_large', 'group_cover' as \"\" instead of null like a new team.\n\n\nTo disband a team you must set the URL paramter 'action' to 'delete_team' and PUT a valid body.\n",
                 "produces": [
                     "application/json"
                 ],
@@ -2633,6 +2633,54 @@
             }
         },
         "/follow": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Follows a channel",
+                "operationId": "FollowChannel",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "description": "User's Auth Token",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "POST data",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": [
+                                        "user"
+                                    ]
+                                },
+                                "follow_id": {
+                                    "type": "string",
+                                    "description": "Channel ID"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful follow",
+                        "schema": {
+                            "$ref": "#/definitions/SuccessFollow"
+                        }
+                    }
+                }
+            },
             "delete": {
                 "tags": [
                     "user"
@@ -5487,11 +5535,11 @@
                             },
                             "media_description": {
                                 "type": "string",
-                                "default": "I the guy created unofficial documentation of the hitbox API and Chat.\n\n[Hitbox API](https://github.com/Hitakashi/Hitbox-API)\n<br /><br /><br /><br /><br /><br />\n\n[Hitbox Chat](https://github.com/Hitakashi/Hitbox-Chat-Doc)"
+                                "default": "I the guy created unofficial documentation of the hitbox API and Chat.\n\n\n[Hitbox API](https://github.com/Hitakashi/Hitbox-API)\n<br /><br /><br /><br /><br /><br />\n\n\n[Hitbox Chat](https://github.com/Hitakashi/Hitbox-Chat-Doc)"
                             },
                             "media_description_md": {
                                 "type": "string",
-                                "default": "<p>I the guy created unofficial documentation of the hitbox API and Chat.</p>\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-API\">Hitbox API</a>\n<br /><br /><br /><br /><br /><br /></p>\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-Chat-Doc\">Hitbox Chat</a></p>\n"
+                                "default": "<p>I the guy created unofficial documentation of the hitbox API and Chat.</p>\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-API\">Hitbox API</a>\n<br /><br /><br /><br /><br /><br /></p>\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-Chat-Doc\">Hitbox Chat</a></p>\n"
                             },
                             "media_tags": {
                                 "type": "string",
@@ -8291,6 +8339,28 @@
                 "success": {
                     "type": "boolean",
                     "default": true
+                }
+            }
+        },
+        "SuccessFollow": {
+            "type": "object",
+            "required": [
+                "success",
+                "error",
+                "message"
+            ],
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "message": {
+                    "type": "string",
+                    "default": "following"
                 }
             }
         },
