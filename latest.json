@@ -2666,7 +2666,7 @@
                                 },
                                 "follow_id": {
                                     "type": "string",
-                                    "description": "Channel ID"
+                                    "description": "User ID of Channel"
                                 }
                             }
                         }
