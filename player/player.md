@@ -4,7 +4,7 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/server](/player/player.md#get-playerconfiglivemedia_id) | Returns socket server addresses. |
+| [GET /player/server](/player/player.md#get-playerserver) | Returns socket server addresses. |
 | [GET /player/config/live/:media_id](/player/player.md#get-playerconfiglivemedia_id) | Returns live player config. |
 | [GET /player/config/video/:video_id](/player/player.md#get-playerconfigvideovideo_id) | Returns VOD player config. |
 
