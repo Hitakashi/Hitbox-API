@@ -3210,24 +3210,7 @@
                     "200": {
                         "description": "Valid Auth",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "image_id": {
-                                        "type": "string",
-                                        "default": 123
-                                    },
-                                    "image_path": {
-                                        "type": "string",
-                                        "default": "/static/img/channel/test-account-profile-image-054b2d1096530c0b-300x300-png_54b7309baa686.png"
-                                    },
-                                    "image_date_added": {
-                                        "type": "string",
-                                        "default": "2015-01-14 23:49:45"
-                                    }
-                                }
-                            }
+                            "$ref": "#/definitions/GetUploadDesc"
                         }
                     },
                     "403": {
@@ -3276,8 +3259,7 @@
                     "200": {
                         "description": "Valid Auth",
                         "schema": {
-                            "type": "string",
-                            "default": "file_saved"
+                            "$ref": "#/definitions/UploadDesc"
                         }
                     },
                     "403": {
@@ -3412,6 +3394,30 @@
         }
     },
     "definitions": {
+        "GetUploadDesc": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "image_id": {
+                        "type": "string",
+                        "default": 123
+                    },
+                    "image_path": {
+                        "type": "string",
+                        "default": "/static/img/channel/test-account-profile-image-054b2d1096530c0b-300x300-png_54b7309baa686.png"
+                    },
+                    "image_date_added": {
+                        "type": "string",
+                        "default": "2015-01-14 23:49:45"
+                    }
+                }
+            }
+        },
+        "UploadDesc": {
+            "type": "string",
+            "default": "file_saved"
+        },
         "GlobalMessage": {
             "type": "object",
             "properties": {
