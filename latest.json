@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "title": "hitbox API",
         "description": "Notice anything incorrect? Send me a tweet or email at the following contact information.",
         "contact": {
@@ -1361,7 +1361,7 @@
         "/game/{game}": {
             "get": {
                 "tags": [
-                    "chat"
+                    "media"
                 ],
                 "summary": "Get Game Properties",
                 "description": "You can use either a game ID or game name. For a game name you must use the soe query.",
@@ -1398,7 +1398,7 @@
         "/games": {
             "get": {
                 "tags": [
-                    "chat"
+                    "media"
                 ],
                 "summary": "Get Games",
                 "description": "Searches for games by keywords",
