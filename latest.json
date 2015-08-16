@@ -3,7 +3,7 @@
     "info": {
         "version": "1.0.1",
         "title": "hitbox API",
-        "description": "Notice anything incorrect? Send me a tweet at the following contact information.",
+        "description": "Notice anything incorrect? Send me a tweet or email at the following contact information.",
         "contact": {
             "name": "hitakashi",
             "url": "https://twitter.com/hitakashi",
@@ -11,7 +11,7 @@
         }
     },
     "host": "api.hitbox.tv",
-    "basePath": "/api",
+    "basePath": "/",
     "tags": [
         {
             "name": "auth",
@@ -56,7 +56,7 @@
                     "auth"
                 ],
                 "summary": "Authenticates user with username and password.",
-                "description": "This API returns a object containing information about the authenticated user.\n\n\nYou can optionally pass just an 'authToken' value in JSON to return the same valid credentials object\n",
+                "description": "This API returns a object containing information about the authenticated user.\n\n\n\n\nYou can optionally pass just an 'authToken' value in JSON to return the same valid credentials object\n",
                 "operationId": "authUserPass",
                 "consumes": [
                     "application/json"
@@ -710,8 +710,7 @@
                     "403": {
                         "description": "Invalid Channel & Auth.",
                         "schema": {
-                            "type": "string",
-                            "default": "auth_required"
+                            "$ref": "#/definitions/AuthRequiredString"
                         }
                     }
                 }
@@ -768,8 +767,7 @@
                     "403": {
                         "description": "Invalid Channel & Auth.",
                         "schema": {
-                            "type": "string",
-                            "default": "auth_required"
+                            "$ref": "#/definitions/AuthRequiredString"
                         }
                     }
                 }
@@ -825,8 +823,7 @@
                     "403": {
                         "description": "Invalid Channel & Auth.",
                         "schema": {
-                            "type": "string",
-                            "default": "auth_required"
+                            "$ref": "#/definitions/AuthRequiredString"
                         }
                     }
                 }
@@ -1005,8 +1002,7 @@
                     "200": {
                         "description": "Valid Channel & Auth Token",
                         "schema": {
-                            "type": "string",
-                            "default": "success"
+                            "$ref": "#/definitions/SuccessOnlyString"
                         }
                     }
                 }
@@ -1509,7 +1505,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "Valid Channel",
                         "schema": {
                             "$ref": "#/definitions/Media"
                         }
@@ -1950,13 +1946,7 @@
                     "200": {
                         "description": "Returns the created video ID",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "media_id": {
-                                    "type": "string",
-                                    "default": "617707"
-                                }
-                            }
+                            "$ref": "#/definitions/VideoCreated"
                         }
                     },
                     "403": {
@@ -1991,21 +1981,7 @@
                     "200": {
                         "description": "Valid Channel",
                         "schema": {
-                            "type": "object",
-                            "required": [
-                                "media_is_live",
-                                "media_views"
-                            ],
-                            "properties": {
-                                "media_is_live": {
-                                    "type": "string",
-                                    "default": "0"
-                                },
-                                "media_views": {
-                                    "type": "string",
-                                    "default": "100"
-                                }
-                            }
+                            "$ref": "#/definitions/MediaStatus"
                         }
                     }
                 }
@@ -2034,16 +2010,7 @@
                     "200": {
                         "description": "Valid Channel. Can return 'false'",
                         "schema": {
-                            "type": "object",
-                            "required": [
-                                "total_live_views"
-                            ],
-                            "properties": {
-                                "total_live_views": {
-                                    "type": "string",
-                                    "default": "1001"
-                                }
-                            }
+                            "$ref": "#/definitions/MediaViews"
                         }
                     }
                 }
@@ -2159,17 +2126,7 @@
                     "200": {
                         "description": "Team Created",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "success_msg": {
-                                    "type": "string",
-                                    "default": "team_created"
-                                }
-                            }
+                            "$ref": "#/definitions/TeamCreate"
                         }
                     },
                     "403": {
@@ -2194,7 +2151,7 @@
                 ],
                 "summary": "Updates Team Object (Invites)",
                 "operationId": "UpdateTeam",
-                "description": "To upload a team icon you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a logo->small and logo->large which then can be put into 'group_logo_small' and 'group_logo_large' respectively.\n\n\nTo delete a logo you must set the URL parameter 'action' to 'delete_logo'\n\n\nTo upload a team cover you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a cover->cover which then can be put into 'group_cover'\n\n\nTo delete a cover you must set the URL paramter 'action' to 'delete_cover'\n\n\nDeleting a cover or logo will return 'group_logo_small', 'group_logo_large', 'group_cover' as \"\" instead of null like a new team.\n\n\nTo disband a team you must set the URL paramter 'action' to 'delete_team' and PUT a valid body.\n",
+                "description": "To upload a team icon you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a logo->small and logo->large which then can be put into 'group_logo_small' and 'group_logo_large' respectively.\n\n\n\n\nTo delete a logo you must set the URL parameter 'action' to 'delete_logo'\n\n\n\n\nTo upload a team cover you must do a [POST /upload/team/{user}/{auth}](/#!/upload/UploadTeam) which will return a cover->cover which then can be put into 'group_cover'\n\n\n\n\nTo delete a cover you must set the URL paramter 'action' to 'delete_cover'\n\n\n\n\nDeleting a cover or logo will return 'group_logo_small', 'group_logo_large', 'group_cover' as \"\" instead of null like a new team.\n\n\n\n\nTo disband a team you must set the URL paramter 'action' to 'delete_team' and PUT a valid body.\n",
                 "produces": [
                     "application/json"
                 ],
@@ -2300,17 +2257,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "success_msg": {
-                                    "type": "string",
-                                    "default": "accepted_{user}"
-                                }
-                            }
+                            "$ref": "#/definitions/AcceptsTeam"
                         }
                     }
                 }
@@ -2358,37 +2305,13 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "success_msg": {
-                                    "type": "string",
-                                    "default": "deleted_{user}"
-                                }
-                            }
+                            "$ref": "#/definitions/LeaveTeam"
                         }
                     },
                     "406": {
                         "description": "",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error_msg": {
-                                    "type": "string",
-                                    "default": "delete_error"
-                                }
-                            }
+                            "$ref": "#/definitions/TeamDeleteError"
                         }
                     }
                 }
@@ -2452,21 +2375,7 @@
                     "400": {
                         "description": "Missing Parameters",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error_msg": {
-                                    "type": "string",
-                                    "default": "missing_param"
-                                }
-                            }
+                            "$ref": "#/definitions/TeamMissingParam"
                         }
                     }
                 }
@@ -2562,21 +2471,7 @@
                     "200": {
                         "description": "Successfully posted. (Currently this API always returns 400)",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "user_name": {
-                                    "type": "string",
-                                    "default": "test-account"
-                                },
-                                "authToken": {
-                                    "type": "string",
-                                    "default": "SuperSecret"
-                                },
-                                "message": {
-                                    "type": "string",
-                                    "default": "Test Message!"
-                                }
-                            }
+                            "$ref": "#/definitions/SocialPost"
                         }
                     }
                 }
@@ -2612,21 +2507,7 @@
                     "200": {
                         "description": "Successfully Posted",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "user_name": {
-                                    "type": "string",
-                                    "default": "test-account"
-                                },
-                                "authToken": {
-                                    "type": "string",
-                                    "default": "SuperSecret"
-                                },
-                                "message": {
-                                    "type": "string",
-                                    "default": "Test Message!"
-                                }
-                            }
+                            "$ref": "#/definitions/SocialPost"
                         }
                     }
                 }
@@ -2720,21 +2601,7 @@
                     "200": {
                         "description": "Successfully Unfollows",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "message": {
-                                    "type": "string",
-                                    "default": "un-followed"
-                                }
-                            }
+                            "$ref": "#/definitions/UnfollowUser"
                         }
                     }
                 }
@@ -2837,21 +2704,7 @@
                     "404": {
                         "description": "",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error_msg": {
-                                    "type": "string",
-                                    "default": "not_following"
-                                }
-                            }
+                            "$ref": "#/definitions/NotFollowing"
                         }
                     }
                 }
@@ -2930,21 +2783,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "message": {
-                                    "type": "string",
-                                    "default": "user_updated"
-                                }
-                            }
+                            "$ref": "#/definitions/UserUpdated"
                         }
                     }
                 }
@@ -3017,33 +2856,13 @@
                     "200": {
                         "description": "Correct Auth",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "isSubscriber": {
-                                    "type": "boolean",
-                                    "default": false
-                                }
-                            }
+                            "$ref": "#/definitions/isSubscriber"
                         }
                     },
                     "400": {
                         "description": "Incorrect Auth",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "success": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "error": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "error_msg": {
-                                    "type": "string",
-                                    "default": "bad_request_token_required"
-                                }
-                            }
+                            "$ref": "#/definitions/BadRequestTokenRequired"
                         }
                     }
                 }
@@ -3109,6 +2928,13 @@
                                 }
                             }
                         }
+                    },
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "User Name",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -3157,8 +2983,7 @@
                     "403": {
                         "description": "Incorrect Auth or Channel",
                         "schema": {
-                            "type": "string",
-                            "default": "auth_required"
+                            "$ref": "#/definitions/AuthRequiredString"
                         }
                     }
                 }
@@ -3201,8 +3026,7 @@
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "type": "string",
-                            "default": "success"
+                            "$ref": "#/definitions/SuccessOnlyString"
                         }
                     }
                 }
@@ -3292,8 +3116,7 @@
                     "404": {
                         "description": "No Subscribers",
                         "schema": {
-                            "type": "string",
-                            "default": "no_subscribers_found"
+                            "$ref": "#/definitions/NoSubscribersFound"
                         }
                     }
                 }
@@ -3345,12 +3168,7 @@
                     "200": {
                         "description": "Only sent on cover change",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "cover": {
-                                    "type": "string"
-                                }
-                            }
+                            "$ref": "#/definitions/Cover"
                         }
                     },
                     "403": {
@@ -3506,8 +3324,7 @@
                     "200": {
                         "description": "Valid Auth",
                         "schema": {
-                            "type": "string",
-                            "default": "success"
+                            "$ref": "#/definitions/SuccessOnlyString"
                         }
                     },
                     "403": {
@@ -3581,13 +3398,7 @@
                     "200": {
                         "description": "There's a global message",
                         "schema": {
-                            "type": "object",
-                            "properties": {
-                                "message": {
-                                    "type": "string",
-                                    "default": "This is where the message is!"
-                                }
-                            }
+                            "$ref": "#/definitions/GlobalMessage"
                         }
                     },
                     "201": {
@@ -3601,6 +3412,15 @@
         }
     },
     "definitions": {
+        "GlobalMessage": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "default": "This is where the message is!"
+                }
+            }
+        },
         "Login": {
             "type": "object",
             "required": [
@@ -5535,11 +5355,11 @@
                             },
                             "media_description": {
                                 "type": "string",
-                                "default": "I the guy created unofficial documentation of the hitbox API and Chat.\n\n\n[Hitbox API](https://github.com/Hitakashi/Hitbox-API)\n<br /><br /><br /><br /><br /><br />\n\n\n[Hitbox Chat](https://github.com/Hitakashi/Hitbox-Chat-Doc)"
+                                "default": "I the guy created unofficial documentation of the hitbox API and Chat.\n\n\n\n\n[Hitbox API](https://github.com/Hitakashi/Hitbox-API)\n<br /><br /><br /><br /><br /><br />\n\n\n\n\n[Hitbox Chat](https://github.com/Hitakashi/Hitbox-Chat-Doc)"
                             },
                             "media_description_md": {
                                 "type": "string",
-                                "default": "<p>I the guy created unofficial documentation of the hitbox API and Chat.</p>\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-API\">Hitbox API</a>\n<br /><br /><br /><br /><br /><br /></p>\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-Chat-Doc\">Hitbox Chat</a></p>\n"
+                                "default": "<p>I the guy created unofficial documentation of the hitbox API and Chat.</p>\n\n\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-API\">Hitbox API</a>\n<br /><br /><br /><br /><br /><br /></p>\n\n\n\n\n<p><a href=\"https://github.com/Hitakashi/Hitbox-Chat-Doc\">Hitbox Chat</a></p>\n"
                             },
                             "media_tags": {
                                 "type": "string",
@@ -7124,6 +6944,15 @@
                 }
             }
         },
+        "VideoCreated": {
+            "type": "object",
+            "properties": {
+                "media_id": {
+                    "type": "string",
+                    "default": "617707"
+                }
+            }
+        },
         "UpdateVideo": {
             "type": "object",
             "properties": {
@@ -7403,6 +7232,32 @@
                         "type": "string",
                         "default": "New-Team-Member"
                     }
+                }
+            }
+        },
+        "AcceptsTeam": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "success_msg": {
+                    "type": "string",
+                    "default": "accepted_{user}"
+                }
+            }
+        },
+        "LeaveTeam": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "success_msg": {
+                    "type": "string",
+                    "default": "deleted_{user}"
                 }
             }
         },
@@ -7858,6 +7713,23 @@
                 }
             }
         },
+        "UserUpdated": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "message": {
+                    "type": "string",
+                    "default": "user_updated"
+                }
+            }
+        },
         "UserAccess": {
             "type": "object",
             "properties": {
@@ -8286,6 +8158,86 @@
                 }
             }
         },
+        "MediaStatus": {
+            "type": "object",
+            "required": [
+                "media_is_live",
+                "media_views"
+            ],
+            "properties": {
+                "media_is_live": {
+                    "type": "string",
+                    "default": "0"
+                },
+                "media_views": {
+                    "type": "string",
+                    "default": "100"
+                }
+            }
+        },
+        "MediaViews": {
+            "type": "object",
+            "required": [
+                "total_live_views"
+            ],
+            "properties": {
+                "total_live_views": {
+                    "type": "string",
+                    "default": "1001"
+                }
+            }
+        },
+        "SocialPost": {
+            "type": "object",
+            "properties": {
+                "user_name": {
+                    "type": "string",
+                    "default": "test-account"
+                },
+                "authToken": {
+                    "type": "string",
+                    "default": "SuperSecret"
+                },
+                "message": {
+                    "type": "string",
+                    "default": "Test Message!"
+                }
+            }
+        },
+        "UnfollowUser": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "message": {
+                    "type": "string",
+                    "default": "un-followed"
+                }
+            }
+        },
+        "Cover": {
+            "type": "object",
+            "properties": {
+                "cover": {
+                    "type": "string"
+                }
+            }
+        },
+        "isSubscriber": {
+            "type": "object",
+            "properties": {
+                "isSubscriber": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
         "Success": {
             "type": "object",
             "required": [
@@ -8342,6 +8294,10 @@
                 }
             }
         },
+        "SuccessOnlyString": {
+            "type": "string",
+            "default": "success"
+        },
         "SuccessFollow": {
             "type": "object",
             "required": [
@@ -8363,6 +8319,10 @@
                     "default": "following"
                 }
             }
+        },
+        "NoSubscribersFound": {
+            "type": "string",
+            "default": "no_subscribers_found"
         },
         "ErrorOnly": {
             "type": "object",
@@ -8419,6 +8379,10 @@
                     "default": "auth_required"
                 }
             }
+        },
+        "AuthRequiredString": {
+            "type": "string",
+            "default": "auth_required"
         },
         "PermissionDenied": {
             "type": "object",
@@ -8486,6 +8450,36 @@
                 }
             }
         },
+        "NotFollowing": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "message": {
+                    "type": "string",
+                    "default": "un-followed"
+                }
+            }
+        },
+        "TeamCreate": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "success_msg": {
+                    "type": "string",
+                    "default": "team_created"
+                }
+            }
+        },
         "TeamCreate406": {
             "type": "object",
             "properties": {
@@ -8519,6 +8513,40 @@
                         "group_taken",
                         "permission_denied"
                     ]
+                }
+            }
+        },
+        "TeamDeleteError": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "delete_error"
+                }
+            }
+        },
+        "TeamMissingParam": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "missing_param"
                 }
             }
         },
@@ -8663,6 +8691,23 @@
                 "error_msg": {
                     "type": "string",
                     "default": "no_media_found"
+                }
+            }
+        },
+        "BadRequestTokenRequired": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "error": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "error_msg": {
+                    "type": "string",
+                    "default": "bad_request_token_required"
                 }
             }
         }
