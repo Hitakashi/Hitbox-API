@@ -1,39 +1,73 @@
-# Player Config API
+# Player API
 ***
 
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /player/config/:media_type/:user_id](/media/player_config.md#get-playerconfigmedia_typeuser_id) | Returns player config for  live video |
-| [GET /player/reconfig/:channe/:rec_session](/media/player_config.md#get-playerrecconfigchannelrec_session) | Returns player config for recordings. |
+| [GET /player/server](/player/player.md#get-playerserver) | Returns socket server addresses. |
+| [GET /player/config/live/:media_id](/player/player.md#get-playerconfiglivemedia_id) | Returns live player config. |
+| [GET /player/config/video/:video_id](/player/player.md#get-playerconfigvideovideo_id) | Returns VOD player config. |
+| [GET /player/reconfig/:channe/:rec_session](/player/player.md#get-playerrecconfigchannelrec_session) | Returns player config for recordings. |
 
-## `GET /player/config/:media_type/:user_id`
+## `GET /player/server`
 
-Returns video player information, could be useful to some people.
+Returns socket server addresses.
 
-`user_id` can be replaced with `channel` if `media_type` is live.
+### Example URL
+
+https://www.hitbox.tv/api/player/server
+
+### Example Response
+
+```javascript
+[
+   {
+      "server_ip":"ec2-54-226-44-62.compute-1.amazonaws.com"
+   },
+   {
+      "server_ip":"ec2-54-144-24-130.compute-1.amazonaws.com"
+   },
+   {
+      "server_ip":"ec2-54-234-100-106.compute-1.amazonaws.com"
+   },
+   {
+      "server_ip":"ec2-50-17-115-203.compute-1.amazonaws.com"
+   },
+   {
+      "server_ip":"ec2-54-144-94-47.compute-1.amazonaws.com"
+   }
+]
+```
+
+## `GET /player/config/live/:media_id`
+
+Returns player config for livestream.  
+`media_id` can be replaced with `channel`.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
 | authToken | No | string | User's Auth Token |
+| redis | No | boolean | Unknown, Default: true |
+| embed | No | boolean | Show channel url, Default: false |
+| qos | No | boolean | Show qosmonitor and bwcheck, Default: false |
+| showHidden | No | boolean | Show Hidden Streams. |
 
 ### Example URL
 
+https://www.hitbox.tv/api/player/config/live/436009  
 https://www.hitbox.tv/api/player/config/live/test-account
 
-### Example Response 
-
-Live:
+### Example Response
 
 ```javascript
 {
-   "key":"#$54d46ea213123213979",
+   "key":"#$0123456789abcdef012",
    "play":null,
    "clip":{
       "autoPlay":true,
       "autoBuffering":true,
       "bufferLength":"2",
-      "eventCategory":"test-account/live/278723",
+      "eventCategory":"Test-Account\/live\/1728027",
       "baseUrl":null,
       "url":"test-account",
       "stopLiveOnPause":true,
@@ -52,12 +86,14 @@ Live:
       ],
       "controls":false,
       "type":"video",
-      "adsPlayed":false
+      "adsPlayed":false,
+      "linkWindow":"_blank",
+      "linkUrl":"http:\/\/hitbox.tv\/test-account"
    },
    "playlist":[
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp://fml.B6BF.edgecastcdn.net/20B6BF",
+         "netConnectionUrl":"rtmp:\/\/fml.B6BF.edgecastcdn.net\/20B6BF",
          "rtmpSubscribe":true,
          "bitrates":[
             {
@@ -73,14 +109,14 @@ Live:
    "plugins":{
       "rtmp":{
          "url":"flowplayer.rtmp-3.2.12.1.swf",
-         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
+         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
          "reconnecting":true
       },
       "hls":{
          "url":"flashlsFlowPlayer.swf",
          "hls_lowbufferlength":1,
          "hls_minbufferlength":4,
-         "hls_maxbufferlength":60,
+         "hls_maxbufferlength":24,
          "hls_startfromlowestlevel":true,
          "hls_seekfromlowestlevel":true,
          "hls_live_flushurlcache":false,
@@ -89,33 +125,48 @@ Live:
       },
       "rtmpHitbox":{
          "url":"flowplayer.rtmp-3.2.12.1.swf",
-         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
+         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
          "reconnecting":true
+      },
+      "bwcheck":{
+         "url":"flowplayer.bwcheck-3.2.12.1.swf"
+      },
+      "qos":{
+         "url":"flowplayer.qosmonitor.swf",
+         "stats":{
+            "all":true
+         },
+         "info":true
       },
       "pingback":{
          "url":"flowplayer.pingback-3.2.7.swf",
-         "server_url":"http://api.mawire.com/pingback",
+         "server_url":"http:\/\/api.mawire.com\/pingback",
          "video_id":"1",
-         "wsUrl":"ws://54.205.241.225/viewers",
+         "wsUrl":"ws:\/\/ec2-50-17-115-203.compute-1.amazonaws.com\/viewers",
          "wsChannel":"test-account",
-         "wsToken":"312312312312321321312312",
-         "userName":"test-account",
-         "uuid":"312312312312321321312312",
-         "countryCode":"",
+         "wsToken":"",
+         "userName":"",
+         "uuid":"",
+         "countryCode":"DE",
          "debug":true,
          "viewersPluginName":"viewers",
          "infoPluginName":"info",
          "ovaPluginName":"ova",
          "isSubscriber":false,
-         "isFollower":true,
+         "isFollower":null,
+         "isWhitelabel":false,
          "updateTimeout":1000,
-         "embed":false
+         "embed":true,
+         "ip":"x.x.x.x",
+         "cdn_id":"2"
       },
       "controls":null,
       "info":{
          "display":"none",
          "url":"flowplayer.content-3.2.8.swf",
-         "html":"</p>",
+         "html":"
+
+<\/p>",
          "width":"50%",
          "height":30,
          "backgroundColor":"#1A1A1A",
@@ -142,35 +193,36 @@ Live:
             "all":true
          },
          "debug":false,
-         "accountId":"UA-42900118-2"
+         "accountId":"UA-12345678-9"
       },
       "ova":{
          "url":"flowplayer.liverail-3.2.7.4.swf",
-         "LR_PUBLISHER_ID":208741,
+         "LR_PUBLISHER_ID":20341,
          "LR_SCHEMA":"vast2-vpaid",
          "LR_ADUNIT":"in",
          "LR_VIDEO_POSITION":0,
          "LR_AUTOPLAY":1,
          "LR_CONTENT":6,
          "LR_TITLE":"test-account",
-         "LR_VIDEO_ID":"18730",
+         "LR_VIDEO_ID":"436009",
          "LR_MUTED":0,
-         "CACHEBUSTER":1420167259,
-         "TIMESTAMP":1420167259,
+         "CACHEBUSTER":1439665272,
+         "TIMESTAMP":1439665272,
+         "LR_TAGS":"mediaUserId_",
          "LR_LAYOUT_SKIN_MESSAGE":"Advertisement: Stream will resume in {COUNTDOWN} seconds.",
          "LR_LIVESTREAM":1,
          "LR_LAYOUT_SKIN_ID":2,
          "LR_LAYOUT_LINEAR_PAUSEONCLICKTHRU":0,
          "LR_BITRATE":"high",
-         "LR_VIDEO_URL":"http://www.hitbox.tv/test-account",
+         "LR_VIDEO_URL":"http:\/\/www.hitbox.tv\/test-account",
          "LR_DESCRIPTION":"test-account",
-         "LR_IP":"X.X.X.X"
+         "LR_IP":"x.x.x.x"
       }
    },
    "cdns":[
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp://fml.B6BF.edgecastcdn.net/20B6BF",
+         "netConnectionUrl":"rtmp:\/\/fml.B6BF.edgecastcdn.net\/20B6BF",
          "rtmpSubscribe":true,
          "bitrates":[
             {
@@ -184,21 +236,21 @@ Live:
       },
       {
          "provider":"rtmp",
-         "netConnectionUrl":"rtmp://hitboxna06livefs.fplive.net/hitboxna06live-live",
-         "rtmpSubscribe":true,
+         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
+         "rtmpSubscribe":false,
          "bitrates":[
             {
-               "url":"stream_test-account",
+               "url":"test-account",
                "bitrate":3500,
                "label":"Source",
                "isDefault":true,
-               "provider":"rtmp"
+               "provider":"rtmpHitbox"
             }
          ]
       },
       {
          "provider":"rtmpHitbox",
-         "netConnectionUrl":"rtmp://edge.live.hitbox.tv/live",
+         "netConnectionUrl":"rtmp:\/\/edge.live.hitbox.tv\/live",
          "rtmpSubscribe":false,
          "bitrates":[
             {
@@ -221,7 +273,7 @@ Live:
    "showErrors":false,
    "settings":{
       "media_id":"-1",
-      "max_buffer_count":"6",
+      "max_buffer_count":"3",
       "buffer_length":"2",
       "max_roundtrips":"3",
       "reset_timeout":"60000",
@@ -237,19 +289,36 @@ Live:
 }
 ```
 
-Video:
+
+## `GET /player/config/video/:video_id`
+
+Returns player config for VOD.
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| authToken | No | string | User's Auth Token |
+| redis | No | boolean | Unknown, Default: true |
+| embed | No | boolean | Show channel url, Default: false |
+| qos | No | boolean | Show qosmonitor and bwcheck, Default: false |
+| showHidden | No | boolean | Show Hidden Streams. |
+
+### Example URL
+
+https://www.hitbox.tv/api/player/config/video/123456
+
+### Example Response
 
 ```javascript
 {
-   "key":"#$54d46ea442f0438979",
+   "key":"#$0123456789abcdef012",
    "play":null,
    "clip":{
       "autoPlay":true,
       "autoBuffering":true,
       "bufferLength":"2",
-      "eventCategory":"test-account/video/22222",
+      "eventCategory":"\/video\/",
       "baseUrl":null,
-      "url":"http://edge.hls.vods.hitbox.tv/static/videos/vods/test-account/5a1c498ed443437e74b416a97c8b80f35fdfd29-53d30943438a20/test-account/index.m3u8",
+      "url":"\/api\/player\/hlsvod\/436009.m3u8",
       "stopLiveOnPause":true,
       "live":false,
       "smoothing":true,
@@ -257,11 +326,19 @@ Video:
       "scaling":"fit",
       "bitrates":[
          {
-            "url":"/test-account/5a1c498ed458b0b7e74b416a97c8b323235fdfd29-53d309a4d8a20/test-account/index.m3u8",
+            "url":"http:\/\/edge.hls.vods.hitbox.tv\/static\/videos\/vods\/Test-Account\/0123456789abcdef0123456789abcdef01234567-0123456789abc_0123456789abc\/Test-Account\/index.m3u8",
             "bitrate":0,
             "label":"HD 720p",
-            "provider":"rtmpHitbox",
+            "provider":"pseudo",
             "isDefault":true
+         },
+         {
+            "url":"\/api\/player\/hlsvod\/436009.m3u8",
+            "bitrate":5000,
+            "label":"Auto",
+            "isDefault":false,
+            "provider":"pseudo",
+            "abr":true
          }
       ],
       "controls":false,
@@ -276,7 +353,7 @@ Video:
          "hls_lowbufferlength":5,
          "hls_minbufferlength":10,
          "hls_maxbufferlength":60,
-         "hls_startfromlowestlevel":false,
+         "hls_startfromlowestlevel":true,
          "hls_seekfromlowestlevel":false,
          "hls_live_flushurlcache":false,
          "hls_seekmode":"SEGMENT"
@@ -285,7 +362,9 @@ Video:
       "info":{
          "display":"none",
          "url":"flowplayer.content-3.2.8.swf",
-         "html":"<p align=\"center\"><\/p>",
+         "html":"
+
+<\/p>",
          "width":"50%",
          "height":30,
          "backgroundColor":"#1A1A1A",
@@ -312,7 +391,7 @@ Video:
             "all":true
          },
          "debug":false,
-         "accountId":"UA-42900118-2"
+         "accountId":"UA-12345678-9"
       },
       "ova":{
          "url":"flowplayer.liverail-3.2.7.4.swf",
@@ -322,19 +401,20 @@ Video:
          "LR_VIDEO_POSITION":0,
          "LR_AUTOPLAY":1,
          "LR_CONTENT":6,
-         "LR_TITLE":"5a1c498ed458b0b7e74b4312321312312fdfd29-53d309a4d8a20",
-         "LR_VIDEO_ID":"180572",
+         "LR_TITLE":"0123456789abcdef0123456789abcdef01234567-0123456789abc_0123456789abc",
+         "LR_VIDEO_ID":"436009",
          "LR_MUTED":0,
-         "CACHEBUSTER":1420168000,
-         "TIMESTAMP":1420168000,
+         "CACHEBUSTER":1439666328,
+         "TIMESTAMP":1439666328,
+         "LR_TAGS":"mediaUserId_",
          "LR_LAYOUT_SKIN_MESSAGE":"Advertisement: Stream will resume in {COUNTDOWN} seconds.",
          "LR_LIVESTREAM":1,
          "LR_LAYOUT_SKIN_ID":2,
          "LR_LAYOUT_LINEAR_PAUSEONCLICKTHRU":0,
          "LR_BITRATE":"high",
-         "LR_VIDEO_URL":"http://www.hitbox.tv/video/11111",
-         "LR_DESCRIPTION":"5a1c498ed4312321321312416a97c8b80f35fdfd29-53d309a4d8a20",
-         "LR_IP":"X.X.X.X"
+         "LR_VIDEO_URL":"http:\/\/www.hitbox.tv\/video\/436009",
+         "LR_DESCRIPTION":"0123456789abcdef0123456789abcdef01234567-0123456789abc_0123456789abc",
+         "LR_IP":"81.217.18.106"
       }
    },
    "canvas":{
@@ -347,7 +427,7 @@ Video:
    "showErrors":false,
    "settings":{
       "media_id":"-1",
-      "max_buffer_count":"6",
+      "max_buffer_count":"3",
       "buffer_length":"2",
       "max_roundtrips":"3",
       "reset_timeout":"60000",
@@ -367,7 +447,7 @@ Video:
 
 Returns player config for recordings. `rec_session` can be taken from the [recording](/video/recordings.md) API.
 
-### Example URL 
+### Example URL
 
 https://www.hitbox.tv/api/player/recconfig/test-account/312312312321312321312312312312-54b3122b336c7
 
