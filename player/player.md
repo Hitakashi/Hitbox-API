@@ -7,14 +7,11 @@
 | [GET /player/server](/player/player.md#get-playerserver) | Returns socket server addresses. |
 | [GET /player/config/live/:media_id](/player/player.md#get-playerconfiglivemedia_id) | Returns live player config. |
 | [GET /player/config/video/:video_id](/player/player.md#get-playerconfigvideovideo_id) | Returns VOD player config. |
+| [GET /player/reconfig/:channe/:rec_session](/player/player.md#get-playerrecconfigchannelrec_session) | Returns player config for recordings. |
 
 ## `GET /player/server`
 
 Returns socket server addresses.
-
-| Parameter | Required? | Type | Description |
-| --- | --- | --- | --- |
-| authToken | No | string | User's Auth Token |
 
 ### Example URL
 
@@ -44,7 +41,8 @@ https://www.hitbox.tv/api/player/server
 
 ## `GET /player/config/live/:media_id`
 
-Returns player config for livestream.
+Returns player config for livestream.  
+`media_id` can be replaced with `channel`.
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
@@ -56,7 +54,8 @@ Returns player config for livestream.
 
 ### Example URL
 
-https://www.hitbox.tv/api/player/config/live/123456
+https://www.hitbox.tv/api/player/config/live/436009  
+https://www.hitbox.tv/api/player/config/live/test-account
 
 ### Example Response
 
@@ -441,5 +440,52 @@ https://www.hitbox.tv/api/player/config/video/123456
    "playlist":[
 
    ]
+}
+```
+
+## `GET /player/recconfig/:channel/:rec_session`
+
+Returns player config for recordings. `rec_session` can be taken from the [recording](/video/recordings.md) API.
+
+### Example URL
+
+https://www.hitbox.tv/api/player/recconfig/test-account/312312312321312321312312312312-54b3122b336c7
+
+### Example Response
+
+```javascript
+{
+   "key":"#$54d46eaa11fsdfdsf32279",
+   "play":null,
+   "clip":{
+      "autoPlay":true,
+      "autoBuffering":true,
+      "url":"http://edge.hls.vods.hitbox.tv/static/videos/vods/test-account/bb9304c4951edasdasdas02a5a937e527ac196-54b3122b336c7/test-account/index.m3u8",
+      "provider":"httpstreaming",
+      "scaling":"fit",
+      "start":1
+   },
+   "plugins":{
+      "controls":null,
+      "httpstreaming":{
+         "url":"flashlsFlowPlayer.swf",
+         "hls_debug":false,
+         "hls_debug2":false,
+         "hls_lowbufferlength":1,
+         "hls_minbufferlength":3,
+         "hls_maxbufferlength":60,
+         "hls_startfromlowestlevel":false,
+         "hls_seekfromlowestlevel":false,
+         "hls_live_flushurlcache":false,
+         "hls_seekmode":"SEGMENT"
+      }
+   },
+   "canvas":{
+      "backgroundGradient":"none"
+   },
+   "log":{
+      "level":"debug",
+      "filter":"org.osmf.*, org.electroteque.m3u8.*, org.flowplayer.bitrateselect.*"
+   }
 }
 ```
