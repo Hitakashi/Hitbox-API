@@ -266,8 +266,8 @@ Failed (Title too short, rec_session incorrect, etc)
 
 ```javascript
 {
-    "error":true",
-    "error_msg":media_error",
+    "error":true,
+    "error_msg":"media_error",
     "success":false
 }
 ```
