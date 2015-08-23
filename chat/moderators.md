@@ -47,7 +47,7 @@ Adds or removes chat moderators. Toggle `remove` for what action you want.
 
 https://www.hitbox.tv/api/chat/moderators/test-account
 
-### Example Response 
+### Example POST Payload 
 
 
 ```javascript
