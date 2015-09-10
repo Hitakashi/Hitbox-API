@@ -9,6 +9,7 @@
 | [POST /upload/description/:channel/:auth](/user/upload.md#post-uploaddescriptionchannelauth) | Uploads images for profile description use |
 | [DELETE /upload/description/:channel/:auth](/user/upload.md#delete-uploaddescriptionchannelauth) | Deletes images for profile description use |
 | [POST /upload/team/:username/:auth](/user/upload.md#post-uploadteamusernameauth) | Uploads teams images |
+| [POST /upload/emoji/:username/:auth](/user/upload.md#post-uploademojiusernameauth) | Uploads emoji image |
 
 ## `POST /upload/account/:user/:auth`
 
@@ -16,7 +17,7 @@ Update User Avatar.
 
 ### Example URL
 
-https://www.hitbox.tv/api/upload/account/test-account/12356765756756
+https://www.hitbox.tv/api/upload/account/test-account/SuperSecret
 
 ### Example Payload 
 
@@ -39,7 +40,7 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXXXXXXXX
 
 ### Example URL
 
-https://www.hitbox.tv/api/upload/account/test-account/1237865864534342423
+https://www.hitbox.tv/api/upload/account/test-account/SuperSecret
 
 ### Example Payload
 
@@ -70,7 +71,7 @@ Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryxc5Hjc4MDXrAqZX
 
 ### Example URL
 
-https://www.hitbox.tv/api/upload/description/test-account/1232131232132
+https://www.hitbox.tv/api/upload/description/test-account/SuperSecret
 
 ### Example Response 
 
@@ -88,7 +89,7 @@ https://www.hitbox.tv/api/upload/description/test-account/1232131232132
 
 ### Example URL
 
-http://www.hitbox.tv/api/upload/description/test-account/1232132132131
+http://www.hitbox.tv/api/upload/description/test-account/SuperSecret
 
 ### Example Payload
 
@@ -115,7 +116,7 @@ file_saved
 
 ### Example URL
 
-http://www.hitbox.tv/api/upload/description/test-account/21321321321312?image_id=85926
+http://www.hitbox.tv/api/upload/description/test-account/SuperSecret?image_id=85926
 
 ### Example Response 
 
@@ -127,7 +128,7 @@ success
 
 ### Example URL
 
-http://www.hitbox.tv/api/upload/team/test-account/12312312
+http://www.hitbox.tv/api/upload/team/test-account/SuperSecret
 
 ### Example Payload
 
@@ -174,5 +175,32 @@ Team Cover:
   "cover":{
     "cover":"/static/img/teams/cover_54dfd4873d3cc.png"
   }
+}
+```
+
+## `POST /upload/emoji/:username/:auth`
+
+### Example URL
+
+https://www.hitbox.tv/api/upload/emoji/test-account/SuperSecret
+
+### Example Payload
+
+```
+------WebKitFormBoundaryufi8nf43Uzh0llJ
+Content-Disposition: form-data; name="file"; filename="hitbox-icon-green.png"
+Content-Type: image/png
+
+
+------WebKitFormBoundaryufi8nf43Uzh0llJ--
+```
+
+### Example Response
+
+```javascript
+{
+    "emoji":{
+        "file":"/static/img/chat/test-account/emotes/emoji_55f126c635c22.png"
+    }
 }
 ```

@@ -7,6 +7,7 @@ Returns hitbox chat emoticons.
 | ---- | --------------- |
 | [GET /chat/icons/:user](/chat/emotes.md#get-chaticonsuser) | Get channel emotes |
 | [GET /chat/icon/:icon_name](/chat/emotes.md#get-chaticonicon_name) | Get Icon Properties |
+| [POST /chat/icons/:user](/chat/emotes.md#post-chaticonsuser) | Add emoji to channel |
 
 ## `GET /chat/icons/:user`
 
@@ -64,5 +65,46 @@ Returns properties about a chat emoji.
       "icon_enabled":"1",
       "icon_comment":""
    }
+}
+```
+
+## `POST /chat/icons/test-account
+
+Adds emoji to user account.
+
+### Example URL
+
+https://www.hitbox.tv/api/chat/icons/test-account
+
+### Example POST Payload
+
+Create
+```javascript
+{
+    "media_id":"test-account",
+    "icon_name":"testEmote",
+    "icon_path":"/static/img/chat/test-account/emotes/emoji_55f126c635c22.png",
+    "authToken":"SuperSecret",
+    "icon_premium":1
+}
+```
+
+Delete
+```javascript
+{
+    "media_id":"test-account",
+    "icon_id":"14068",
+    "authToken":"SuperSecret",
+    "action":"delete"
+}
+```
+
+### Example Response
+
+```javascript
+{
+    "success":true,
+    "error":false,
+    "message":"success"
 }
 ```

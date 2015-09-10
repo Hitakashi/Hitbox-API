@@ -201,7 +201,7 @@ Updates a team object
 
 ### Example URL
 
-https://www.hitbox.tv/api/team/test-team/test-account?authToken=123321
+https://www.hitbox.tv/api/team/test-team/test-account?authToken=SuperSecret
 
 ### Example Payload
 
