@@ -5,6 +5,7 @@
 | Endpoint | Description |
 | ---- | --------------- |
 | [GET /following/user](/user/following.md#get-followinguser) | Returns a list of channels a user is following. |
+| [PUT /following/user](/user/following.md#put-followinguser) | Motify following notifications. |
 | [GET /following/user/:channel](/user/following.md#getfollowinguserchannel) | Returns following information for channel. |
 
 ## `GET /following/user`
@@ -56,6 +57,62 @@ https://www.hitbox.tv/api/following/user?user_name=test-account
       ...
    ],
    "max_results":"2"
+}
+```
+
+
+## `PUT /following/user`
+
+| Parameter | Required? | Type | Description |
+| --- | --- | --- | --- |
+| user_name | Yes | string | User's user name |
+| authToken | Yes | string | User's auth token |
+
+### Example URL
+
+https://www.hitbox.tv/api/following/user?authToken=SuperSecret&user_name=Test-Account
+
+### Example PUT Payload
+
+```javascript
+{
+    "following":[
+        {
+            "followers":"17",
+            "user_name":"Test-Admin",
+            "user_id":"278723",
+            "user_logo":"\/static\/img\/channel\/Hitakashi_5600a327a9a4e_large.png",
+            "user_logo_small":"\/static\/img\/channel\/Hitakashi_5600a327a9a4e_small.png",
+            "follow_id":"278723",
+            "follower_user_id":"278723",
+            "follower_notify":"0",
+            "date_added":"2015-09-23 22:25:50"
+        },
+        ...
+    ]
+}
+```
+
+### Example Response
+
+You will get an echo back with what you sent.
+
+```javascript
+{
+    "following":[
+        {
+            "followers":"17",
+            "user_name":"Test-Admin",
+            "user_id":"278723",
+            "user_logo":"\/static\/img\/channel\/Hitakashi_5600a327a9a4e_large.png",
+            "user_logo_small":"\/static\/img\/channel\/Hitakashi_5600a327a9a4e_small.png",
+            "follow_id":"278723",
+            "follower_user_id":"278723",
+            "follower_notify":"0",
+            "date_added":"2015-09-23 22:25:50"
+        },
+        ...
+    ]
 }
 ```
 
