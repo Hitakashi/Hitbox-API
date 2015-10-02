@@ -47,7 +47,7 @@ Returns list of editor objects that `:user` has access to.
 
 ### Example URL
 
-https://www.hitbox.tv/api/editors/test-account?authToken=SuperSecret
+https://www.hitbox.tv/api/editor/test-account?authToken=SuperSecret
 
 ### Example Response 
 
