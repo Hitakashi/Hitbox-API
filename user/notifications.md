@@ -54,3 +54,9 @@ https://www.hitbox.tv/api/notifications?authToken=SuperSecret&user_name=test-acc
    "push_twitter":"0",
 }
 ```
+
+### Example Response
+
+```javascript
+"success"
+```
