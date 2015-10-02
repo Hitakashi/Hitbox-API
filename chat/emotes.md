@@ -68,7 +68,7 @@ Returns properties about a chat emoji.
 }
 ```
 
-## `POST /chat/icons/test-account
+## `POST /chat/icons/test-account`
 
 Adds emoji to user account.
 
