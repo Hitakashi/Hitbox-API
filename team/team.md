@@ -105,7 +105,7 @@ The livestream array will be filled with:
    "user_logo_small":"/static/img/channel/test-account_54f988997d191_small.jpg",
    "user_partner":"1",
    "media_offline_id":null,
-   "media_id":1",
+   "media_id":"1",
    "media_duration_format":"00:00:00",
    "category_logo_large":"",
    "media_thumbnail":"/static/img/media/live/test-account_mid_000.jpg",
