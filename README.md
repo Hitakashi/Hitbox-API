@@ -1,6 +1,8 @@
 Hitbox-API
 ==========
 
+[![Join the chat at https://gitter.im/Hitakashi/Hitbox-API](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Hitakashi/Hitbox-API?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is an unofficial documentation of hitbox.tv API. 
 
 I've made a new web documentation, this and the web doc will be updated together. http://hitakashi.github.io/Hitbox-API/
