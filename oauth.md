@@ -8,7 +8,7 @@ This API is used for receiving  global messages to hitbox users.
 | [GET /oauthaccess/:user](/oauth.md#get-oauthaccessuser) | Get Third Party OAuth Access |
 | [POST /oauthaccess/:user](/oauth.md#post-oauthaccessuser) | Remove Application From Account |
 | [GET /userfromtoken/:token](/oauth.md#get-userfromtokentoken) | Get User From Token |
-| [OAuth Flow](/oauth.md#OAuth-Flow) | OAuth Flow |
+| [OAuth Flow](/oauth.md#oauth-flow) | OAuth Flow |
 
 ## `GET /oauthaccess/:user`
 
