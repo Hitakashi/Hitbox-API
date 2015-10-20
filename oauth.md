@@ -88,7 +88,7 @@ You should then handle three types of flows:
 
 If the user hasn't already authentication with your application and accepts authorization, the user will be redirect to:
 
-https://redirect_uri/?request_token=request_token.
+https://redirect_uri?request_token=request_token.
 
 #### Exchange
 
@@ -129,12 +129,12 @@ authentication_failed
 
 If the user has already authenticated with your application and you exchanged the request_token, the hitbox API will skip the login screen. The user will be redirected with an ``authToken``:
 
-https://redirect_uri/?authToken=authToken
+https://redirect_uri?authToken=authToken
 
 ### Errors
 
 The hitbox API with redirect to the following URL when there's an error with authorization. (EX: User Canceled)
 
-https://redirect_uri/?error=error
+https://redirect_uri?error=error
 
 
