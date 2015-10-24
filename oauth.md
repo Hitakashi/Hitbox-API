@@ -86,7 +86,7 @@ You should then handle three types of flows:
 
 ### Request Tokens
 
-If the user hasn't already authentication with your application and accepts authorization, the user will be redirect to:
+If the user hasn't already authenticated with your application and accepts authorization, the user will be redirected to:
 
 https://redirect_uri?request_token=request_token.
 
@@ -105,7 +105,7 @@ Once the user is redirected, You then need to exchange the ``request_token`` for
     "hash":""
 }
 ```
-The ``hash`` value is a Base64 Encode of of the ``app_token`` and ``app_secret``. As an example, You can open up Chrome Developer Tool go to the console and type ``btoa(app_token+app_secret);`` and the result will be your ``hash``.
+The ``hash`` value is a Base64 Encode of of the ``app_token`` and ``app_secret``. As an example, You can open up Chrome/Firefox Developer Tool go to the console and type ``btoa(app_token+app_secret);`` and the result will be your ``hash``.
 
 You will then get back either two responses:
 
@@ -131,9 +131,11 @@ If the user has already authenticated with your application and you exchanged th
 
 https://redirect_uri?authToken=authToken
 
+Note: You can add force_auth=true to the URL query to force login again.
+
 ### Errors
 
-The hitbox API with redirect to the following URL when there's an error with authorization. (EX: User Canceled)
+The hitbox API will redirect to the following URL when there's an error with authorization. (EX: User Canceled)
 
 https://redirect_uri?error=error
 
