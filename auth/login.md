@@ -32,32 +32,35 @@ https://www.hitbox.tv/api/auth/login
 Correct credentials:
 ```javascript
 {
-   "user_id":"111",
-   "user_name":"test-account",
-   "user_logo":"/static/img/channel/test-account_53aa862ac9adf_large.png",
-   "user_logo_small":"/static/img/channel/test-account_53aa862ac9adf_small.png",
-   "user_banned":"0",
-   "user_banned_channel":"0",
-   "superadmin":"0",
-   "livestream_count":"1",
-   "followers":"0",
-   "authToken":"SuperSecret",
-   "login":"true",
-   "data":{
-      "app":"desktop",
-      "user_id":"111",
-      "user_name":"test-account",
-      "user_logo":"/static/img/channel/test-account_53aa862ac9adf_large.png",
-      "user_logo_small":"/static/img/channel/test-account_53aa862ac9adf_small.png",
-      "user_banned":"0",
-      "superadmin":"0",
-      "livestream_count":"1",
-      "followers":"0",
-      "authToken":"SuperSecret",
-      "login":"true"
-   },
-   "access":"all",
-   "app":"desktop"
+  "user_id": "1",
+  "user_name": "masta",
+  "user_logo": "/static/img/channel/masta_56413fc1455f6_large.png",
+  "user_logo_small": "/static/img/channel/masta_56413fc1455f6_small.png",
+  "user_banned": "\u0000",
+  "user_partner": null,
+  "user_banned_channel": "0",
+  "superadmin": "0",
+  "livestream_count": "1",
+  "followers": "19",
+  "authToken": "SuperSecret",
+  "login": "true",
+  "data": {
+    "user_id": "278723",
+    "user_name": "masta",
+    "user_logo": "/static/img/channel/masta_56413fc1455f6_large.png",
+    "user_logo_small": "/static/img/channel/masta_56413fc1455f6_small.png",
+    "user_banned": "\u0000",
+    "user_partner": null,
+    "user_banned_channel": "0",
+    "superadmin": "0",
+    "livestream_count": "1",
+    "followers": "19",
+    "authToken": "SuperSecret",
+    "login": "true",
+    "app": "desktop"
+  },
+  "access": "all",
+  "app": "desktop"
 }
 ```
 

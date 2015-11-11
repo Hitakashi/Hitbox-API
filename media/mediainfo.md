@@ -34,6 +34,7 @@ https://www.hitbox.tv/api/mediainfo/live/123
       "level":"40",
       "fps":"30",
       "gop":null,
+      "kf_interval": "2",
       "hostname":"WAS-BCE1-BL04",
       "useragent":null,
       "log_date":"2014-12-18 07:42:49"
