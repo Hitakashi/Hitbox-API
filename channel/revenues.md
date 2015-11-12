@@ -3,12 +3,12 @@
 
 | Endpoint | Description |
 | ---- | --------------- |
-| [GET /revenues/channel/:user](/channel/revenues.md#get-revenueschanneluser) | Returns Revenues stats |
+| [GET /revenues/:type/:user](/channel/revenues.md#get-revenuestypeuser) | Returns Revenues stats |
 | [GET /payments/balance/:user](/channel/revenues.md#get-paymentsbalanceuser) | Get Payment Balance |
 | [GET /transactions/history/:user](/channel/revenues.md#get-transactionshistoryuser) | Get Transaction History |
 | [GET /payments/settings/:user](/channel/revenues.md#get-paymentssettingsuser) | Get Payment Settings |
 
-## `GET /revenues/channel/:user`
+## `GET /revenues/:type/:user`
 
 | Parameter | Required? | Type | Description |
 | --- | --- | --- | --- |
@@ -18,13 +18,17 @@
 
 Returns revenues for given channel between `startDate` and `endDate`.
 
+`:type` should either be `team` or `channel`
+
+`:user` should be either a user when `:type` is `channel`, or a team name when `:type` is `team`
+
 I have truncated each array to just one property.
 
 ### Example URL
 
 https://www.hitbox.tv/api/revenues/channel/test-account?authToken=SuperSecret&endDate=2015-04-08&startDate=2015-03-07
 
-### Example Response 
+### Example User Response 
 
 Non-Parter Info: (I assume Partners follow the same layout)
 ```javascript
@@ -100,6 +104,129 @@ Non-Parter Info: (I assume Partners follow the same layout)
          }
       }
    }
+}
+```
+
+### Example Team Response
+
+```javascript
+{
+    "request":{
+        "this":"/revenues/team/TestTeam",
+        "type":"team",
+        "user":"TestTeam"
+    },
+    "team":{
+        "revenues":{
+            "summary":{
+                "currency":"USD"
+            },
+            "plans":[
+                {
+                    "plan_id":"1",
+                    "plan_name":"TestTeam",
+                    "plan_group_id":"1",
+                    "plan_user_id":null,
+                    "plan_countries":"Australia,Belgium,Canada,Denmark,Finland,France,Luxembourg,Netherlands,Norway,Sweden,United Kingdom,United States",
+                    "plan_cpm":"0.00",
+                    "plan_currency":"USD",
+                    "plan_date_added":"2015-01-12 00:00:00"
+                },
+                {
+                    "plan_id":"2",
+                    "plan_name":"TestTeam",
+                    "plan_group_id":"1",
+                    "plan_user_id":null,
+                    "plan_countries":"*",
+                    "plan_cpm":"0.00",
+                    "plan_currency":"USD",
+                    "plan_date_added":"2015-01-12 00:00:00"
+                },
+                {
+                    "plan_id":"3",
+                    "plan_name":"TestTeam",
+                    "plan_group_id":"1",
+                    "plan_user_id":null,
+                    "plan_countries":"Austria,Germany,Switzerland",
+                    "plan_cpm":"0.00",
+                    "plan_currency":"USD",
+                    "plan_date_added":"2015-01-12 00:00:00"
+                }
+            ],
+            "members":{
+                "1":{
+                    "summary":{
+                        "last_updated":"2015-11-11 00:00:00",
+                        "total_earnings":0,
+                        "max_earnings":null,
+                        "sub_earnings":0,
+                        "live_earnings":0,
+                        "video_earnings":0
+                    },
+                    "timeline":[
+                        [
+                            1444435200000,
+                            0
+                        ]
+                    ],
+                    "daily":{
+                        "2015-10-10":{
+                            "earnings":0
+                        }
+                    }
+                },
+				...
+            }
+        },
+        "info":{
+            "group_id":"1",
+            "founder_name":"TestAdmin",
+            "group_name":"TestTeam",
+            "group_display_name":"Test Team",
+            "group_text":"The Best Team Description.",
+            "group_logo_small":"/static/img/teams/logo_54c643249d_small.png",
+            "group_logo_large":"/static/img/teams/logo_54c643249d_large.png",
+            "group_cover":null,
+            "members_total":1
+        },
+        "members":[
+            {
+                "followers":"113",
+                "user_id":"1",
+                "user_name":"TestAdmin",
+                "user_status":"1",
+                "user_logo":"/static/img/channel/TestAdmin_53cda133184df_large.png",
+                "user_cover":"/static/img/channel/cover_52f62514d614b.png",
+                "user_logo_small":"/static/img/channel/TestAdmin_53cda133184df_small.png",
+                "user_email":"example@example.com",
+                "revenues":{
+                    "summary":{
+                        "last_updated":"2015-11-11 00:00:00",
+                        "total_earnings":0.00,
+                        "max_earnings":0.00,
+                        "sub_earnings":0.00,
+                        "live_earnings":0,
+                        "video_earnings":0
+                    },
+                    "timeline":[
+                        [
+                            1444435200000,
+                            0
+                        ]
+                    ],
+                    "daily":{
+                        "2015-10-10":{
+                            "earnings":0
+                        }
+                    }
+                }
+            },
+			...
+        ],
+        "summary":{
+            "currency":"USD"
+        }
+    }
 }
 ```
 
