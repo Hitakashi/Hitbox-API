@@ -241,7 +241,7 @@ else
 | authToken | No | string | Users Auth Token. Used if wanting private user information. | 
 | publicOnly | No | boolean | Show only visible streams. |
 | showHidden | Sorta | boolean | Show Hidden Streams. |
-| showHidden | No | boolean | Only show hidden streams. |
+| hiddenOnly | No | boolean | Only show hidden streams. |
 | liveonly | No | boolean | Show non-live media objects. |
 | filter | No | string | Valid: recent, popular (default). |
 | game | No | string | Sorts Media Objects by category id, Game SEO or URL Encoded game name. |
@@ -249,6 +249,7 @@ else
 | start | No | int | Offsets the returns results |
 | follow_id | No | String | Shows only live streams that `follow_id` (user ID) follows. |
 | search | No | String | Search keyboard for `media_status`. |
+| fast | No | boolean | Returns pertinent information. |
 
 Returns a list of media objects. 
 
@@ -334,6 +335,62 @@ https://www.hitbox.tv/api/media/live/list
     },
     ...
   ]
+}
+```
+
+### Example Follower Response
+
+This is response is only returned when `follower_id` query is sent.
+
+Note: This example was used with the `fast` query.
+
+```javascript
+{
+    "request":{
+        "this":"/media/live/list"
+    },
+    "media_type":"live",
+    "hosting":[
+        {
+            "media_id":"1",
+            "channel":"ChannelHostingUser",
+            "hosted_media_id":"2",
+            "hosted_channel":"HostedChannel",
+            "hosted_media_is_live":"1",
+            "user_logo_small":"/static/img/channel/masta_547d4d85b111a_small.jpg",
+            "hosted_user_logo_small":"/static/img/channel/markus_564101d060bc7_small.jpg",
+            "hosted_media_live_since":"2015-11-16 03:14:19",
+            "hosted_media_thumbnail":"/static/img/media/live/markus_mid_000.jpg",
+            "hosted_media_thumbnail_large":"/static/img/media/live/masta_large_000.jpg"
+        }
+    ],
+    "livestream":[
+        {
+            "media_display_name":"Masta",
+            "media_status":"OK Let's do this!!",
+            "media_name":"masta",
+            "category_name":"Counter-Strike: Global Offensive",
+            "media_views":"7",
+            "media_countries":[
+                "US",
+                "AT"
+            ],
+            "media_live_since":"2015-11-16 02:05:08",
+            "media_is_live":"1",
+            "user_logo":"/static/img/channel/masta_53d8a389e01b1_large.png",
+            "user_logo_small":"/static/img/channel/masta_53d8a389e01b1_small.png",
+            "user_partner":null,
+            "media_offline_id":null,
+            "media_id":"1",
+            "media_thumbnail":"/static/img/media/live/masta_mid_000.jpg",
+            "media_thumbnail_large":"/static/img/media/live/masta_large_000.jpg",
+            "channel":{
+                "user_logo":"/static/img/channel/masta_53d8a389e01b1_large.png",
+                "user_logo_small":"/static/img/channel/masta_53d8a389e01b1_small.png",
+                "channel_link":"http://hitbox.tv/masta"
+            }
+        }
+    ]
 }
 ```
 
