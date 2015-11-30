@@ -1,6 +1,5 @@
 # Media Info API
 ***
-*Transcoding Feature Only*
 
 | Endpoint | Description |
 | ---- | --------------- |
