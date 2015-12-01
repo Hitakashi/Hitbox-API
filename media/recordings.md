@@ -70,6 +70,8 @@ https://www.hitbox.tv/api/recordings/test-account?authToken=SuperSecret
       "rec_bitrate":"83",
       "rec_duration":"00:00:19",
       "rec_date_added":"2014-12-13 08:07:57",
+      "rec_done":null,
+      "rec_uploaded":"1",
       "rec_saved_media_id":null,
       "thumbnail":"/static/img/media/videos/0e6/0e61e00563c9b3239a0ee433c812950d0784c243728-548bf4333a867_mid_000.jpg",
       "thumbnail_large":"/static/img/media/videos/0e6/0e61e005633c9b3239a330ee4c812950d0784c24728-548bf4333a867_large_000.jpg",

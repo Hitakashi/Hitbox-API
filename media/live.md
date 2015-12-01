@@ -130,6 +130,7 @@ If valid authToken is passed and host is off
             "user_cover":"/static/img/channel/cover_53fbf01572c78.png",
             "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
+            "partner_type":null,
             "user_beta_profile": "1",
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
@@ -172,6 +173,7 @@ else
             "US"
          ],
          "media_hosted_id":null,
+         "media_offline_id":null,
          "user_banned":null,
          "media_name":"test-account",
          "media_display_name":"test-account",
@@ -210,6 +212,7 @@ else
             "user_cover":"/static/img/channel/cover_53fbf06572c78.png",
             "user_logo_small":"/static/img/channel/test-account_53f4e837eb388_small.png",
             "user_partner":null,
+            "partner_type":null,
             "user_beta_profile": "1",
             "media_is_live":"0",
             "media_live_since":"2014-12-14 05:18:54",
