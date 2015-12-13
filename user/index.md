@@ -74,6 +74,7 @@ if authToken
    "user_media_id":"12",
    "user_email":"example@example.com",
    "user_partner":null,
+   "partner_type":null,
    "media_is_live":"0",
    "media_live_since":"2014-12-14 05:18:54",
    "twitter_account":"test-account",
