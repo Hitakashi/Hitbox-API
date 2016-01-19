@@ -1,7 +1,9 @@
 Hitbox-API
 ==========
 
-[![Join the chat at https://gitter.im/Hitakashi/Hitbox-API](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Hitakashi/Hitbox-API?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+### DEPRECATED
+
+I now work on the [official documentation](http://developers.hitbox.tv/), so please use that. This document is deprecated.
 
 This is an unofficial documentation of hitbox.tv API. 
 
